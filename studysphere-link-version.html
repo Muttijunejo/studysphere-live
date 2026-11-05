@@ -1,0 +1,556 @@
+<!doctype html>
+<!-- Design method: unslop by @heydamir (heydamir/unslop, CC BY 4.0) — 9-pass audit applied: spacing, color, icons, copy, type, layout, details, visuals, motion -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>StudySphere — Learn, practice, prepare</title>
+<meta name="description" content="Free preparation for PST, JEST and EST tests in Sindh: model papers in the official pattern, daily MCQs, notes, coding lessons and typing practice." />
+<meta name="keywords" content="PST preparation, JEST preparation, EST teaching licence, STS test preparation, past papers Sindh, MCQ practice, typing practice Pakistan" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#166649" />
+<link rel="canonical" href="https://muttijunejo.github.io/studysphere-live/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="StudySphere" />
+<meta property="og:title" content="StudySphere — Learn, practice, prepare" />
+<meta property="og:description" content="Free preparation for PST, JEST and EST tests in Sindh: model papers in the official pattern, daily MCQs, notes, coding lessons and typing practice." />
+<meta property="og:url" content="https://muttijunejo.github.io/studysphere-live/" />
+<meta property="og:image" content="https://muttijunejo.github.io/studysphere-live/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="StudySphere — Learn, practice, prepare" />
+<meta name="twitter:description" content="Free preparation for PST, JEST and EST tests in Sindh: model papers in the official pattern, daily MCQs, notes, coding lessons and typing practice." />
+<meta name="twitter:image" content="https://muttijunejo.github.io/studysphere-live/og-image.jpg" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"StudySphere","url":"https://muttijunejo.github.io/studysphere-live/","description":"Free preparation for PST, JEST and EST tests in Sindh: model papers in the official pattern, daily MCQs, notes, coding lessons and typing practice."}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Lora:wght@500;600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#faf8f2; --surface:#fffefa; --surface2:#f2eee3; --surface3:#eae5d6;
+  --ink:#1b201d; --ink2:#54605a; --ink3:#7d8881;
+  --line:#e3ddd0; --line2:#d6cfbc;
+  --accent:#166649; --accent-hover:#12543d; --accent-soft:#e8f0eb; --accent-ink:#fff;
+  --amber:#9a6a14; --amber-soft:#f5ecd6;
+  --danger:#a93a2f; --danger-soft:#f9ecea;
+  --shadow:0 1px 2px rgba(27,32,29,.05), 0 8px 24px rgba(27,32,29,.04);
+  --r-lg:16px; --r-md:12px; --r-sm:8px;
+  --ease:cubic-bezier(.25,.6,.3,1);
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#141714; --surface:#1b1f1b; --surface2:#222722; --surface3:#2a302a; --ink:#edf0eb; --ink2:#aab5ac; --ink3:#828d84; --line:#2e352e; --line2:#3a423a; --accent:#4ab78a; --accent-hover:#5fc79b; --accent-soft:#1d2f27; --accent-ink:#0d1511; --amber:#d9a84a; --amber-soft:#332a16; --danger:#e07a6d; --danger-soft:#33201d; --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.2)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
+body.ur{font-family:"Noto Nastaliq Urdu","Manrope",serif;line-height:2}
+a{color:var(--accent);text-underline-offset:3px}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* signature hand-drawn underline */
+.u-draw{position:relative;display:inline-block;padding-bottom:6px}
+.u-draw::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 6' preserveAspectRatio='none'%3E%3Cpath d='M2 4 C 30 1, 60 6, 118 3' fill='none' stroke='%23166649' stroke-width='2' stroke-linecap='round' opacity='.55'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+@media (prefers-color-scheme: dark){.u-draw::after{opacity:.8}}
+header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:12px;padding:12px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1.02rem;letter-spacing:-.01em}
+.brand .mark{width:32px;height:32px;border-radius:8px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:"Lora",serif;font-weight:600;font-size:1rem}
+.navlinks{display:flex;gap:4px;flex-wrap:wrap;order:4;width:100%;border-top:1px solid var(--line);padding-top:8px}
+.navlinks button{background:none;border:0;padding:8px 10px;border-radius:8px;color:var(--ink2);font-weight:500;font-size:.92rem;transition:background .16s var(--ease),color .16s var(--ease)}
+.navlinks button:hover{color:var(--ink);background:var(--surface2)}
+.navlinks button.active{background:var(--accent);color:var(--accent-ink)}
+.langbtn{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600;font-size:.88rem;color:var(--ink);margin-inline-start:auto;transition:border-color .16s var(--ease)}
+.langbtn:hover{border-color:var(--accent)}
+.menubtn{display:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;color:var(--ink)}
+.menubtn svg{width:20px;height:20px;display:block}
+@media (max-width:860px){.menubtn{display:block}.navlinks{display:none;flex-direction:column;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:8px}.navlinks.open{display:flex}.navlinks button{text-align:start;padding:10px 12px}}
+main{padding:32px 0 64px}
+.page{display:none}.page.active{display:block}
+h1,h2,h3{font-family:"Lora",serif;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0 0 .5em}
+body.ur h1,body.ur h2,body.ur h3{font-family:"Noto Nastaliq Urdu",serif;line-height:1.9;font-weight:600}
+h1{font-size:clamp(1.85rem,4.2vw,2.75rem)}
+h2{font-size:clamp(1.3rem,2.8vw,1.7rem)}
+h3{font-size:1.08rem}
+p{margin:0 0 1em}.muted{color:var(--ink2)}.small{font-size:.88rem}.meta{font-size:.82rem;color:var(--ink3);font-weight:500}
+.hero{padding:24px 0 8px;display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:start}
+@media (max-width:860px){.hero{grid-template-columns:1fr}}
+.hero p.lede{font-size:1.08rem;color:var(--ink2);max-width:560px;line-height:1.65}
+.kicker{font-size:.9rem;font-weight:600;color:var(--accent);margin-bottom:12px}
+.hero-cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent);border-radius:10px;padding:10px 18px;font-weight:600;text-decoration:none;font-size:.95rem;transition:background .16s var(--ease),transform .12s var(--ease)}
+.btn:hover{background:var(--accent-hover)}.btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--surface)}
+.btn.secondary{background:var(--surface);color:var(--ink);border-color:var(--line2)}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin:28px 0 4px;padding-top:20px;border-top:1px solid var(--line)}
+.stat b{display:block;font-family:"Lora",serif;font-weight:600;font-size:1.5rem;line-height:1.1}
+.stat span{color:var(--ink2);font-size:.86rem;font-weight:500}
+.grid{display:grid;gap:16px;margin-top:20px}
+.grid.c2{grid-template-columns:repeat(2,1fr)}.grid.c3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.grid.c3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.grid.c2,.grid.c3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;box-shadow:var(--shadow)}
+.card h3{margin-bottom:.35em}.card p{color:var(--ink2);font-size:.95rem}
+.card .go{font-weight:600;font-size:.92rem;text-decoration:none}
+.iconbox{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:12px;color:var(--accent)}
+.iconbox svg{width:20px;height:20px}
+.pill{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.78rem;padding:3px 10px;border-radius:999px}
+.pill.amber{background:var(--amber-soft);color:var(--amber)}
+.row-between{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.section-head{margin:36px 0 4px}
+.section-head p{color:var(--ink2);max-width:640px}
+/* Daily quiz / word */
+.daily-card{background:var(--surface);border:1px solid var(--line2);border-radius:var(--r-lg);padding:20px;box-shadow:var(--shadow)}
+.daily-card .label{font-size:.84rem;font-weight:600;color:var(--accent);margin-bottom:6px}
+.word-big{font-family:"Lora",serif;font-size:2rem;font-weight:600;line-height:1.1}
+.word-ur{font-size:1rem;color:var(--ink);font-weight:600}
+.dq-q{padding:14px 0;border-top:1px solid var(--line)}
+.dq-q:first-of-type{border-top:0}
+.dq-q p{font-weight:600;color:var(--ink);margin-bottom:8px}
+.dq-opts{display:grid;gap:6px}
+.dq-opt{text-align:start;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:.94rem;transition:border-color .16s var(--ease),background .16s var(--ease)}
+.dq-opt:hover{border-color:var(--accent)}
+.dq-opt.right{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.dq-opt.wrongpick{background:var(--danger-soft);border-color:var(--danger)}
+.dq-explain{display:none;font-size:.9rem;color:var(--ink2);background:var(--surface2);border-radius:8px;padding:10px 12px;margin-top:8px}
+.dq-explain.show{display:block}
+.score-line{display:none;margin-top:12px;background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-weight:600}
+.score-line.show{display:block}
+/* countdown + timetable */
+input[type="date"],input[type="text"],input[type="email"],select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.count-num{font-family:"Lora",serif;font-size:2.6rem;font-weight:600;line-height:1}
+.tt-wrap{overflow:visible}
+.tt-grid{display:grid;gap:8px}
+.tt-row{display:grid;grid-template-columns:92px 1fr 1fr 1fr;gap:8px;align-items:center}
+.tt-row.head{font-size:.82rem;font-weight:600;color:var(--ink2)}
+.tt-row input{width:100%;padding:8px 10px;font-size:.92rem}
+@media (max-width:640px){.tt-row{grid-template-columns:1fr}.tt-row.head{display:none}.tt-day{font-weight:600;margin-top:8px}}
+.tt-day{font-weight:600;font-size:.92rem}
+/* lists */
+.item{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 20px;margin-bottom:12px}
+.item .grow{flex:1;min-width:0}.item h3{margin-bottom:.2em;font-size:1rem}.item p{margin:0;color:var(--ink2);font-size:.92rem}
+.dl{background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:9px 16px;font-weight:600;font-size:.88rem;white-space:nowrap}
+details.lesson{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);margin-bottom:12px;overflow:hidden}
+details.lesson summary{cursor:pointer;padding:18px 20px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:center}
+details.lesson summary::-webkit-details-marker{display:none}
+details.lesson .body{padding:0 20px 20px;color:var(--ink2)}
+code{background:var(--surface2);padding:2px 7px;border-radius:6px;font-size:.88em}
+pre{background:var(--surface2);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:.88rem;line-height:1.55}
+pre code{background:none;padding:0}
+.typebox{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;box-shadow:var(--shadow)}
+.sample{font-size:1.12rem;line-height:1.9;background:var(--surface2);border-radius:10px;padding:16px 18px;margin-bottom:16px;user-select:none;word-break:break-word}
+.sample.ur-text{font-family:"Noto Nastaliq Urdu",serif;line-height:2.4}
+.sample span.correct{color:var(--accent)}.sample span.wrong{color:var(--danger);background:var(--danger-soft);border-radius:3px}.sample span.current{border-bottom:2px solid var(--accent)}
+textarea#typeInput{width:100%;min-height:110px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);padding:14px 16px;font:inherit;font-size:1.02rem;resize:vertical}
+textarea.lesson-input{width:100%;min-height:80px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);padding:14px 16px;font:inherit;font-size:1.02rem;resize:vertical}
+.lvl-nav{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 18px}
+.lvl-chip{background:var(--surface);border:1px solid var(--line2);border-radius:999px;padding:7px 14px;font-weight:600;font-size:.88rem;color:var(--ink2);transition:border-color .16s var(--ease),background .16s var(--ease),color .16s var(--ease)}
+.lvl-chip:hover{border-color:var(--accent);color:var(--accent)}
+.lvl-chip.active{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.lvl-chip.done{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.lvl-chip.done.active{background:var(--accent);color:var(--accent-ink)}
+.lvl-instruct{background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-size:.95rem;margin-bottom:14px}
+.kbd-board{margin:0 0 16px;padding:12px;background:var(--surface2);border-radius:10px}
+.kbd-row{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin:4px 0}
+.kbd{min-width:30px;text-align:center;padding:4px 4px;border:1px solid var(--line2);border-bottom-width:2px;border-radius:6px;background:var(--surface);font-size:.8rem;font-weight:600;color:var(--ink3);text-transform:uppercase}
+.kbd.on{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.kbd.space{min-width:150px;text-transform:none}
+.lvl-done{display:none;margin-top:4px;background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-weight:600}
+.lvl-done.show{display:block}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.meters{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.meter{flex:1;min-width:120px;background:var(--surface2);border-radius:10px;padding:12px 16px;text-align:center}
+.meter b{display:block;font-size:1.45rem;font-family:"Lora",serif;font-weight:600;line-height:1.1}
+.meter span{font-size:.8rem;font-weight:600;color:var(--ink2)}
+.qcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;margin-bottom:12px}
+.qcard .q{font-weight:600;margin-bottom:10px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;font-size:.96rem}
+.opt:hover{border-color:var(--accent)}.opt input{margin-top:4px;accent-color:var(--accent)}
+.opt.right{border-color:var(--accent);background:var(--accent-soft)}.opt.wrongpick{border-color:var(--danger);background:var(--danger-soft)}
+.explain{display:none;margin-top:12px;background:var(--surface2);border-radius:10px;padding:12px 14px;font-size:.92rem;color:var(--ink2)}.explain.show{display:block}
+.result-banner{display:none;border-radius:var(--r-lg);padding:20px;margin-bottom:16px;background:var(--accent-soft);border:1px solid var(--accent)}.result-banner.show{display:block}.result-banner b{font-family:"Lora",serif;font-size:1.4rem}
+.notice{border-inline-start:3px solid var(--amber);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:12px}
+.notice .when{font-size:.82rem;font-weight:600;color:var(--amber)}
+.notice h3{margin:.2em 0 .25em}.notice p{margin:0;color:var(--ink2);font-size:.95rem}
+/* Daily news */
+.news-entry{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 22px 8px;margin-bottom:16px;box-shadow:var(--shadow)}
+.news-entry .news-source{font-size:.82rem;font-weight:600;color:var(--accent);letter-spacing:.02em;margin-bottom:6px}
+.news-entry h2{margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.news-points{margin:0;padding-inline-start:22px}
+.news-points li{margin-bottom:14px;color:var(--ink2);font-size:.97rem;line-height:1.65}
+.news-points li strong{color:var(--ink);font-weight:700}
+footer{border-top:1px solid var(--line);padding:32px 0 40px;margin-top:16px}
+.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}@media (max-width:700px){.footgrid{grid-template-columns:1fr}}
+footer h4{margin:0 0 10px;font-size:.95rem;font-weight:600}
+footer a{display:block;color:var(--ink2);text-decoration:none;font-size:.92rem;padding:3px 0}footer a:hover{color:var(--accent)}
+.foot-note{margin-top:24px;color:var(--ink3);font-size:.84rem}
+.github-note{background:var(--surface2);border-radius:10px;padding:14px 16px;font-size:.92rem;color:var(--ink2);margin-top:16px}
+.github-note strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">S</span><span>StudySphere</span></div>
+    <button class="menubtn" id="menuBtn" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="navlinks" id="navLinks" aria-label="Main">
+      <button data-page="home" class="active" data-i18n="n_home">Home</button>
+      <button data-page="exam" data-i18n="n_exam">Exam preparation</button>
+      <button data-page="papers" data-i18n="n_papers">Past papers</button>
+      <button data-page="library" data-i18n="n_library">PDF library</button>
+      <button data-page="coding" data-i18n="n_coding">Coding academy</button>
+      <button data-page="typing" data-i18n="n_typing">Typing practice</button>
+      <button data-page="mcq" data-i18n="n_mcq">Online MCQs and tests</button>
+      <button data-page="live" data-i18n="n_live">Live preparation</button>
+      <button data-page="daily" data-i18n="n_daily">Daily news</button>
+      <button data-page="about" data-i18n="n_about">About us</button>
+      <button data-page="contact" data-i18n="n_contact">Contact us</button>
+    </nav>
+    <button class="langbtn" id="langBtn" aria-label="Switch language">اردو</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- HOME -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div>
+        <div class="kicker" data-i18n="tagline">For PST, JEST, EST and screening tests</div>
+        <h1><span class="u-draw" data-i18n="hero_h">Prepare a little every day, pass with confidence.</span></h1>
+        <p class="lede" data-i18n="hero_p">Notes, past papers, daily quizzes and typing practice for students in Sindh and across Pakistan. Everything here follows the real test pattern and is free to use.</p>
+        <div class="hero-cta">
+          <button class="btn" data-goto="mcq" data-i18n="cta_test">Start an MCQ test</button>
+          <button class="btn ghost" data-goto="typing" data-i18n="cta_typing">Try the typing test</button>
+          <a class="btn secondary" href="https://wa.me/923463030508" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>10</b><span data-i18n="st_pages">Study sections</span></div>
+          <div class="stat"><b>28</b><span data-i18n="st_daily">Daily quiz questions in rotation</span></div>
+          <div class="stat"><b>4</b><span data-i18n="st_lessons">Coding lessons</span></div>
+          <div class="stat"><b>2</b><span data-i18n="st_lang">Languages, English and Urdu</span></div>
+        </div>
+      </div>
+      <div class="daily-card" id="dailyQuizCard">
+        <div class="label" data-i18n="dq_label">Aaj ka quiz — quiz of the day</div>
+        <h3 style="margin-bottom:4px" id="dqTitle">Today's 4 questions</h3>
+        <p class="meta" id="dqDate"></p>
+        <div id="dqList"></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+          <button class="btn" id="dqCheck" data-i18n="dq_check">Check answers</button>
+          <button class="btn ghost" id="dqReset" data-i18n="dq_retry">Try again</button>
+        </div>
+        <div class="score-line" id="dqScore"></div>
+      </div>
+    </div>
+
+    <div class="grid c2" style="margin-top:8px">
+      <div class="card">
+        <div class="label" style="font-size:.84rem;font-weight:600;color:var(--accent);margin-bottom:8px" data-i18n="wotd_label">Word of the day</div>
+        <div class="word-big" id="wotdWord">—</div>
+        <p class="meta" id="wotdPos"></p>
+        <p style="color:var(--ink);margin-bottom:6px" id="wotdEn"></p>
+        <p class="word-ur" id="wotdUr"></p>
+        <p class="muted" style="font-size:.94rem" id="wotdEx"></p>
+      </div>
+      <div class="card">
+        <div class="label" style="font-size:.84rem;font-weight:600;color:var(--accent);margin-bottom:8px" data-i18n="cd_label">Exam countdown</div>
+        <h3 data-i18n="cd_h">How many days are left</h3>
+        <p data-i18n="cd_p">Pick the date of your test. The count updates straight away, so you can plan your revision.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <label class="small" style="font-weight:600"><span data-i18n="cd_pick">Exam date</span> <input type="date" id="cdDate" /></label>
+          <input type="text" id="cdName" placeholder="Exam name, e.g. PST" style="flex:1;min-width:160px" />
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline;margin-top:16px">
+          <span class="count-num" id="cdDays">—</span>
+          <span class="muted" id="cdText">Choose a date to see the days left.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2><span class="u-draw" data-i18n="tt_h">Your weekly study timetable</span></h2>
+      <p data-i18n="tt_p">Write one subject in each box. Morning, evening and night are enough — a short plan you follow daily is better than a long plan you leave. Your entries stay in this tab, and you can download a copy for your phone.</p>
+    </div>
+    <div class="card tt-wrap">
+      <div class="tt-grid" id="ttGrid"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px">
+        <button class="btn" id="ttDownload" data-i18n="tt_dl">Download timetable</button>
+        <button class="btn ghost" id="ttClear" data-i18n="tt_clear">Clear all</button>
+        <span class="meta" style="align-self:center" data-i18n="tt_note">Fills stay on this device, in this tab only.</span>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2 data-i18n="home_study_h">Study sections</h2>
+      <p data-i18n="home_study_p">Start where you are weakest. Each section is short and built for phone study.</p>
+    </div>
+    <div class="grid c3">
+      <div class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><h3 data-i18n="c1_h">Exam preparation</h3><p data-i18n="c1_p">Subject-wise preparation for PST, JEST and EST — English, mathematics, general science, Pakistan studies, Islamiyat and pedagogy, following the real test pattern.</p><a class="go" href="#" data-goto="exam" data-i18n="c1_a">Start preparing →</a></div>
+      <div class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.33c-.8.3-.9.8-.9 1.67"/><path d="M12 17h.01"/></svg></div><h3 data-i18n="c2_h">Online MCQs and tests</h3><p data-i18n="c2_p">Practice tests with instant results. Every question carries an explanation, so you learn from each mistake the moment you make it.</p><a class="go" href="#" data-goto="mcq" data-i18n="c2_a">Take a test →</a></div>
+      <div class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h.01M18 14h.01M9 14h6"/></svg></div><h3 data-i18n="c3_h">Typing practice</h3><p data-i18n="c3_p">Build typing speed in English and Urdu with live WPM and accuracy — useful for computer operator and data entry jobs.</p><a class="go" href="#" data-goto="typing" data-i18n="c3_a">Test your speed →</a></div>
+      <div class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3 data-i18n="c4_h">Past papers and PDF library</h3><p data-i18n="c4_p">Previous PST and JEST papers and downloadable notes for every subject. Read here or save to your phone for offline study.</p><a class="go" href="#" data-goto="papers" data-i18n="c4_a">Browse papers →</a></div>
+      <div class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M13 4l-2 16"/></svg></div><h3 data-i18n="c5_h">Coding academy</h3><p data-i18n="c5_p">Beginner lessons in HTML, CSS, C++ and Python, written in simple English with examples you can try yourself.</p><a class="go" href="#" data-goto="coding" data-i18n="c5_a">Start learning →</a></div>
+      <div class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3 data-i18n="c6_h">Live preparation</h3><p data-i18n="c6_p">Announcements about upcoming tests and study sessions, plus a direct WhatsApp line for questions.</p><a class="go" href="#" data-goto="live" data-i18n="c6_a">See announcements →</a></div>
+      <div class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0V9"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></svg></div><h3 data-i18n="c7_h">Daily news</h3><p data-i18n="c7_p">The day's main points from Dawn — read the headlines, learn the words, stay updated for GK and current affairs.</p><a class="go" href="#" data-goto="daily" data-i18n="c7_a">Read today's news →</a></div>
+    </div>
+
+  </section>
+
+  <!-- EXAM -->
+  <section class="page" id="page-exam">
+    <h1><span class="u-draw" data-i18n="exam_h">Exam preparation</span></h1>
+    <p class="muted" data-i18n="exam_p">Preparation built around the real PST and JEST pattern used by IBA Sukkur STS: 100 MCQs — mother tongue 15, social studies, current affairs, GK, Islamiyat and computer 15, English 20, mathematics 25, general science 25. EST (BS-16) additionally requires the STEDA teaching licence.</p>
+    <div class="grid c2">
+      <div class="card"><span class="pill">English · 20 MCQs</span><h3 style="margin-top:10px" data-i18n="ex1_h">English</h3><p data-i18n="ex1_p">Grammar, vocabulary, synonyms and antonyms, prepositions, sentence correction and comprehension — the highest-scoring section when practised daily.</p><a class="go" href="#" data-goto="mcq" data-i18n="practice">Practice now →</a></div>
+      <div class="card"><span class="pill">Mathematics · 25 MCQs</span><h3 style="margin-top:10px" data-i18n="ex2_h">Mathematics</h3><p data-i18n="ex2_p">Percentage, ratio and proportion, averages, sets, basic algebra and geometry — with shortcut methods for solving under time pressure.</p><a class="go" href="#" data-goto="mcq" data-i18n="practice">Practice now →</a></div>
+      <div class="card"><span class="pill">General science · 25 MCQs</span><h3 style="margin-top:10px" data-i18n="ex3_h">General science</h3><p data-i18n="ex3_p">Everyday physics, chemistry and biology from the Sindh textbook board syllabus — plants, the human body, energy, matter and the solar system.</p><a class="go" href="#" data-goto="mcq" data-i18n="practice">Practice now →</a></div>
+      <div class="card"><span class="pill">GK and Pakistan studies · 15 MCQs</span><h3 style="margin-top:10px" data-i18n="ex4_h">Pakistan studies, GK and Islamiyat</h3><p data-i18n="ex4_p">Pakistan movement, constitution, geography, current affairs 2025–26 and Islamiyat essentials — the facts that repeat in almost every paper.</p><a class="go" href="#" data-goto="mcq" data-i18n="practice">Practice now →</a></div>
+      <div class="card"><span class="pill">Mother tongue · 15 MCQs</span><h3 style="margin-top:10px" data-i18n="ex5_h">Sindhi and Urdu</h3><p data-i18n="ex5_p">Grammar, idioms, proverbs and literature in your mother tongue — an easy-scoring section most candidates leave until the last week.</p><a class="go" href="#" data-goto="library" data-i18n="getnotes">Get the notes →</a></div>
+      <div class="card"><span class="pill amber">EST · BS-16</span><h3 style="margin-top:10px" data-i18n="ex6_h">EST and teaching licence</h3><p data-i18n="ex6_p">EST is a separate BS-16 post under the Teaching Licence Policy 2023 — filled 30 percent through SPSC, 50 percent by promotion from JEST and 20 percent from PST. The STEDA licence test weighs subject content 40 percent and pedagogy 60 percent.</p><a class="go" href="#" data-goto="library" data-i18n="getnotes">Get the notes →</a></div>
+    </div>
+  </section>
+
+  <section class="page" id="page-papers"><h1><span class="u-draw" data-i18n="papers_h">Past papers</span></h1><p class="muted" data-i18n="papers_p">Previous papers and model papers in the official pattern. Download any paper as a printable file and attempt it under exam timing — 100 questions, 100 minutes.</p><div id="paperList"></div></section>
+  <section class="page" id="page-library"><h1><span class="u-draw" data-i18n="lib_h">PDF library</span></h1><p class="muted" data-i18n="lib_p">Study notes prepared for PST, JEST and EST candidates. Tap download to save a note to your device and study offline, anywhere.</p><div id="noteList"></div></section>
+
+  <section class="page" id="page-coding">
+    <h1><span class="u-draw" data-i18n="code_h">Coding academy</span></h1>
+    <p class="muted" data-i18n="code_p">Four starter lessons in simple English. Open a lesson, read it carefully, and type the example yourself — that is how programming is actually learned.</p>
+    <details class="lesson"><summary><span>Lesson 1 — HTML: your first web page</span><span class="pill">HTML</span></summary><div class="body"><p>HTML is the skeleton of every web page. Tags tell the browser what each part of the page is.</p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;My first page&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Assalam-o-Alaikum&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre><p><code>&lt;h1&gt;</code> is a big heading, <code>&lt;p&gt;</code> is a paragraph. Almost every tag opens and closes — what goes between them is the content.</p></div></details>
+    <details class="lesson"><summary><span>Lesson 2 — CSS: making pages clear and readable</span><span class="pill">CSS</span></summary><div class="body"><p>CSS controls how a page looks — colours, sizes, spacing and layout.</p><pre><code>h1 { color: #166649; }
+p { font-size: 18px; line-height: 1.6; }</code></pre><p>Each rule names an element, then lists its styles inside curly brackets.</p></div></details>
+    <details class="lesson"><summary><span>Lesson 3 — C++: variables and output</span><span class="pill">C++</span></summary><div class="body"><p>C++ is the language taught in most Pakistani universities. A variable is a named box that stores a value.</p><pre><code>#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    int marks = 85;
+    cout &lt;&lt; "My marks are " &lt;&lt; marks;
+    return 0;
+}</code></pre><p><code>int</code> stores whole numbers, <code>cout</code> prints to the screen.</p></div></details>
+    <details class="lesson"><summary><span>Lesson 4 — Python: a friendly start</span><span class="pill">Python</span></summary><div class="body"><p>Python reads almost like English, which makes it a good first language for data science and AI.</p><pre><code>name = "Mutiu"
+marks = [80, 75, 90, 88]
+average = sum(marks) / len(marks)
+print(name, "your average is", average)</code></pre><p>No semicolons, no curly brackets — just clean, readable code.</p></div></details>
+  </section>
+
+  <section class="page" id="page-typing">
+    <h1><span class="u-draw" data-i18n="type_h">Typing practice</span></h1>
+    <p class="muted" data-i18n="type_p">Choose a text, then start typing in the box below. The timer starts with your first keystroke. Your speed and accuracy are calculated live.</p>
+    <h2 style="margin-top:28px"><span class="u-draw" data-i18n="learn_h">Typing Seekho — learn step by step</span></h2>
+    <p class="muted" data-i18n="learn_p">New to typing? Follow the six short levels in order. Each level teaches a few keys at a time — finish a level, then move to the next. The speed test at the end is your final step.</p>
+    <div class="typebox" id="lessonBox">
+      <div class="lvl-nav" id="lvlNav" role="navigation" aria-label="Typing levels"></div>
+      <h3 id="lvlTitle" style="margin-bottom:6px">Level 1 — Home Row</h3>
+      <p class="lvl-instruct" id="lvlInstruct"></p>
+      <div class="kbd-board" id="kbdBoard" aria-hidden="true"></div>
+      <div class="sample" id="lvlSample"></div>
+      <textarea class="lesson-input" id="lvlInput" data-i18n-ph="lvl_ph" placeholder="Type the line here…" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+      <div class="meters"><div class="meter"><b id="lvlAcc">100%</b><span data-i18n="m_acc">Accuracy</span></div><div class="meter"><b id="lvlChars">0</b><span data-i18n="m_chars">Characters</span></div><div class="meter"><b id="lvlOf">0</b><span data-i18n="lvl_total">Total characters</span></div></div>
+      <p class="lvl-done" id="lvlDone"></p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+        <button class="btn ghost" id="lvlRetry" data-i18n="lvl_retry">Retry level</button>
+        <button class="btn" id="lvlNext" disabled>Next level →</button>
+      </div>
+    </div>
+    <h2 style="margin-top:32px"><span class="u-draw" data-i18n="speed_h">Final step — the speed test</span></h2>
+    <p class="muted" data-i18n="speed_p">Finished the six levels? Now check your real speed. You have 60 seconds.</p>
+    <div class="typebox" id="speedTestBox">
+      <div class="row-between" style="margin-bottom:14px"><label class="small" style="font-weight:600"><span data-i18n="type_text">Text:</span> <select id="textPick"><option value="en1">English — Education</option><option value="en2">English — Pakistan</option><option value="ur1">Urdu — تعلیم</option></select></label><button class="btn ghost" id="typeReset" data-i18n="type_reset">Restart</button></div>
+      <div class="sample" id="sampleBox"></div>
+      <textarea id="typeInput" data-i18n-ph="type_ph" placeholder="Start typing here…" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+      <div class="meters"><div class="meter"><b id="mTime">60</b><span data-i18n="m_time">Seconds left</span></div><div class="meter"><b id="mWpm">0</b><span>WPM</span></div><div class="meter"><b id="mAcc">100%</b><span data-i18n="m_acc">Accuracy</span></div><div class="meter"><b id="mChars">0</b><span data-i18n="m_chars">Characters</span></div></div>
+      <p class="small muted" id="typeDone" style="display:none;font-weight:600"></p>
+    </div>
+  </section>
+
+  <section class="page" id="page-mcq">
+    <h1><span class="u-draw" data-i18n="mcq_h">Online MCQs and tests</span></h1>
+    <p class="muted" data-i18n="mcq_p">Three practice tests in the PST and JEST pattern. Answer every question, then submit — your result, correct answers and explanations appear straight away.</p>
+    <div class="row-between" style="margin:18px 0"><label class="small" style="font-weight:600"><span data-i18n="mcq_pick">Choose a test:</span> <select id="testPick"><option value="t1">Test 1 — English</option><option value="t2">Test 2 — Mathematics</option><option value="t3">Test 3 — General knowledge and science</option></select></label><span class="pill amber" id="testMeta">5 questions</span></div>
+    <div class="result-banner" id="resultBanner"></div><form id="quizForm"></form>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px"><button class="btn" id="submitQuiz" data-i18n="mcq_submit">Submit and see result</button><button class="btn ghost" id="resetQuiz" data-i18n="mcq_retry">Try again</button></div>
+  </section>
+
+  <section class="page" id="page-live">
+    <h1><span class="u-draw" data-i18n="live_h">Live preparation</span></h1>
+    <p class="muted" data-i18n="live_p">Announcements, schedules and guidance for students preparing right now.</p>
+    <div class="notice"><span class="when">Announcement</span><h3 data-i18n="an1_h">Welcome to StudySphere</h3><p data-i18n="an1_p">Assalam-o-Alaikum. StudySphere is open for all students. Start with the daily quiz on the home page to check your level, download notes from the PDF library, and practise typing daily.</p></div>
+    <div class="notice"><span class="when">Guidance</span><h3 data-i18n="an2_h">No live PST or JEST advertisement yet — prepare anyway</h3><p data-i18n="an2_p">As of late October 2026 there is no live PST, JEST or EST advertisement on the STS portal. Candidates who prepare before the announcement usually score higher — follow the pattern on the exam preparation page and revise weekly.</p></div>
+    <div class="notice"><span class="when">Teaching licence</span><h3 data-i18n="an3_h">STEDA licence — what to expect</h3><p data-i18n="an3_p">The STEDA teaching licence test weighs subject content 40 percent and pedagogy 60 percent, and a second stage with a classroom demonstration video has been announced. Pedagogy is no longer optional for serious candidates.</p></div>
+    <div class="card" style="margin-top:20px"><h3 data-i18n="live_wa_h">Questions — ask on WhatsApp</h3><p data-i18n="live_wa_p">For guidance about tests, notes or preparation plans, message StudySphere directly on WhatsApp.</p><a class="btn" href="https://wa.me/923463030508" target="_blank" rel="noopener">WhatsApp +92 346 3030508</a></div>
+  </section>
+
+  <!-- DAILY NEWS: newest entry first — prepend each new day's block at the top of #dailyNewsList -->
+  <section class="page" id="page-daily">
+    <h1><span class="u-draw" data-i18n="daily_h">Daily news</span></h1>
+    <p class="muted" data-i18n="daily_p">The day's main points from Dawn — read the headlines, learn the words, stay updated for GK and current affairs.</p>
+    <div id="dailyNewsList">
+      <article class="news-entry" data-date="2026-11-05">
+        <div class="news-source">Dawn — Main points</div>
+        <h2>Thursday, 5 November 2026</h2>
+        <ul class="news-points">
+          <li><strong>$3bn Saudi rollover for Pakistan</strong> — Saudi Arabia has extended its $3 billion financing; the IMF board meets in December on a $1.2bn payment.</li>
+          <li><strong>Petrol cheaper by Rs7.06</strong> — Petrol now costs Rs362.00 per litre and diesel Rs387.81, the third cut in a row.</li>
+          <li><strong>South Korea mission near Hormuz</strong> — South Korea will send patrol aircraft and a disposal team to help keep the Strait of Hormuz open.</li>
+          <li><strong>UN panel on Pakistan</strong> — A UN committee welcomed Pakistan's law fixing 18 as the minimum marriage age, but raised concern over bonded labour.</li>
+          <li><strong>US court blocks Afghan deportations</strong> — A US federal court stopped the plan to deport Afghan immigrants this week.</li>
+          <li><strong>Exports to Europe fall</strong> — Pakistan's exports to Europe dropped 1.84% to $2.350 billion in the first quarter despite GSP+ status.</li>
+          <li><strong>NAB summons Fazl's son</strong> — NAB has called Asad Mahmood in the Pakistan Post appointments case.</li>
+        </ul>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px"><button class="btn ghost daily-dl" type="button">Download today's points</button></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="page" id="page-about">
+    <h1><span class="u-draw" data-i18n="about_h">About us</span></h1>
+    <p data-i18n="about_p1">StudySphere is an educational platform built for students of Sindh and Pakistan who are preparing for teaching jobs (PST, JEST, EST), screening tests and computer-based careers. It brings preparation material, past papers, practice tests and skill training together in one free place.</p>
+    <p data-i18n="about_p2">The platform is run by a teacher of computer science and AI who believes quality preparation should not depend on expensive academies. Every note and test here follows the real exam pattern, checked against official syllabi and past papers.</p>
+    <div class="grid c3"><div class="card"><h3 data-i18n="ab1_h">Our mission</h3><p data-i18n="ab1_p">Give every student, in every village and city, the same quality of preparation — learn, practice, prepare, succeed.</p></div><div class="card"><h3 data-i18n="ab2_h">What we offer</h3><p data-i18n="ab2_p">Exam preparation, past papers, a PDF library, coding lessons, typing practice and auto-marked MCQ tests in English and Urdu, plus a daily quiz, word of the day, exam countdown and study timetable.</p></div><div class="card"><h3 data-i18n="ab3_h">What is next</h3><p data-i18n="ab3_p">This link version is static and free to host. Student accounts and saved results would need hosting with a database, which is a separate step.</p></div></div>
+    <h2 style="margin-top:32px" data-i18n="privacy_h">Privacy policy</h2><p class="muted" data-i18n="privacy_p">This website does not collect, store or share your personal information. Practice tests, the typing test, the countdown and the timetable run entirely in your browser — your answers and entries are never sent anywhere.</p>
+    <h2 style="margin-top:24px" data-i18n="terms_h">Terms of use</h2><p class="muted" data-i18n="terms_p">All study material on StudySphere is provided free for personal exam preparation. Notes are summaries prepared for learning; for official syllabus and advertisement details, always confirm with IBA Sukkur STS, SPSC or the relevant board. You may share notes with fellow students, but please keep the StudySphere name on them.</p>
+  </section>
+
+  <section class="page" id="page-contact">
+    <h1><span class="u-draw" data-i18n="contact_h">Contact us</span></h1>
+    <p class="muted" data-i18n="contact_p">Questions about a test, a note, or your preparation plan. Reach out — replies usually come the same day.</p>
+    <div class="grid c2"><div class="card"><h3>WhatsApp</h3><p data-i18n="ct_wa">Fastest reply — tap below to open a chat.</p><a class="btn" href="https://wa.me/923463030508" target="_blank" rel="noopener">+92 346 3030508</a></div><div class="card"><h3>Email</h3><p data-i18n="ct_em">For detailed questions and document queries.</p><a class="btn ghost" href="mailto:junejomutti@gmail.com">junejomutti@gmail.com</a></div></div>
+    <div class="card" style="margin-top:16px"><h3 data-i18n="ct_send_h">Send a message</h3><p data-i18n="ct_send_p">Write your message here — the button opens it in WhatsApp, ready to send.</p><div style="display:grid;gap:10px"><input type="text" id="ctName" data-i18n-ph="ct_name" placeholder="Your name" /><textarea id="ctMsg" rows="4" style="font:inherit;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);width:100%" data-i18n-ph="ct_msg" placeholder="Your message…"></textarea><div><button class="btn" id="ctSend" data-i18n="ct_send">Send via WhatsApp</button></div></div></div>
+  </section>
+</main>
+
+<footer><div class="wrap"><div class="footgrid"><div><h4>StudySphere</h4><p class="muted small" data-i18n="foot_tag">Learn, practice, prepare, succeed. Free exam preparation for PST, JEST, EST and screening tests — in English and Urdu.</p></div><div><h4 data-i18n="foot_study">Study</h4><a href="#" data-goto="exam" data-i18n="n_exam">Exam preparation</a><a href="#" data-goto="papers" data-i18n="n_papers">Past papers</a><a href="#" data-goto="library" data-i18n="n_library">PDF library</a><a href="#" data-goto="mcq" data-i18n="n_mcq">Online MCQs and tests</a></div><div><h4 data-i18n="foot_contact">Contact</h4><a href="mailto:junejomutti@gmail.com">junejomutti@gmail.com</a><a href="https://wa.me/923463030508" target="_blank" rel="noopener">WhatsApp +92 346 3030508</a><a href="#" data-goto="about" data-i18n="foot_legal">Privacy policy and terms</a></div></div><p class="foot-note">© 2026 StudySphere. <span data-i18n="foot_note">Made for the students of Sindh and Pakistan.</span> Design method: unslop by @heydamir.</p></div></footer>
+<script>
+var pages=["home","exam","papers","library","coding","typing","mcq","live","daily","about","contact"];
+function goTo(id){pages.forEach(function(p){document.getElementById("page-"+p).classList.toggle("active",p===id)});document.querySelectorAll(".navlinks button").forEach(function(b){b.classList.toggle("active",b.getAttribute("data-page")===id)});document.getElementById("navLinks").classList.remove("open");window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll("[data-page]").forEach(function(b){b.addEventListener("click",function(){goTo(b.getAttribute("data-page"))})});
+document.querySelectorAll("[data-goto]").forEach(function(el){el.addEventListener("click",function(e){e.preventDefault();goTo(el.getAttribute("data-goto"))})});
+document.getElementById("menuBtn").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open")});
+function downloadText(filename,text){var blob=new Blob([text],{type:"text/plain;charset=utf-8"});var url=URL.createObjectURL(blob);var a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(url)},800)}
+var PAPERS=[
+{t:"PST Past Paper — 2021 Pattern",d:"Primary School Teacher paper pattern: 100 MCQs (Mother Tongue 15, English 20, Maths 25, General Science 25, GK/Islamiyat/Computer 15).",body:"STUDYSPHERE — PST MODEL PAPER (2021 PATTERN)\n100 MCQs | Time: 100 Minutes\n\nENGLISH\n1. Choose the correct preposition: He is good ___ mathematics.\n A) in B) at C) on D) for [Answer: B]\n2. Synonym of Rapid: A) Slow B) Fast C) Weak D) Late [Answer: B]\n\nMATHEMATICS\n3. What is 25% of 480? A) 100 B) 110 C) 120 D) 140 [Answer: C]\n4. If a train covers 120 km in 2 hours, its speed is: A) 40 B) 50 C) 60 D) 80 km/h [Answer: C]\n\nGENERAL SCIENCE\n5. The process by which plants make food is: A) Respiration B) Photosynthesis C) Digestion D) Evaporation [Answer: B]"},
+{t:"JEST Past Paper — 2021 Pattern",d:"Junior Elementary School Teacher paper pattern with the same 100-MCQ distribution and 40% qualifying marks.",body:"STUDYSPHERE — JEST MODEL PAPER (2021 PATTERN)\n100 MCQs | Time: 100 Minutes\n\nENGLISH\n1. Antonym of Ancient: A) Old B) Modern C) Antique D) Aged [Answer: B]\n2. She has been teaching ___ 2015. A) for B) from C) since D) by [Answer: C]\n\nMATHEMATICS\n3. The average of 10, 20, 30, 40 is: A) 20 B) 25 C) 30 D) 35 [Answer: B]"},
+{t:"BPS 05–15 Screening — Model Paper",d:"General screening pattern used for BPS 05–15 posts: English 40, Mathematics 20, General Knowledge 40.",body:"STUDYSPHERE — BPS 05-15 SCREENING MODEL PAPER\nEnglish 40 | Maths 20 | GK 40\n\n1. Choose the correct sentence: A) He don't know. B) He doesn't know. [Answer: B]\n2. 15 x 6 + 10 = ? A) 90 B) 100 C) 110 [Answer: B]\n3. The largest province of Pakistan by area is Balochistan."},
+{t:"Teaching Licence (STEDA) — Pattern Guide",d:"Licence test pattern: subject content 40% + pedagogy / PCK 60%, licence valid 5 years, plus a Phase-II classroom-demonstration stage.",body:"STUDYSPHERE — STEDA TEACHING LICENCE PATTERN GUIDE\n- Subject Content 40% + PCK 60%\n- Licence validity: 5 years\n- EST routes: 30% SPSC, 50% promotion from JEST, 20% from PST"}
+];
+var NOTES=[
+{t:"English Grammar and Prepositions — Notes",d:"The most repeated grammar rules with 20 practice MCQs and answers.",body:"ENGLISH — GRAMMAR & PREPOSITIONS\n- good AT, weak IN, afraid OF, interested IN, depend ON, belong TO\n- since + point of time; for + duration\n- between for two; among for more than two"},
+{t:"Mathematics Shortcuts — Percentage, Ratio, Average",d:"Worked examples and shortcut formulas for the 25-mark maths section.",body:"MATHEMATICS SHORTCUTS\nPERCENTAGE: x% of y = (x/100)*y. 25% of 480=120.\nAVERAGE = sum / count. Average of 10,20,30,40=25."},
+{t:"Pakistan Studies — Complete Timeline",d:"From 1857 to the Constitution of 1973: every date that appears in tests.",body:"PAKISTAN STUDIES TIMELINE\n1857 War of Independence | 1906 Muslim League | 1940 Lahore Resolution | 14 Aug 1947 Pakistan | 1973 Constitution"},
+{t:"Pedagogy and PCK — Licence Essentials",d:"Lesson planning, Bloom's taxonomy, assessment and classroom management for the STEDA licence.",body:"PEDAGOGY ESSENTIALS\nBloom: Remember > Understand > Apply > Analyse > Evaluate > Create\nFormative = during learning; Summative = at end; Diagnostic = before teaching."},
+{t:"General Science — 100 One-Liners",d:"Rapid-revision science facts from the Sindh textbook syllabus.",body:"GENERAL SCIENCE ONE-LINERS\n- Plants make food by photosynthesis\n- Sun is a star; Earth is third planet\n- Water boils at 100C, freezes at 0C\n- Human heart has 4 chambers"}
+];
+function renderDownloads(){var pl=document.getElementById("paperList");PAPERS.forEach(function(p){var div=document.createElement("div");div.className="item";div.innerHTML='<div class="grow"><h3></h3><p></p></div>';div.querySelector("h3").textContent=p.t;div.querySelector("p").textContent=p.d;var b=document.createElement("button");b.className="dl";b.textContent="Download";b.addEventListener("click",function(){downloadText(p.t.replace(/[^a-z0-9]+/gi,"_")+".txt",p.body)});div.appendChild(b);pl.appendChild(div)});var nl=document.getElementById("noteList");NOTES.forEach(function(n){var div=document.createElement("div");div.className="item";div.innerHTML='<div class="grow"><h3></h3><p></p></div>';div.querySelector("h3").textContent=n.t;div.querySelector("p").textContent=n.d;var b=document.createElement("button");b.className="dl";b.textContent="Download";b.addEventListener("click",function(){downloadText(n.t.replace(/[^a-z0-9]+/gi,"_")+".txt",n.body)});div.appendChild(b);nl.appendChild(div)})}
+renderDownloads();
+document.querySelectorAll(".daily-dl").forEach(function(btn){btn.addEventListener("click",function(){var art=btn.closest(".news-entry");if(!art)return;var dateEl=art.querySelector("h2");var dateTxt=dateEl?dateEl.textContent.trim():"Daily news";var lines=["STUDYSPHERE — DAILY NEWS (DAWN MAIN POINTS)",dateTxt,""];art.querySelectorAll(".news-points li").forEach(function(li,i){lines.push((i+1)+". "+li.textContent.trim())});downloadText("Daily_News_"+(art.getAttribute("data-date")||dateTxt.replace(/[^a-z0-9]+/gi,"_"))+".txt",lines.join("\n"))})});
+/* Daily quiz + word */
+function dayIndex(len){var now=new Date();var start=new Date(now.getFullYear(),0,0);var diff=Math.floor((now-start)/86400000);return diff%len}
+var DAILY_SETS=[
+[{q:"Choose the correct preposition: She is interested ___ science.",o:["in","on","at","for"],a:0,e:"We say interested in."},{q:"What is 10% of 350?",o:["25","30","35","45"],a:2,e:"10% of 350 = 35."},{q:"Plants absorb which gas for photosynthesis?",o:["Oxygen","Carbon dioxide","Nitrogen","Hydrogen"],a:1,e:"Plants absorb carbon dioxide."},{q:"The capital of Sindh is:",o:["Hyderabad","Sukkur","Karachi","Larkana"],a:2,e:"Karachi is the capital of Sindh."}],
+[{q:"Synonym of 'Begin' is:",o:["End","Start","Stop","Close"],a:1,e:"Begin means start."},{q:"Average of 5, 15, 25 is:",o:["10","15","20","25"],a:1,e:"(5+15+25)/3 = 15."},{q:"Water freezes at:",o:["0°C","10°C","50°C","100°C"],a:0,e:"Water freezes at 0°C."},{q:"Pakistan's national language is:",o:["Punjabi","Sindhi","Urdu","Pashto"],a:2,e:"Urdu is the national language."}],
+[{q:"Antonym of 'Difficult' is:",o:["Hard","Easy","Tough","Strong"],a:1,e:"Difficult is opposite to easy."},{q:"If x + 7 = 15, x is:",o:["6","7","8","9"],a:2,e:"15 - 7 = 8."},{q:"The largest planet is:",o:["Earth","Mars","Jupiter","Venus"],a:2,e:"Jupiter is the largest planet."},{q:"Quaid-e-Azam was born in:",o:["Lahore","Karachi","Delhi","Hyderabad"],a:1,e:"He was born in Karachi in 1876."}],
+[{q:"Choose the correct sentence:",o:["She don't like tea.","She doesn't like tea.","She not like tea.","She isn't like tea."],a:1,e:"With she, use doesn't + base verb."},{q:"Ratio 3:6 in simplest form is:",o:["1:2","2:3","3:2","1:3"],a:0,e:"Divide both by 3: 1:2."},{q:"Human heart has how many chambers?",o:["2","3","4","5"],a:2,e:"The heart has 4 chambers."},{q:"Lahore Resolution was passed in:",o:["1930","1940","1947","1906"],a:1,e:"Lahore Resolution: 23 March 1940."}],
+[{q:"'Since' is used with:",o:["Duration","Point of time","Place","Person"],a:1,e:"Since + point of time, e.g. since 2015."},{q:"50% of 240 is:",o:["100","110","120","140"],a:2,e:"Half of 240 is 120."},{q:"Which vitamin is made in skin with sunlight?",o:["Vitamin A","Vitamin C","Vitamin D","Vitamin B"],a:2,e:"Vitamin D is made with sunlight."},{q:"First Prime Minister of Pakistan was:",o:["Ayub Khan","Liaquat Ali Khan","Zulfikar Ali Bhutto","Benazir Bhutto"],a:1,e:"Liaquat Ali Khan was first PM."}],
+[{q:"Plural of 'Child' is:",o:["Childs","Childes","Children","Childrens"],a:2,e:"Child → Children."},{q:"15 × 4 = ?",o:["45","50","60","70"],a:2,e:"15 × 4 = 60."},{q:"Earth is which planet from the Sun?",o:["Second","Third","Fourth","Fifth"],a:1,e:"Earth is third from the Sun."},{q:"Mohenjo-daro is in which province?",o:["Punjab","Sindh","Balochistan","KPK"],a:1,e:"Mohenjo-daro is near Larkana, Sindh."}],
+[{q:"Choose the synonym of 'Honest':",o:["Truthful","Clever","Rich","Brave"],a:0,e:"Honest means truthful."},{q:"What is 3 squared (3²)?",o:["6","8","9","12"],a:2,e:"3 × 3 = 9."},{q:"Force is measured in:",o:["Joules","Newtons","Watts","Litres"],a:1,e:"Force is measured in newtons."},{q:"The Constitution of 1973 was enforced in:",o:["1971","1972","1973","1974"],a:2,e:"Current constitution came in 1973."}]
+];
+var WORDS=[
+{w:"Persistent",p:"adjective",en:"Continuing to try even when something is difficult.",ur:"Roman Urdu: Lagatar koshish karne wala, haar na manne wala.",ex:"Example: She was persistent in her studies and passed the test."},
+{w:"Accurate",p:"adjective",en:"Correct and exact, without mistakes.",ur:"Roman Urdu: Bilkul durust aur sahi.",ex:"Example: Your answer must be accurate to get full marks."},
+{w:"Essential",p:"adjective",en:"Necessary and very important.",ur:"Roman Urdu: Lazmi, bohat zaruri.",ex:"Example: Practice is essential for success in the exam."},
+{w:"Confident",p:"adjective",en:"Feeling sure about your own ability.",ur:"Roman Urdu: Pur-aitemad, apne aap par bharosa rakhne wala.",ex:"Example: He felt confident before the interview."},
+{w:"Improve",p:"verb",en:"To become better or to make something better.",ur:"Roman Urdu: Behtar karna, sudharna.",ex:"Example: Reading daily will improve your English."},
+{w:"Achieve",p:"verb",en:"To reach a goal through effort.",ur:"Roman Urdu: Hasil karna, kamyabi pana.",ex:"Example: You can achieve your goal with daily study."},
+{w:"Curious",p:"adjective",en:"Wanting to learn or know more.",ur:"Roman Urdu: Jaanne ka shoq rakhne wala.",ex:"Example: Curious students ask good questions."},
+{w:"Reliable",p:"adjective",en:"Someone or something you can trust.",ur:"Roman Urdu: Bharosemand, jis par aitbar kiya ja sakay.",ex:"Example: She is a reliable friend who always helps."},
+{w:"Gradually",p:"adverb",en:"Slowly, step by step over time.",ur:"Roman Urdu: Aahista aahista, batadreej.",ex:"Example: His typing speed improved gradually."},
+{w:"Significant",p:"adjective",en:"Important and large enough to matter.",ur:"Roman Urdu: Ahem, numaya.",ex:"Example: Practice made a significant difference to her score."},
+{w:"Encourage",p:"verb",en:"To give support and hope to someone.",ur:"Roman Urdu: Hosla afzai karna.",ex:"Example: Teachers encourage students to ask questions."},
+{w:"Consistent",p:"adjective",en:"Doing something regularly in the same way.",ur:"Roman Urdu: Musalsal, pabandi se karne wala.",ex:"Example: Consistent study beats last-night cramming."},
+{w:"Opportunity",p:"noun",en:"A good chance to do something.",ur:"Roman Urdu: Mauqa, acha chance.",ex:"Example: This scholarship is a great opportunity."},
+{w:"Knowledge",p:"noun",en:"What you know and understand.",ur:"Roman Urdu: Ilm, maloomat.",ex:"Example: Knowledge grows when you share it."}
+];
+var dqPicks={},dqDone=false,dqSet=DAILY_SETS[dayIndex(DAILY_SETS.length)];
+function renderDaily(){
+  document.getElementById("dqDate").textContent=new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+  var list=document.getElementById("dqList");list.innerHTML="";dqPicks={};dqDone=false;document.getElementById("dqScore").className="score-line";document.getElementById("dqScore").textContent="";
+  dqSet.forEach(function(item,qi){var wrap=document.createElement("div");wrap.className="dq-q";var p=document.createElement("p");p.textContent=(qi+1)+". "+item.q;wrap.appendChild(p);var opts=document.createElement("div");opts.className="dq-opts";item.o.forEach(function(opt,oi){var b=document.createElement("button");b.type="button";b.className="dq-opt";b.textContent=opt;b.addEventListener("click",function(){if(dqDone)return;dqPicks[qi]=oi;opts.querySelectorAll(".dq-opt").forEach(function(x){x.style.borderColor="";x.style.background=""});b.style.borderColor="var(--accent)";b.style.background="var(--accent-soft)"});opts.appendChild(b)});wrap.appendChild(opts);var ex=document.createElement("div");ex.className="dq-explain";ex.id="dqe"+qi;ex.textContent=item.e;wrap.appendChild(ex);list.appendChild(wrap)});
+  var w=WORDS[dayIndex(WORDS.length)];document.getElementById("wotdWord").textContent=w.w;document.getElementById("wotdPos").textContent=w.p;document.getElementById("wotdEn").textContent=w.en;document.getElementById("wotdUr").textContent=w.ur;document.getElementById("wotdEx").textContent=w.ex;
+}
+document.getElementById("dqCheck").addEventListener("click",function(){if(dqDone)return;dqDone=true;var score=0;dqSet.forEach(function(item,qi){var opts=document.querySelectorAll("#dqList .dq-q")[qi].querySelectorAll(".dq-opt");opts.forEach(function(b,oi){b.style.borderColor="";b.style.background="";if(oi===item.a)b.classList.add("right");if(dqPicks[qi]===oi&&oi!==item.a)b.classList.add("wrongpick")});if(dqPicks[qi]===item.a)score++;document.getElementById("dqe"+qi).classList.add("show")});var el=document.getElementById("dqScore");el.className="score-line show";el.textContent="Score: "+score+" / "+dqSet.length+(score===dqSet.length?" — full marks today. A new set comes tomorrow.":score>=2?" — good work. Read the explanations and come back tomorrow.":" — read the explanations above. A new set comes tomorrow.")});
+document.getElementById("dqReset").addEventListener("click",renderDaily);
+renderDaily();
+/* Countdown */
+function updateCountdown(){var v=document.getElementById("cdDate").value;var name=document.getElementById("cdName").value.trim();var daysEl=document.getElementById("cdDays");var txt=document.getElementById("cdText");if(!v){daysEl.textContent="—";txt.textContent=(window.currentLang==="ur"?"تاریخ منتخب کریں۔":"Choose a date to see the days left.");return}var target=new Date(v+"T00:00:00");var today=new Date();today.setHours(0,0,0,0);var diff=Math.round((target-today)/86400000);if(diff>0){daysEl.textContent=diff;txt.textContent=(window.currentLang==="ur"?("دن باقی ہیں"+(name?" — "+name:"")):("days left"+(name?" until "+name:"")+". Use the timetable below to plan them."))}else if(diff===0){daysEl.textContent="0";txt.textContent=(window.currentLang==="ur"?"آج ہی امتحان ہے۔":"Your exam is today. Stay calm and read each question carefully.")}else{daysEl.textContent="0";txt.textContent=(window.currentLang==="ur"?"یہ تاریخ گزر چکی ہے — نئی تاریخ منتخب کریں۔":"That date has passed. Pick your next exam date.")}}
+document.getElementById("cdDate").addEventListener("change",updateCountdown);document.getElementById("cdName").addEventListener("input",updateCountdown);
+/* Timetable */
+var TT_DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+var ttData={};
+function renderTT(){var g=document.getElementById("ttGrid");g.innerHTML="";var head=document.createElement("div");head.className="tt-row head";head.innerHTML="<span>Day</span><span>Morning</span><span>Evening</span><span>Night</span>";g.appendChild(head);TT_DAYS.forEach(function(d,di){var row=document.createElement("div");row.className="tt-row";var lab=document.createElement("span");lab.className="tt-day";lab.textContent=d;row.appendChild(lab);["Morning","Evening","Night"].forEach(function(slot){var inp=document.createElement("input");inp.type="text";inp.placeholder=slot+" subject";inp.setAttribute("aria-label",d+" "+slot);inp.value=(ttData[di]&&ttData[di][slot])||"";inp.addEventListener("input",function(){if(!ttData[di])ttData[di]={};ttData[di][slot]=inp.value});row.appendChild(inp)});g.appendChild(row)})}
+renderTT();
+document.getElementById("ttClear").addEventListener("click",function(){ttData={};renderTT()});
+document.getElementById("ttDownload").addEventListener("click",function(){var lines=["STUDYSPHERE — MY WEEKLY STUDY TIMETABLE",""];TT_DAYS.forEach(function(d,di){var r=ttData[di]||{};lines.push(d+": Morning: "+(r.Morning||"-")+" | Evening: "+(r.Evening||"-")+" | Night: "+(r.Night||"-"))});downloadText("My_Study_Timetable.txt",lines.join("\n"))});
+/* Typing */
+var TEXTS={en1:"Education is the most powerful weapon which you can use to change the world. A good teacher explains, a great teacher inspires, and the best teachers make learning feel like a journey worth taking every single day.",en2:"Pakistan is a land of rivers, mountains and hardworking people. From the peaks of the north to the shores of the Arabian Sea, its students dream big and work hard to build a brighter future for their families.",ur1:"تعلیم ہر انسان کا بنیادی حق ہے۔ ایک اچھا استاد اپنے شاگردوں کی زندگی بدل دیتا ہے اور علم کی روشنی ہر گھر تک پہنچاتا ہے۔"};
+var typeState={text:"",started:false,startTime:0,timer:null,timeLeft:60,done:false};
+var sampleBox=document.getElementById("sampleBox"),typeInput=document.getElementById("typeInput");
+function loadText(key){typeState.text=TEXTS[key];typeState.started=false;typeState.done=false;typeState.timeLeft=60;clearInterval(typeState.timer);typeInput.value="";typeInput.disabled=false;sampleBox.dir=(key==="ur1")?"rtl":"ltr";sampleBox.classList.toggle("ur-text",key==="ur1");typeInput.dir=(key==="ur1")?"rtl":"ltr";renderSample();document.getElementById("mWpm").textContent="0";document.getElementById("mAcc").textContent="100%";document.getElementById("mChars").textContent="0";document.getElementById("mTime").textContent="60";document.getElementById("typeDone").style.display="none"}
+function renderSample(){var typed=typeInput.value;var html="";for(var i=0;i<typeState.text.length;i++){var ch=typeState.text[i];var cls="";if(i<typed.length)cls=(typed[i]===ch)?"correct":"wrong";else if(i===typed.length)cls="current";html+='<span class="'+cls+'">'+(ch===" "?"&nbsp;":ch.replace(/</g,"&lt;"))+"</span>"}sampleBox.innerHTML=html}
+function finishTyping(){typeState.done=true;clearInterval(typeState.timer);typeInput.disabled=true;var typed=typeInput.value;var correct=0;for(var i=0;i<typed.length;i++){if(typed[i]===typeState.text[i])correct++}var acc=typed.length?Math.round(correct/typed.length*100):100;var wpm=Math.round((correct/5)/1);var el=document.getElementById("typeDone");el.style.display="block";el.textContent=(window.currentLang==="ur")?("ٹیسٹ مکمل — رفتار "+wpm+" WPM، درستگی "+acc+"%"):("Time up. Your final speed is "+wpm+" WPM with "+acc+"% accuracy. Press Restart to try again.")}
+typeInput.addEventListener("input",function(){if(typeState.done)return;if(!typeState.started&&typeInput.value.length>0){typeState.started=true;typeState.startTime=Date.now();typeState.timer=setInterval(function(){typeState.timeLeft--;document.getElementById("mTime").textContent=Math.max(typeState.timeLeft,0);if(typeState.timeLeft<=0)finishTyping()},1000)}if(typeInput.value.length>typeState.text.length)typeInput.value=typeInput.value.slice(0,typeState.text.length);renderSample();var typed=typeInput.value;var correct=0;for(var i=0;i<typed.length;i++){if(typed[i]===typeState.text[i])correct++}var elapsedMin=typeState.started?Math.max((Date.now()-typeState.startTime)/60000,0.01):0.01;document.getElementById("mWpm").textContent=Math.round((correct/5)/elapsedMin);document.getElementById("mAcc").textContent=(typed.length?Math.round(correct/typed.length*100):100)+"%";document.getElementById("mChars").textContent=typed.length;if(typed.length>=typeState.text.length)finishTyping()});
+document.getElementById("textPick").addEventListener("change",function(e){loadText(e.target.value)});
+document.getElementById("typeReset").addEventListener("click",function(){loadText(document.getElementById("textPick").value);typeInput.focus()});
+loadText("en1");
+/* Typing Seekho lessons */
+var LEVELS=[
+{t:"Level 1 — Home Row",tu:"Level 1 — Home Row (ghar wali line)",keys:"asdfjkl;",i:"Keep your fingers on the home row — left hand on A S D F, right hand on J K L ; — and type slowly without looking down.",iu:"Ungliyan home row par rakhen — bayein haath A S D F par, dayein haath J K L ; par — aur neeche dekhe baghair aahista type karen.",p:"asdf jkl; fdsa ;lkj asdf jkl; fff jjj ddd kkk sss lll aaa ;;; asdf jkl;"},
+{t:"Level 2 — Home Row + E and I",tu:"Level 2 — Home Row + E aur I",keys:"asdfjkl;ei",i:"Add E and I: the middle fingers reach up to press them, then come straight back to the home row.",iu:"Ab E aur I shamil karen: darmiyani ungliyan upar ja kar ye dabati hain, phir foran home row par wapas aati hain.",p:"dead seed feed idea file desk side jail lake fade deal leaf idea dead seed feed"},
+{t:"Level 3 — Top Row",tu:"Level 3 — Top Row (upar wali line)",keys:"qwertyuiop",i:"Learn the top row — Q W E R T Y U I O P — and bring your fingers back to the home row after each letter.",iu:"Top row seekhen — Q W E R T Y U I O P — aur har harf ke baad ungliyan home row par wapas layen.",p:"we type words with power quiet tower poetry equip your type writer we type"},
+{t:"Level 4 — Bottom Row",tu:"Level 4 — Bottom Row (neeche wali line)",keys:"zxcvbnm",i:"Learn the bottom row — Z X C V B N M — press space with your thumb and start slowly.",iu:"Bottom row seekhen — Z X C V B N M — space angoothay se dabayen aur aahista shuru karen.",p:"zebra fox van cab moon zoom brave cave number box zebra fox van cab moon"},
+{t:"Level 5 — Common Short Words",tu:"Level 5 — Aam Chhote Alfaaz",keys:"abcdefghijklmnopqrstuvwxyz",i:"Now type the short words that appear most in daily work — accuracy first, speed will follow.",iu:"Ab wo chhote alfaaz type karen jo roz ke kaam mein sab se zyada aate hain — pehle durustgi, raftaar khud ayegi.",p:"the and for are you all can had her was one our out day get has him how man new now old see two way who did say she too use"},
+{t:"Level 6 — Full Sentences",tu:"Level 6 — Pure Jumle",keys:"abcdefghijklmnopqrstuvwxyz",i:"Finish with full sentences. If you make a mistake, do not stop — keep typing slowly and correctly.",iu:"Aakhir mein pure jumle type karen. Ghalti ho to ruken nahi — aahista aur durust type karte jayen.",p:"the quick brown fox jumps over the lazy dog. typing every day makes your fingers fast and your work neat."}
+];
+var lessonState={level:0,done:{}};
+var lvlInput=document.getElementById("lvlInput"),lvlSample=document.getElementById("lvlSample");
+function lvlLang(){return window.currentLang==="ur"}
+function renderKbd(keys){var rows=["qwertyuiop","asdfghjkl;","zxcvbnm"];var html="";rows.forEach(function(r){html+='<div class="kbd-row">';for(var i=0;i<r.length;i++){var ch=r[i];html+='<span class="kbd'+(keys.indexOf(ch)>=0?" on":"")+'">'+(ch===";"?";":ch)+"</span>"}html+="</div>"});html+='<div class="kbd-row"><span class="kbd space'+(keys.length>10?" on":"")+'">space</span></div>';document.getElementById("kbdBoard").innerHTML=html}
+function renderLvlSample(){var L=LEVELS[lessonState.level];var typed=lvlInput.value;var html="";for(var i=0;i<L.p.length;i++){var ch=L.p[i];var cls="";if(i<typed.length)cls=(typed[i]===ch)?"correct":"wrong";else if(i===typed.length)cls="current";html+='<span class="'+cls+'">'+(ch===" "?"&nbsp;":ch.replace(/</g,"&lt;"))+"</span>"}lvlSample.innerHTML=html}
+function updLesson(){var L=LEVELS[lessonState.level];var typed=lvlInput.value;var correct=0;for(var i=0;i<typed.length;i++){if(typed[i]===L.p[i])correct++}var acc=typed.length?Math.round(correct/typed.length*100):100;document.getElementById("lvlAcc").textContent=acc+"%";document.getElementById("lvlChars").textContent=typed.length;document.getElementById("lvlOf").textContent=L.p.length;var doneEl=document.getElementById("lvlDone");var nextBtn=document.getElementById("lvlNext");if(typed.length>=L.p.length){lessonState.done[lessonState.level]=true;doneEl.className="lvl-done show";if(lvlLang()){doneEl.textContent=(acc>=80?"Bohat khoob! ":"Level mukammal — ")+"Is level ki durustgi "+acc+"% rahi."+(lessonState.level<LEVELS.length-1?" Ab agla level shuru karen.":" Ab neeche wala speed test de kar apni raftaar check karen.")}else{doneEl.textContent=(acc>=80?"Well done! ":"Level complete — ")+"You finished this level with "+acc+"% accuracy."+(lessonState.level<LEVELS.length-1?" Move on to the next level.":" Now take the speed test below to check your speed.")}nextBtn.disabled=false;renderLvlNav()}else{doneEl.className="lvl-done";doneEl.textContent="";nextBtn.disabled=!lessonState.done[lessonState.level]}}
+function renderLvlNav(){var nav=document.getElementById("lvlNav");nav.innerHTML="";LEVELS.forEach(function(L,i){var b=document.createElement("button");b.type="button";b.className="lvl-chip"+(i===lessonState.level?" active":"")+(lessonState.done[i]?" done":"");b.textContent=(lessonState.done[i]?"✓ ":"")+(lvlLang()?("Level "+(i+1)):("Level "+(i+1)));b.setAttribute("aria-label",L.t);b.addEventListener("click",function(){lessonState.level=i;renderLesson()});nav.appendChild(b)});var fin=document.createElement("span");fin.className="lvl-chip";fin.textContent=lvlLang()?"Aakhri qadam: speed test ↓":"Final step: speed test ↓";nav.appendChild(fin)}
+function renderLesson(preserve){var L=LEVELS[lessonState.level];document.getElementById("lvlTitle").textContent=lvlLang()?L.tu:L.t;document.getElementById("lvlInstruct").textContent=lvlLang()?L.iu:L.i;if(!preserve)lvlInput.value="";if(lvlInput.value.length>L.p.length)lvlInput.value=lvlInput.value.slice(0,L.p.length);renderKbd(L.keys);renderLvlNav();renderLvlSample();var nextBtn=document.getElementById("lvlNext");nextBtn.textContent=lessonState.level<LEVELS.length-1?(lvlLang()?"Agla level →":"Next level →"):(lvlLang()?"Speed test par jayen ↓":"Go to the speed test ↓");updLesson()}
+window.renderLesson=function(){renderLesson(true)};
+lvlInput.addEventListener("input",function(){var L=LEVELS[lessonState.level];if(lvlInput.value.length>L.p.length)lvlInput.value=lvlInput.value.slice(0,L.p.length);renderLvlSample();updLesson()});
+document.getElementById("lvlRetry").addEventListener("click",function(){renderLesson();lvlInput.focus()});
+document.getElementById("lvlNext").addEventListener("click",function(){if(lessonState.level<LEVELS.length-1){lessonState.level++;renderLesson();lvlInput.focus()}else{lessonState.done[lessonState.level]=true;document.getElementById("speedTestBox").scrollIntoView({behavior:"smooth",block:"center"});typeInput.focus()}});
+renderLesson();
+/* MCQ */
+var TESTS={t1:{name:"Test 1 — English",qs:[{q:"Choose the correct preposition: He is good ___ mathematics.",o:["in","at","on","for"],a:1,e:"We say good at a subject."},{q:"Choose the synonym of Rapid.",o:["Slow","Fast","Weak","Late"],a:1,e:"Rapid means fast."},{q:"Choose the antonym of Ancient.",o:["Old","Antique","Modern","Aged"],a:2,e:"Ancient means very old; opposite is modern."},{q:"She has been teaching ___ 2015.",o:["for","from","since","by"],a:2,e:"Since is used with a point of time."},{q:"Choose the correct sentence.",o:["He don't know the answer.","He doesn't know the answer.","He not know the answer.","He isn't know the answer."],a:1,e:"With he/she/it use doesn't + base verb."}]},t2:{name:"Test 2 — Mathematics",qs:[{q:"What is 25% of 480?",o:["100","110","120","140"],a:2,e:"25% of 480 = 120."},{q:"The average of 10, 20, 30 and 40 is:",o:["20","25","30","35"],a:1,e:"Sum 100 / 4 = 25."},{q:"If a train covers 120 km in 2 hours, its speed is:",o:["40 km/h","50 km/h","60 km/h","80 km/h"],a:2,e:"120 / 2 = 60 km/h."},{q:"Which ratio is equal to 2:3?",o:["4:9","6:9","8:10","3:2"],a:1,e:"Multiply by 3: 6:9."},{q:"15 × 6 + 10 = ?",o:["90","100","110","96"],a:1,e:"90 + 10 = 100."}]},t3:{name:"Test 3 — GK and Science",qs:[{q:"The largest province of Pakistan by area is:",o:["Punjab","Sindh","Balochistan","Khyber Pakhtunkhwa"],a:2,e:"Balochistan is largest by area."},{q:"Pakistan came into being on:",o:["23 March 1940","14 August 1947","3 June 1947","11 August 1947"],a:1,e:"14 August 1947."},{q:"Plants make food by:",o:["Respiration","Digestion","Photosynthesis","Evaporation"],a:2,e:"Photosynthesis."},{q:"Which gas do plants absorb?",o:["Oxygen","Nitrogen","Hydrogen","Carbon dioxide"],a:3,e:"Carbon dioxide."},{q:"First Governor-General of Pakistan was:",o:["Liaquat Ali Khan","Quaid-e-Azam Muhammad Ali Jinnah","Allama Iqbal","Ayub Khan"],a:1,e:"Quaid-e-Azam was first Governor-General."}]}};
+var quizForm=document.getElementById("quizForm"),currentTest="t1",quizDone=false;
+function renderQuiz(){var t=TESTS[currentTest];document.getElementById("testMeta").textContent=t.qs.length+" questions";document.getElementById("resultBanner").className="result-banner";quizDone=false;quizForm.innerHTML="";t.qs.forEach(function(item,qi){var card=document.createElement("div");card.className="qcard";var q=document.createElement("div");q.className="q";q.textContent=(qi+1)+". "+item.q;card.appendChild(q);var opts=document.createElement("div");opts.className="opts";item.o.forEach(function(opt,oi){var label=document.createElement("label");label.className="opt";var radio=document.createElement("input");radio.type="radio";radio.name="q"+qi;radio.value=oi;var span=document.createElement("span");span.textContent=opt;label.appendChild(radio);label.appendChild(span);opts.appendChild(label)});card.appendChild(opts);var ex=document.createElement("div");ex.className="explain";ex.id="ex"+qi;ex.textContent=item.e;card.appendChild(ex);quizForm.appendChild(card)})}
+document.getElementById("testPick").addEventListener("change",function(e){currentTest=e.target.value;renderQuiz()});
+document.getElementById("submitQuiz").addEventListener("click",function(){if(quizDone)return;var t=TESTS[currentTest];var score=0,unanswered=0;t.qs.forEach(function(item,qi){var picked=quizForm.querySelector('input[name="q'+qi+'"]:checked');if(!picked)unanswered++;var labels=quizForm.querySelectorAll(".qcard")[qi].querySelectorAll(".opt");labels.forEach(function(lab,oi){lab.querySelector("input").disabled=true;if(oi===item.a)lab.classList.add("right");if(picked&&oi===parseInt(picked.value,10)&&oi!==item.a)lab.classList.add("wrongpick")});if(picked&&parseInt(picked.value,10)===item.a)score++;document.getElementById("ex"+qi).classList.add("show")});quizDone=true;var pct=Math.round(score/t.qs.length*100);var banner=document.getElementById("resultBanner");banner.className="result-banner show";var msg=pct>=80?"Excellent — you are well prepared.":pct>=50?"Good effort — read the explanations and try again.":"Keep practising — revise the notes and try again.";banner.innerHTML="<b>"+score+" / "+t.qs.length+"</b> ("+pct+"%)<br>"+msg+(unanswered?"<br>Note: "+unanswered+" question(s) left unanswered.":"");banner.scrollIntoView({behavior:"smooth",block:"center"})});
+document.getElementById("resetQuiz").addEventListener("click",function(e){e.preventDefault();renderQuiz()});
+renderQuiz();
+document.getElementById("ctSend").addEventListener("click",function(){var name=document.getElementById("ctName").value.trim();var msg=document.getElementById("ctMsg").value.trim();var text=(name?name+": ":"")+msg;window.open("https://wa.me/923463030508?text="+encodeURIComponent(text||"Assalam-o-Alaikum, I have a question about StudySphere."),"_blank")});
+/* Language */
+window.currentLang="en";
+var I18N={ur:{n_home:"ہوم",n_exam:"امتحان کی تیاری",n_papers:"پرانے پیپرز",n_library:"پی ڈی ایف لائبریری",n_coding:"کوڈنگ اکیڈمی",n_typing:"ٹائپنگ پریکٹس",n_mcq:"آن لائن MCQs و ٹیسٹ",n_live:"لائیو تیاری",n_daily:"روزانہ کی خبریں",daily_h:"روزانہ کی خبریں",daily_p:"ڈان کے دن کے اہم نکات — سرخیاں پڑھیں، نئے الفاظ سیکھیں، اور GK و حالات حاضرہ کے لیے اپ ڈیٹ رہیں۔",c7_h:"روزانہ کی خبریں",c7_p:"ڈان کے دن کے اہم نکات — سرخیاں پڑھیں، نئے الفاظ سیکھیں، اور GK و حالات حاضرہ کے لیے اپ ڈیٹ رہیں۔",c7_a:"آج کی خبریں پڑھیں ←",n_about:"ہمارے بارے میں",n_contact:"رابطہ کریں",tagline:"PST، JEST، EST اور اسکریننگ ٹیسٹوں کے لیے",hero_h:"روز تھوڑا پڑھیں، اعتماد سے پاس ہوں۔",hero_p:"سندھ اور پورے پاکستان کے طلبہ کے لیے نوٹس، پرانے پیپرز، روزانہ کوئز اور ٹائپنگ پریکٹس۔ سب کچھ اصل ٹیسٹ پیٹرن کے مطابق اور مفت ہے۔",cta_test:"MCQ ٹیسٹ شروع کریں",cta_typing:"ٹائپنگ ٹیسٹ آزمائیں",dq_label:"آج کا کوئز",dq_check:"جوابات چیک کریں",dq_retry:"دوبارہ کوشش کریں",wotd_label:"آج کا لفظ",cd_label:"امتحان کی الٹی گنتی",cd_h:"کتنے دن باقی ہیں",cd_p:"اپنے ٹیسٹ کی تاریخ منتخب کریں۔ گنتی فوراً نظر آئے گی۔",cd_pick:"امتحان کی تاریخ",tt_h:"آپ کا ہفتہ وار مطالعہ ٹائم ٹیبل",tt_p:"ہر خانے میں ایک مضمون لکھیں۔ صبح، شام اور رات کافی ہیں۔ آپ کی تحریر اسی ٹیب میں رہتی ہے، اور آپ کاپی ڈاؤن لوڈ کر سکتے ہیں۔",tt_dl:"ٹائم ٹیبل ڈاؤن لوڈ کریں",tt_clear:"سب صاف کریں",tt_note:"تحریر صرف اسی آلے اور اسی ٹیب میں رہتی ہے۔",home_study_h:"مطالعے کے شعبے",home_study_p:"جہاں کمزوری ہے وہاں سے آغاز کریں۔ ہر شعبہ فون پر پڑھنے کے لیے مختصر رکھا گیا ہے۔",exam_h:"امتحان کی تیاری",papers_h:"پرانے پیپرز",lib_h:"پی ڈی ایف لائبریری",code_h:"کوڈنگ اکیڈمی",type_h:"ٹائپنگ پریکٹس",learn_h:"ٹائپنگ سیکھو — قدم بہ قدم",learn_p:"ٹائپنگ نئی ہے؟ چھ چھوٹے لیول ترتیب سے کریں۔ ہر لیول چند بٹن سکھاتا ہے — لیول مکمل کریں، پھر اگلے پر جائیں۔ آخر میں اسپیڈ ٹیسٹ آپ کا آخری قدم ہے۔",speed_h:"آخری قدم — اسپیڈ ٹیسٹ",speed_p:"چھے لیول مکمل کر لیے؟ اب اپنی اصل رفتار دیکھیں۔ آپ کے پاس 60 سیکنڈ ہیں۔",lvl_total:"کل حروف",lvl_retry:"لیول دوبارہ کریں",mcq_h:"آن لائن MCQs و ٹیسٹ",live_h:"لائیو تیاری",about_h:"ہمارے بارے میں",contact_h:"رابطہ کریں"}};
+var EN={},ENPH={};document.querySelectorAll("[data-i18n]").forEach(function(el){EN[el.getAttribute("data-i18n")]=el.innerHTML});document.querySelectorAll("[data-i18n-ph]").forEach(function(el){ENPH[el.getAttribute("data-i18n-ph")]=el.getAttribute("placeholder")});
+function setLang(lang){window.currentLang=lang;var ur=lang==="ur";document.body.classList.toggle("ur",ur);document.documentElement.lang=ur?"ur":"en";document.documentElement.dir=ur?"rtl":"ltr";document.getElementById("langBtn").textContent=ur?"English":"اردو";document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(ur&&I18N.ur[k])el.innerHTML=I18N.ur[k];else if(!ur&&EN[k])el.innerHTML=EN[k]});updateCountdown();if(window.renderLesson)window.renderLesson()}
+document.getElementById("langBtn").addEventListener("click",function(){setLang(window.currentLang==="en"?"ur":"en")});
+</script>
+</body>
+</html>
