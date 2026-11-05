@@ -196,6 +196,41 @@ footer a{display:block;color:var(--ink2);text-decoration:none;font-size:.92rem;p
 .foot-note{margin-top:24px;color:var(--ink3);font-size:.84rem}
 .github-note{background:var(--surface2);border-radius:10px;padding:14px 16px;font-size:.92rem;color:var(--ink2);margin-top:16px}
 .github-note strong{color:var(--ink)}
+/* Owner admin — hidden panel, no link anywhere on the site */
+.admin-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,23,20,.55);overflow-y:auto;padding:14px 10px 48px;font-family:"Manrope",system-ui,sans-serif;line-height:1.55}
+.admin-overlay.open{display:block}
+.admin-card{max-width:640px;margin:18px auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:22px 20px}
+.admin-card h2{font-size:1.35rem;margin-bottom:.3em}
+.admin-card h3{margin-top:24px}
+.admin-sub{color:var(--ink2);font-size:.93rem}
+.admin-steps{margin:8px 0 4px;padding-inline-start:20px;color:var(--ink2);font-size:.93rem}
+.admin-steps li{margin-bottom:6px}
+.admin-field{margin:12px 0}
+.admin-field label{display:block;font-weight:600;font-size:.94rem;margin-bottom:6px}
+.admin-field label span{display:block;font-weight:500;color:var(--ink2);font-size:.84rem;margin-top:2px}
+.admin-field input,.admin-field select,.admin-field textarea{width:100%;padding:12px;border:1px solid var(--line2);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;font-size:1rem}
+.admin-field textarea{min-height:130px;resize:vertical}
+.admin-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;width:100%;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent);border-radius:10px;padding:10px 18px;font-weight:600;font-size:.98rem;text-decoration:none;cursor:pointer;transition:background .16s var(--ease)}
+.admin-btn:hover{background:var(--accent-hover)}
+.admin-btn.ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+.admin-btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--surface)}
+.admin-btn.secondary{background:var(--surface);color:var(--ink);border-color:var(--line2)}
+.admin-btn.secondary:hover{border-color:var(--accent);color:var(--accent)}
+.admin-btn.small{width:auto;min-height:40px;padding:6px 14px;font-size:.9rem}
+.admin-btn.danger{background:var(--danger);border-color:var(--danger);color:#fff}
+.admin-btn[disabled]{opacity:.5;cursor:not-allowed}
+.admin-status{display:none;border-radius:10px;padding:12px 14px;font-size:.93rem;margin:12px 0;background:var(--surface2);color:var(--ink2)}
+.admin-status.show{display:block}
+.admin-status.ok{background:var(--accent-soft);color:var(--ink)}
+.admin-status.err{background:var(--danger-soft);color:var(--ink)}
+.admin-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 4px}
+.admin-tab{flex:1;min-width:96px;min-height:48px;background:var(--surface);border:1px solid var(--line2);border-radius:10px;font-weight:600;font-size:.95rem;color:var(--ink2);cursor:pointer}
+.admin-tab.active{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.admin-item{border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;margin-bottom:10px;background:var(--surface)}
+.admin-item .t{font-weight:600}
+.admin-item .m{color:var(--ink2);font-size:.86rem}
+.admin-item-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.admin-badge{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.74rem;padding:2px 8px;border-radius:999px;margin-inline-start:6px}
 </style>
 </head>
 <body>
@@ -502,6 +537,103 @@ print(name, "your average is", average)</code></pre><p>No semicolons, no curly b
 </main>
 
 <footer><div class="wrap"><div class="footgrid"><div><h4>StudySphere</h4><p class="muted small" data-i18n="foot_tag">Learn, practice, prepare, succeed. Free exam preparation for PST, JEST, EST and screening tests — in English and Urdu.</p></div><div><h4 data-i18n="foot_study">Study</h4><a href="#" data-goto="exam" data-i18n="n_exam">Exam preparation</a><a href="#" data-goto="papers" data-i18n="n_papers">Past papers</a><a href="#" data-goto="library" data-i18n="n_library">PDF library</a><a href="#" data-goto="mcq" data-i18n="n_mcq">Online MCQs and tests</a></div><div><h4 data-i18n="foot_contact">Contact</h4><a href="mailto:junejomutti@gmail.com">junejomutti@gmail.com</a><a href="https://wa.me/923463030508" target="_blank" rel="noopener">WhatsApp +92 346 3030508</a><a href="#" data-goto="about" data-i18n="foot_legal">Privacy policy and terms</a></div></div><p class="foot-note">© 2026 StudySphere. <span data-i18n="foot_note">Made for the students of Sindh and Pakistan.</span> Design method: unslop by @heydamir.</p></div></footer>
+
+<!-- OWNER ADMIN — hidden: no link anywhere. Open with #admin in the address, or tap the S mark 5 times. -->
+<div class="admin-overlay" id="adminOverlay" role="dialog" aria-modal="true" aria-label="Admin panel">
+  <div class="admin-card" id="adminLoginCard">
+    <h2>Admin Login</h2>
+    <p class="admin-sub">Ye panel sirf site ke owner (Mutiu) ke liye hai. Site par is ka koi link nahi — aam visitors ko ye nazar hi nahi aata.</p>
+    <div id="adminSetPw">
+      <p class="admin-sub"><strong>Pehli dafa:</strong> apna admin password banayen. Ye password yaad rakhen — isi se panel khulega.</p>
+      <div class="admin-field"><label>Naya password <span>kam se kam 6 characters</span></label><input type="password" id="adminNewPw" autocomplete="new-password" /></div>
+      <div class="admin-field"><label>Password dobara likhen</label><input type="password" id="adminNewPw2" autocomplete="new-password" /></div>
+      <button class="admin-btn" id="adminSetPwBtn" type="button">Password set karein</button>
+    </div>
+    <div id="adminLoginForm" style="display:none">
+      <div class="admin-field"><label>Admin password</label><input type="password" id="adminPw" autocomplete="current-password" /></div>
+      <button class="admin-btn" id="adminLoginBtn" type="button">Login karein</button>
+      <p class="admin-sub" style="margin-top:12px"><a href="#" id="adminForgot">Password bhool gaye? Reset karein</a> — reset karne se saved GitHub token bhi clear ho jayega, phir dono dobara dalne honge.</p>
+    </div>
+    <div class="admin-status" id="adminLoginStatus"></div>
+    <button class="admin-btn ghost" id="adminLoginClose" type="button" style="margin-top:6px">Band karein</button>
+  </div>
+
+  <div class="admin-card" id="adminPanel" style="display:none">
+    <div class="row-between"><h2 style="margin:0">Admin Panel</h2><button class="admin-btn ghost small" id="adminCloseBtn" type="button">Band karein ✕</button></div>
+    <p class="admin-sub">Assalam-o-Alaikum Mutiu — yahan se poori site aap ke haath mein hai: roz ki khabrein, PDF files aur visitor counting, sab kuch phone se.</p>
+
+    <div id="adminConnect">
+      <h3>Step 1 — GitHub se jodein (sirf ek dafa)</h3>
+      <p class="admin-sub">Publish karne ke liye panel ko aap ke GitHub account ki chabi (token) chahiye. Token banana bilkul free hai:</p>
+      <ol class="admin-steps">
+        <li>GitHub par login karein, phir <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">token banane wala page kholen ↗</a></li>
+        <li>Token name likhen (masalan: StudySphere Admin), expiry 1 saal rakhen</li>
+        <li><strong>Repository access</strong> mein "Only select repositories" chunein aur <strong>studysphere-live</strong> select karein</li>
+        <li><strong>Permissions → Contents</strong> ko "Read and write" karein</li>
+        <li>"Generate token" dabayen aur token copy karke neeche paste karein</li>
+      </ol>
+      <div class="admin-field"><label>GitHub token <span>Ye sirf aap ke is browser mein save hota hai — site par ya kahin aur nazar nahi aata.</span></label><input type="password" id="adminToken" placeholder="github_pat_…" autocomplete="off" /></div>
+      <div class="admin-field"><label>Repository <span>owner/repo — aam tor par yehi rakhen</span></label><input type="text" id="adminRepo" value="Muttijunejo/studysphere-live" /></div>
+      <button class="admin-btn" id="adminConnectBtn" type="button">Save karein aur connect karein</button>
+      <div class="admin-status" id="adminConnStatus"></div>
+    </div>
+
+    <div id="adminMain" style="display:none">
+      <div class="admin-status ok show" id="adminRepoStatus"></div>
+      <h3>Step 2 — One-time setup</h3>
+      <p class="admin-sub">Ye button repo mein content files (news, library, settings) bana dega — mojooda khabrein aur notes un mein mehfooz ho jayengi. Agar files pehle se bani hui hain to kuch overwrite nahi hoga.</p>
+      <button class="admin-btn secondary" id="adminSetupBtn" type="button">Content files banayen / check karein</button>
+      <div class="admin-status" id="adminSetupStatus"></div>
+
+      <div class="admin-tabs" role="navigation" aria-label="Admin sections">
+        <button class="admin-tab active" data-atab="news" type="button">Daily News</button>
+        <button class="admin-tab" data-atab="lib" type="button">PDF Library</button>
+        <button class="admin-tab" data-atab="set" type="button">Settings</button>
+      </div>
+
+      <div class="admin-tabpage" id="atab-news">
+        <h3 id="adminNewsFormTitle">Nayi khabar likhen</h3>
+        <div class="admin-field"><label>Tareekh (date)</label><input type="date" id="anDate" /></div>
+        <div class="admin-field"><label>Source</label><input type="text" id="anSource" value="Dawn — Main points" /></div>
+        <div class="admin-field"><label>Khabar ke points <span>Har line = ek point. Pehla hissa bold (mota) karne ke liye aise likhen: <b>Surkhee — baqi tafseel</b></span></label><textarea id="anPoints" placeholder="Petrol sasta — Petrol ki qeemat kam ho gayi&#10;Doosra point — us ki tafseel"></textarea></div>
+        <input type="hidden" id="anEditIdx" value="" />
+        <button class="admin-btn" id="anSaveBtn" type="button">Publish karein</button>
+        <button class="admin-btn ghost" id="anCancelBtn" type="button" style="display:none;margin-top:8px">Edit cancel karein</button>
+        <div class="admin-status" id="anStatus"></div>
+        <h3>Chhapi hui khabrein (Daily News)</h3>
+        <div id="anList"><p class="admin-sub">Pehle upar se connect karein…</p></div>
+      </div>
+
+      <div class="admin-tabpage" id="atab-lib" style="display:none">
+        <h3>Nayi PDF upload karein</h3>
+        <div class="admin-field"><label>PDF file chunein <span>Phone se file select karein — paper ya notes ki PDF</span></label><input type="file" id="alFile" accept="application/pdf,.pdf" /></div>
+        <div class="admin-field"><label>Title <span>Site par ye naam nazar ayega</span></label><input type="text" id="alTitle" placeholder="masalan: PST Past Paper — 26 September 2021" /></div>
+        <div class="admin-field"><label>Section</label><select id="alSection"><option value="papers">Past papers</option><option value="notes">PDF library (notes)</option></select></div>
+        <div class="admin-field"><label>Chhoti si tafseel (description)</label><input type="text" id="alDesc" placeholder="masalan: Official paper — solved, with answer key" /></div>
+        <button class="admin-btn" id="alUploadBtn" type="button">Upload aur publish karein</button>
+        <div class="admin-status" id="alStatus"></div>
+        <h3>Library ki files</h3>
+        <div id="alList"><p class="admin-sub">Pehle upar se connect karein…</p></div>
+      </div>
+
+      <div class="admin-tabpage" id="atab-set" style="display:none">
+        <h3>GoatCounter — visitors ginna</h3>
+        <p class="admin-sub">GoatCounter batata hai roz kitne log site par aye. Pehle wahan free account banayen (account banate waqt jo site naam chunein ge, wohi aap ka code hoga — masalan <b>studysphere</b>), phir code yahan likh kar save karein. Us ke baad counting khud-ba-khud shuru ho jayegi.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+          <a class="admin-btn secondary small" href="https://www.goatcounter.com/signup" target="_blank" rel="noopener">1 — GoatCounter account banayen ↗</a>
+          <a class="admin-btn secondary small" id="gcDashLink" href="https://www.goatcounter.com/" target="_blank" rel="noopener">2 — Apna dashboard dekhen ↗</a>
+        </div>
+        <div class="admin-field"><label>GoatCounter site code</label><input type="text" id="gcCode" placeholder="masalan: studysphere" /></div>
+        <button class="admin-btn" id="gcSaveBtn" type="button">Code save karein</button>
+        <div class="admin-status" id="gcStatus"></div>
+        <h3>Session</h3>
+        <button class="admin-btn ghost" id="adminLogoutBtn" type="button">Logout — token is browser se hata dein</button>
+        <p class="admin-sub">Logout ke baad dobara publish karne ke liye token phir se dalna hoga. Password waisa hi rahega.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 var pages=["home","exam","papers","library","coding","typing","mcq","live","daily","about","contact"];
 function goTo(id){pages.forEach(function(p){document.getElementById("page-"+p).classList.toggle("active",p===id)});document.querySelectorAll(".navlinks button").forEach(function(b){b.classList.toggle("active",b.getAttribute("data-page")===id)});document.getElementById("navLinks").classList.remove("open");window.scrollTo({top:0,behavior:"smooth"})}
@@ -621,5 +753,80 @@ var EN={},ENPH={};document.querySelectorAll("[data-i18n]").forEach(function(el){
 function setLang(lang){window.currentLang=lang;var ur=lang==="ur";document.body.classList.toggle("ur",ur);document.documentElement.lang=ur?"ur":"en";document.documentElement.dir=ur?"rtl":"ltr";document.getElementById("langBtn").textContent=ur?"English":"اردو";document.querySelectorAll("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(ur&&I18N.ur[k])el.innerHTML=I18N.ur[k];else if(!ur&&EN[k])el.innerHTML=EN[k]});updateCountdown();if(window.renderLesson)window.renderLesson()}
 document.getElementById("langBtn").addEventListener("click",function(){setLang(window.currentLang==="en"?"ur":"en")});
 </script>
+<script>
+/* ===== StudySphere owner content: public loader (content/*.json from the owner's GitHub repo) ===== */
+function ssEsc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){if(c==="&")return "&amp;";if(c==="<")return "&lt;";if(c===">")return "&gt;";if(c==='"')return "&quot;";return "&#39;"})}
+function ssFmtDate(iso){var d=new Date((iso||"")+"T00:00:00");if(isNaN(d))return iso||"";return d.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}
+function ssPointHtml(p){if(typeof p==="string"){var i=p.indexOf(" — ");if(i>0)return "<strong>"+ssEsc(p.slice(0,i))+"</strong> — "+ssEsc(p.slice(i+3));return ssEsc(p)}var lead=(p&&p.lead)||"",text=(p&&p.text)||"";if(lead)return "<strong>"+ssEsc(lead)+"</strong>"+(text?" — "+ssEsc(text):"");return ssEsc(text)}
+function ssBindDailyDl(scope){scope.querySelectorAll(".daily-dl").forEach(function(btn){btn.addEventListener("click",function(){var art=btn.closest(".news-entry");if(!art)return;var dateEl=art.querySelector("h2");var dateTxt=dateEl?dateEl.textContent.trim():"Daily news";var lines=["STUDYSPHERE — DAILY NEWS (DAWN MAIN POINTS)",dateTxt,""];art.querySelectorAll(".news-points li").forEach(function(li,i){lines.push((i+1)+". "+li.textContent.trim())});downloadText("Daily_News_"+(art.getAttribute("data-date")||dateTxt.replace(/[^a-z0-9]+/gi,"_"))+".txt",lines.join("\n"))})})}
+function ssRenderNews(entries){var list=document.getElementById("dailyNewsList");if(!list||!entries||!entries.length)return;var sorted=entries.slice().sort(function(a,b){return (a.date||"")<(b.date||"")?1:-1});list.innerHTML=sorted.map(function(e){var pts=(e.points||[]).map(function(p){return "<li>"+ssPointHtml(p)+"</li>"}).join("");return '<article class="news-entry" data-date="'+ssEsc(e.date||"")+'"><div class="news-source">'+ssEsc(e.source||"Dawn — Main points")+'</div><h2>'+ssEsc(e.title||ssFmtDate(e.date||""))+'</h2><ul class="news-points">'+pts+'</ul><div style="display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px"><button class="btn ghost daily-dl" type="button">Download today\'s points</button></div></article>'}).join("");ssBindDailyDl(list)}
+function ssRenderLibrary(lib){var pl=document.getElementById("paperList"),nl=document.getElementById("noteList");if(!pl||!nl||!lib)return;pl.innerHTML="";nl.innerHTML="";function add(list,it){var div=document.createElement("div");div.className="item";var grow=document.createElement("div");grow.className="grow";var h=document.createElement("h3");h.textContent=it.t||"Untitled";var p=document.createElement("p");p.textContent=it.d||"";grow.appendChild(h);grow.appendChild(p);div.appendChild(grow);if(it.type==="pdf"&&it.path){var a=document.createElement("a");a.className="dl";a.style.textDecoration="none";a.href=it.path;a.target="_blank";a.rel="noopener";a.textContent="Open PDF";div.appendChild(a)}else{var b=document.createElement("button");b.className="dl";b.textContent="Download";b.addEventListener("click",function(){downloadText((it.t||"notes").replace(/[^a-z0-9]+/gi,"_")+".txt",it.body||"")});div.appendChild(b)}list.appendChild(div)}(lib.papers||[]).forEach(function(it){add(pl,it)});(lib.notes||[]).forEach(function(it){add(nl,it)})}
+function ssLoadPublic(){fetch("content/news.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(j){if(j&&j.entries&&j.entries.length)ssRenderNews(j.entries)}).catch(function(){});fetch("content/library.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(j){if(j&&(j.papers||j.notes))ssRenderLibrary(j)}).catch(function(){})}
+ssLoadPublic();
+
+/* ===== Hidden owner admin panel ===== */
+var ssStore={m:{},get:function(k){try{return localStorage.getItem(k)}catch(e){return ssStore.m[k]||null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){ssStore.m[k]=v}},del:function(k){try{localStorage.removeItem(k)}catch(e){delete ssStore.m[k]}}};
+var SSK={pw:"ss_admin_pwhash",tok:"ss_admin_token",repo:"ss_admin_repo"};
+function ssSha256(str){if(window.crypto&&crypto.subtle&&crypto.subtle.digest&&window.TextEncoder){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(str)).then(function(buf){var out="";var bytes=new Uint8Array(buf);for(var i=0;i<bytes.length;i++){out+=("0"+bytes[i].toString(16)).slice(-2)}return out})}var h=0;for(var i=0;i<str.length;i++){h=((h*31)+str.charCodeAt(i))|0}return Promise.resolve("fnv"+h)}
+function ssB64Encode(str){return btoa(unescape(encodeURIComponent(str)))}
+function ssB64Decode(b64){return decodeURIComponent(escape(atob(String(b64||"").replace(/\s/g,""))))}
+function ssStatus(id,msg,kind){var el=document.getElementById(id);if(!el)return;el.textContent=msg||"";el.className="admin-status"+(msg?" show":"")+(kind?" "+kind:"")}
+function ssErrText(err){if(!err)return "Kuch masla aa gaya.";if(err.status===401)return "Token ghalat hai ya expire ho gaya hai. Naya token bana kar paste karein.";if(err.status===404)return "Repository ya file nahi mili. Repo ka naam check karein — aur token ko isi repo (studysphere-live) ki access honi chahiye.";if(err.status===403)return "Permission nahi mili. Token banate waqt Contents ko Read and write lazmi rakhen.";if(err.status===409||err.status===422)return "File abhi badli gayi lagti hai — page refresh karke dobara try karein.";return "Masla aa gaya: "+(err.message||err)}
+var gh={repo:function(){return (document.getElementById("adminRepo").value||"Muttijunejo/studysphere-live").trim()},token:function(){return ssStore.get(SSK.tok)||""},base:function(){return "https://api.github.com/repos/"+gh.repo()},
+req:function(method,path,body){return fetch(gh.base()+path,{method:method,headers:{"Authorization":"Bearer "+gh.token(),"Accept":"application/vnd.github+json","Content-Type":"application/json"},body:body?JSON.stringify(body):undefined}).then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok){var err=new Error((j&&j.message)||("HTTP "+r.status));err.status=r.status;throw err}return j})})},
+getFile:function(path){return gh.req("GET","/contents/"+path).then(function(j){return {sha:j.sha,text:ssB64Decode(j.content||"")}})},
+putFile:function(path,text,sha,message){var body={message:message||("StudySphere: update "+path),content:ssB64Encode(text),branch:"main"};if(sha)body.sha=sha;return gh.req("PUT","/contents/"+path,body)},
+putBinary:function(path,b64,message){return gh.req("PUT","/contents/"+path,{message:message||("StudySphere: upload "+path),content:b64,branch:"main"})},
+putLarge:function(path,b64,message){var headSha=null;return gh.req("POST","/git/blobs",{content:b64,encoding:"base64"}).then(function(blob){return gh.req("GET","/git/ref/heads/main").then(function(ref){headSha=ref.object.sha;return gh.req("GET","/git/commits/"+headSha)}).then(function(commit){return gh.req("POST","/git/trees",{base_tree:commit.tree.sha,tree:[{path:path,mode:"100644",type:"blob",sha:blob.sha}]})}).then(function(tree){return gh.req("POST","/git/commits",{message:message||("StudySphere: upload "+path),tree:tree.sha,parents:[headSha]})}).then(function(commit){return gh.req("PATCH","/git/refs/heads/main",{sha:commit.sha})})})},
+deleteFile:function(path,sha,message){return gh.req("DELETE","/contents/"+path,{message:message||("StudySphere: delete "+path),sha:sha,branch:"main"})}};
+var astate={connected:false,news:null,newsSha:null,lib:null,libSha:null,set:null,setSha:null};
+function ssLoadOne(path){return gh.getFile(path).then(function(f){var data=null;try{data=JSON.parse(f.text)}catch(e){}return {data:data,sha:f.sha}}).catch(function(err){if(err.status===404)return {data:null,sha:null};throw err})}
+function ssSeedNews(){var entries=[];document.querySelectorAll("#dailyNewsList .news-entry").forEach(function(art){var pts=[];art.querySelectorAll(".news-points li").forEach(function(li){var strong=li.querySelector("strong");var lead=strong?strong.textContent.trim():"";var text=li.textContent.trim();if(lead)text=text.slice(lead.length).replace(/^\s*—\s*/,"");pts.push({lead:lead,text:text})});var src=art.querySelector(".news-source");var h2=art.querySelector("h2");entries.push({date:art.getAttribute("data-date")||"",source:src?src.textContent.trim():"Dawn — Main points",title:h2?h2.textContent.trim():"",points:pts})});return {entries:entries}}
+function ssSeedLibrary(){function map(arr){return (arr||[]).map(function(p){return {type:"text",t:p.t,d:p.d,body:p.body}})}return {papers:map(typeof PAPERS!=="undefined"?PAPERS:[]),notes:map(typeof NOTES!=="undefined"?NOTES:[])}}
+function ssRefreshLists(){renderAdminNews();renderAdminLib();if(astate.set&&astate.set.goatcounter)document.getElementById("gcCode").value=astate.set.goatcounter;if(astate.news)ssRenderNews(astate.news.entries||[]);if(astate.lib)ssRenderLibrary(astate.lib)}
+function ssConnect(){if(!gh.token()){ssStatus("adminConnStatus","Pehle token paste karein.","err");return}ssStatus("adminConnStatus","Connect ho raha hai…","info");gh.req("GET","").then(function(repo){astate.connected=true;document.getElementById("adminMain").style.display="block";ssStatus("adminConnStatus","","");ssStatus("adminRepoStatus","Connected: "+repo.full_name+" ✓ — ab aap khabrein aur PDF publish kar sakte hain.","ok");return Promise.all([ssLoadOne("content/news.json"),ssLoadOne("content/library.json"),ssLoadOne("content/settings.json")]).then(function(res){astate.news=res[0].data;astate.newsSha=res[0].sha;astate.lib=res[1].data;astate.libSha=res[1].sha;astate.set=res[2].data;astate.setSha=res[2].sha;ssRefreshLists();var missing=[];if(!astate.news)missing.push("news");if(!astate.lib)missing.push("library");if(!astate.set)missing.push("settings");if(missing.length)ssStatus("adminSetupStatus","Content files abhi nahi bani ("+missing.join(", ")+"). Neeche wala setup button dabayen — ek dafa hi karna hai.","info");else ssStatus("adminSetupStatus","Sab content files tayyar hain ✓","ok")})}).catch(function(err){astate.connected=false;ssStatus("adminConnStatus",ssErrText(err),"err")})}
+function ssArm(btn,fn){if(btn.getAttribute("data-armed")==="1"){fn();return}btn.setAttribute("data-armed","1");var old=btn.textContent;btn.textContent="Pakka delete karein?";btn.classList.add("danger");setTimeout(function(){btn.removeAttribute("data-armed");btn.textContent=old;btn.classList.remove("danger")},4000)}
+/* News admin */
+function renderAdminNews(){var box=document.getElementById("anList");if(!astate.news){box.innerHTML='<p class="admin-sub">Abhi news file nahi bani — upar Step 2 wala setup button dabayen.</p>';return}var entries=astate.news.entries||[];if(!entries.length){box.innerHTML='<p class="admin-sub">Abhi koi khabar nahi. Upar form se pehli khabar likhen.</p>';return}var order=entries.map(function(e,i){return {e:e,i:i}}).sort(function(a,b){return (a.e.date||"")<(b.e.date||"")?1:-1});box.innerHTML="";order.forEach(function(o){var div=document.createElement("div");div.className="admin-item";var t=document.createElement("div");t.className="t";t.textContent=o.e.title||ssFmtDate(o.e.date||"");var m=document.createElement("div");m.className="m";m.textContent=(o.e.date||"")+" · "+((o.e.points||[]).length)+" points";div.appendChild(t);div.appendChild(m);var acts=document.createElement("div");acts.className="admin-item-actions";var eb=document.createElement("button");eb.type="button";eb.className="admin-btn ghost small";eb.textContent="Edit karein";eb.addEventListener("click",function(){ssEditNews(o.i)});var db=document.createElement("button");db.type="button";db.className="admin-btn ghost small";db.textContent="Delete";db.addEventListener("click",function(){ssArm(db,function(){ssDeleteNews(o.i)})});acts.appendChild(eb);acts.appendChild(db);div.appendChild(acts);box.appendChild(div)})}
+function ssEditNews(i){var e=(astate.news.entries||[])[i];if(!e)return;document.getElementById("anDate").value=e.date||"";document.getElementById("anSource").value=e.source||"Dawn — Main points";document.getElementById("anPoints").value=(e.points||[]).map(function(p){if(typeof p==="string")return p;return p.lead?(p.lead+" — "+p.text):p.text}).join("\n");document.getElementById("anEditIdx").value=i;document.getElementById("adminNewsFormTitle").textContent="Khabar edit karein";document.getElementById("anCancelBtn").style.display="block";document.getElementById("atab-news").scrollIntoView({behavior:"smooth"})}
+function ssClearNewsForm(){document.getElementById("anPoints").value="";document.getElementById("anEditIdx").value="";document.getElementById("adminNewsFormTitle").textContent="Nayi khabar likhen";document.getElementById("anCancelBtn").style.display="none"}
+function ssDeleteNews(i){astate.news.entries.splice(i,1);gh.putFile("content/news.json",JSON.stringify(astate.news,null,2),astate.newsSha,"StudySphere: delete news").then(function(r){astate.newsSha=r.content.sha;ssStatus("anStatus","Khabar delete ho gayi ✓","ok");ssClearNewsForm();ssRefreshLists()}).catch(function(err){ssStatus("anStatus",ssErrText(err),"err")})}
+document.getElementById("anCancelBtn").addEventListener("click",ssClearNewsForm);
+document.getElementById("anSaveBtn").addEventListener("click",function(){if(!astate.news){ssStatus("anStatus","Pehle Step 2 wala setup button dabayen.","err");return}var date=document.getElementById("anDate").value;var source=document.getElementById("anSource").value.trim()||"Dawn — Main points";var raw=document.getElementById("anPoints").value;if(!date){ssStatus("anStatus","Tareekh (date) lazmi chunein.","err");return}var points=raw.split("\n").map(function(l){return l.trim()}).filter(function(l){return l.length}).map(function(l){var i=l.indexOf(" — ");if(i>0)return {lead:l.slice(0,i).trim(),text:l.slice(i+3).trim()};var j=l.indexOf("::");if(j>0)return {lead:l.slice(0,j).trim(),text:l.slice(j+2).trim()};return {lead:"",text:l}});if(!points.length){ssStatus("anStatus","Kam se kam ek point likhen.","err");return}var entry={date:date,source:source,title:ssFmtDate(date),points:points};var idx=document.getElementById("anEditIdx").value;if(idx!=="")astate.news.entries[parseInt(idx,10)]=entry;else astate.news.entries.unshift(entry);astate.news.entries.sort(function(a,b){return (a.date||"")<(b.date||"")?1:-1});var btn=this;btn.disabled=true;ssStatus("anStatus","Publish ho raha hai…","info");gh.putFile("content/news.json",JSON.stringify(astate.news,null,2),astate.newsSha,"StudySphere: news "+date).then(function(r){astate.newsSha=r.content.sha;btn.disabled=false;ssStatus("anStatus","Publish ho gaya ✓ — live site par aam tor par 1 minute ke andar nazar aa jata hai.","ok");ssClearNewsForm();ssRefreshLists()}).catch(function(err){btn.disabled=false;ssStatus("anStatus",ssErrText(err),"err")})});
+/* Library admin */
+function renderAdminLib(){var box=document.getElementById("alList");if(!astate.lib){box.innerHTML='<p class="admin-sub">Abhi library file nahi bani — upar Step 2 wala setup button dabayen.</p>';return}box.innerHTML="";var any=false;[["papers","Past papers"],["notes","PDF library (notes)"]].forEach(function(sec){(astate.lib[sec[0]]||[]).forEach(function(it,i){any=true;var div=document.createElement("div");div.className="admin-item";var t=document.createElement("div");t.className="t";t.textContent=it.t||"Untitled";var badge=document.createElement("span");badge.className="admin-badge";badge.textContent=it.type==="pdf"?"PDF":"Text";t.appendChild(badge);var m=document.createElement("div");m.className="m";m.textContent=sec[1]+(it.d?" · "+it.d:"");div.appendChild(t);div.appendChild(m);var acts=document.createElement("div");acts.className="admin-item-actions";if(it.type==="pdf"&&it.path){var a=document.createElement("a");a.className="admin-btn ghost small";a.href=it.path;a.target="_blank";a.rel="noopener";a.textContent="PDF dekhen";acts.appendChild(a)}var db=document.createElement("button");db.type="button";db.className="admin-btn ghost small";db.textContent="Delete";db.addEventListener("click",function(){ssArm(db,function(){ssDeleteLib(sec[0],i)})});acts.appendChild(db);div.appendChild(acts);box.appendChild(div)})});if(!any)box.innerHTML='<p class="admin-sub">Library khaali hai. Upar form se pehli PDF upload karein.</p>'}
+function ssDeleteLib(section,i){var it=(astate.lib[section]||[])[i];astate.lib[section].splice(i,1);gh.putFile("content/library.json",JSON.stringify(astate.lib,null,2),astate.libSha,"StudySphere: delete library item").then(function(r){astate.libSha=r.content.sha;ssStatus("alStatus","Item delete ho gaya ✓","ok");ssRefreshLists();if(it&&it.type==="pdf"&&it.path){gh.getFile(it.path).then(function(f){return gh.deleteFile(it.path,f.sha,"StudySphere: delete PDF file")}).catch(function(){})}}).catch(function(err){ssStatus("alStatus",ssErrText(err),"err")})}
+function ssReadFileB64(file){return new Promise(function(resolve,reject){var fr=new FileReader();fr.onload=function(){var res=String(fr.result||"");var comma=res.indexOf(",");resolve(comma>=0?res.slice(comma+1):res)};fr.onerror=function(){reject(new Error("File parhi nahi gayi"))};fr.readAsDataURL(file)})}
+document.getElementById("alUploadBtn").addEventListener("click",function(){if(!astate.lib){ssStatus("alStatus","Pehle Step 2 wala setup button dabayen.","err");return}var fileEl=document.getElementById("alFile");var file=fileEl.files&&fileEl.files[0];var title=document.getElementById("alTitle").value.trim();var section=document.getElementById("alSection").value;var desc=document.getElementById("alDesc").value.trim();if(!file){ssStatus("alStatus","Pehle PDF file chunein.","err");return}if(!/\.pdf$/i.test(file.name)){ssStatus("alStatus","Sirf PDF file upload karein.","err");return}if(!title){ssStatus("alStatus","Title lazmi likhen.","err");return}var btn=this;btn.disabled=true;ssStatus("alStatus","File parhi ja rahi hai…","info");ssReadFileB64(file).then(function(b64){var slug=title.replace(/[^a-z0-9]+/gi,"-").replace(/^-+|-+$/g,"").toLowerCase()||"file";var now=new Date();var stamp=now.getFullYear()+("0"+(now.getMonth()+1)).slice(-2)+("0"+now.getDate()).slice(-2);var path="files/"+slug+"-"+stamp+".pdf";ssStatus("alStatus","PDF upload ho rahi hai ("+Math.round(file.size/1024)+" KB) — internet ki speed par hai, thoda intezar karein…","info");var up=file.size<=900*1024?gh.putBinary(path,b64,"StudySphere: upload PDF "+title):gh.putLarge(path,b64,"StudySphere: upload PDF "+title);return up.then(function(){var entry={type:"pdf",t:title,d:desc,path:path};if(!astate.lib[section])astate.lib[section]=[];astate.lib[section].unshift(entry);return gh.putFile("content/library.json",JSON.stringify(astate.lib,null,2),astate.libSha,"StudySphere: add PDF "+title).then(function(r){astate.libSha=r.content.sha;btn.disabled=false;ssStatus("alStatus","Publish ho gaya ✓ — PDF ab Past papers / library mein nazar ayegi.","ok");fileEl.value="";document.getElementById("alTitle").value="";document.getElementById("alDesc").value="";ssRefreshLists()})})}).catch(function(err){btn.disabled=false;ssStatus("alStatus",ssErrText(err),"err")})});
+/* Settings: GoatCounter */
+document.getElementById("gcDashLink").href="https://studysphere.goatcounter.com/";
+document.getElementById("gcSaveBtn").addEventListener("click",function(){var code=document.getElementById("gcCode").value.trim().replace(/[^a-z0-9-]/gi,"");if(!code){ssStatus("gcStatus","Pehle apna GoatCounter code likhen.","err");return}if(!astate.connected){ssStatus("gcStatus","Pehle GitHub se connect karein.","err");return}if(!astate.set)astate.set={};astate.set.goatcounter=code;document.getElementById("gcDashLink").href="https://"+code+".goatcounter.com/";gh.putFile("content/settings.json",JSON.stringify(astate.set,null,2),astate.setSha,"StudySphere: settings").then(function(r){astate.setSha=r.content.sha;ssStatus("gcStatus","Save ho gaya ✓ — counting is code se juri hai: "+code+".goatcounter.com","ok")}).catch(function(err){ssStatus("gcStatus",ssErrText(err),"err")})});
+/* Setup + connect + session */
+document.getElementById("adminSetupBtn").addEventListener("click",function(){if(!astate.connected){ssStatus("adminSetupStatus","Pehle Step 1 se GitHub connect karein.","err");return}var jobs=[];var made=[];if(!astate.news){var seedN=ssSeedNews();jobs.push(gh.putFile("content/news.json",JSON.stringify(seedN,null,2),null,"StudySphere: create news content").then(function(r){astate.news=seedN;astate.newsSha=r.content.sha;made.push("news")}));}if(!astate.lib){var seedL=ssSeedLibrary();jobs.push(gh.putFile("content/library.json",JSON.stringify(seedL,null,2),null,"StudySphere: create library content").then(function(r){astate.lib=seedL;astate.libSha=r.content.sha;made.push("library")}));}if(!astate.set){var seedS={goatcounter:"studysphere"};jobs.push(gh.putFile("content/settings.json",JSON.stringify(seedS,null,2),null,"StudySphere: create settings").then(function(r){astate.set=seedS;astate.setSha=r.content.sha;made.push("settings")}));}if(!jobs.length){ssStatus("adminSetupStatus","Sab content files pehle se bani hui hain ✓ — neeche tabs se kaam shuru karein.","ok");return}ssStatus("adminSetupStatus","Files ban rahi hain…","info");Promise.all(jobs).then(function(){ssStatus("adminSetupStatus","Setup mukammal ✓ ("+made.join(", ")+" ban gayi). Ab neeche tabs se khabrein aur PDF khud publish karein.","ok");ssRefreshLists()}).catch(function(err){ssStatus("adminSetupStatus",ssErrText(err),"err")})});
+document.getElementById("adminConnectBtn").addEventListener("click",function(){var tok=document.getElementById("adminToken").value.trim();var repo=document.getElementById("adminRepo").value.trim();if(tok)ssStore.set(SSK.tok,tok);if(repo)ssStore.set(SSK.repo,repo);ssConnect()});
+document.getElementById("adminLogoutBtn").addEventListener("click",function(){ssStore.del(SSK.tok);document.getElementById("adminToken").value="";astate.connected=false;document.getElementById("adminMain").style.display="none";ssStatus("adminConnStatus","Logout ho gaya — token is browser se hat gaya hai.","info");window.scrollTo({top:0,behavior:"smooth"})});
+/* Auth + overlay */
+var ssOverlay=document.getElementById("adminOverlay");
+function ssShowOverlay(){ssOverlay.classList.add("open");document.body.style.overflow="hidden";var hasPw=!!ssStore.get(SSK.pw);document.getElementById("adminSetPw").style.display=hasPw?"none":"block";document.getElementById("adminLoginForm").style.display=hasPw?"block":"none";document.getElementById("adminLoginCard").style.display="block";document.getElementById("adminPanel").style.display="none";ssStatus("adminLoginStatus","","")}
+function ssHideOverlay(){ssOverlay.classList.remove("open");document.body.style.overflow="";if(location.hash==="#admin"){try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}}
+function ssEnterPanel(){document.getElementById("adminLoginCard").style.display="none";document.getElementById("adminPanel").style.display="block";var savedRepo=ssStore.get(SSK.repo);if(savedRepo)document.getElementById("adminRepo").value=savedRepo;var savedTok=ssStore.get(SSK.tok);if(savedTok){document.getElementById("adminToken").value=savedTok;ssConnect()}}
+document.getElementById("adminSetPwBtn").addEventListener("click",function(){var a=document.getElementById("adminNewPw").value;var b=document.getElementById("adminNewPw2").value;if(a.length<6){ssStatus("adminLoginStatus","Password kam se kam 6 characters ka rakhen.","err");return}if(a!==b){ssStatus("adminLoginStatus","Dono password ek jaise nahi hain — dobara likhen.","err");return}ssSha256(a).then(function(h){ssStore.set(SSK.pw,h);ssStatus("adminLoginStatus","","");ssEnterPanel()})});
+document.getElementById("adminLoginBtn").addEventListener("click",function(){var v=document.getElementById("adminPw").value;ssSha256(v).then(function(h){if(h===ssStore.get(SSK.pw)){document.getElementById("adminPw").value="";ssEnterPanel()}else{ssStatus("adminLoginStatus","Password ghalat hai — dobara try karein.","err")}})});
+document.getElementById("adminPw").addEventListener("keydown",function(e){if(e.key==="Enter")document.getElementById("adminLoginBtn").click()});
+document.getElementById("adminNewPw2").addEventListener("keydown",function(e){if(e.key==="Enter")document.getElementById("adminSetPwBtn").click()});
+document.getElementById("adminForgot").addEventListener("click",function(e){e.preventDefault();var el=this;if(el.getAttribute("data-armed")==="1"){ssStore.del(SSK.pw);ssStore.del(SSK.tok);document.getElementById("adminToken").value="";el.removeAttribute("data-armed");el.textContent="Password bhool gaye? Reset karein";ssShowOverlay();ssStatus("adminLoginStatus","Reset ho gaya — ab naya password banayen.","info");return}el.setAttribute("data-armed","1");el.textContent="Pakka reset karein? Dobara dabayen";setTimeout(function(){el.removeAttribute("data-armed");el.textContent="Password bhool gaye? Reset karein"},4000)});
+document.getElementById("adminLoginClose").addEventListener("click",ssHideOverlay);
+document.getElementById("adminCloseBtn").addEventListener("click",ssHideOverlay);
+document.querySelectorAll(".admin-tab").forEach(function(tab){tab.addEventListener("click",function(){document.querySelectorAll(".admin-tab").forEach(function(x){x.classList.toggle("active",x===tab)});document.querySelectorAll(".admin-tabpage").forEach(function(p){p.style.display="none"});document.getElementById("atab-"+tab.getAttribute("data-atab")).style.display="block"})});
+(function(){var d=new Date();var iso=d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+("-0"+d.getDate()).slice(-2);document.getElementById("anDate").value=iso})();
+if(!document.getElementById("gcCode").value)document.getElementById("gcCode").value="studysphere";
+/* Hidden triggers: #admin in address, 5 taps on the S mark, Ctrl+Shift+A */
+function ssCheckHash(){if(location.hash==="#admin")ssShowOverlay()}
+window.addEventListener("hashchange",ssCheckHash);ssCheckHash();
+var ssTaps=0,ssTapTimer=null;var ssMark=document.querySelector(".brand .mark");
+if(ssMark){ssMark.addEventListener("click",function(){ssTaps++;clearTimeout(ssTapTimer);ssTapTimer=setTimeout(function(){ssTaps=0},3000);if(ssTaps>=5){ssTaps=0;ssShowOverlay()}})}
+document.addEventListener("keydown",function(e){if(e.ctrlKey&&e.shiftKey&&(e.key==="A"||e.key==="a")){e.preventDefault();ssShowOverlay()}if(e.key==="Escape"&&ssOverlay.classList.contains("open"))ssHideOverlay()});
+</script>
+<script data-goatcounter="https://studysphere.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
