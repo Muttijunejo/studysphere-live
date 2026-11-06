@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Newton's Laws of Motion — Study Notes | StudySphere</title>
+<meta name="description" content="Newton's three laws of motion, key formulas and 10 practice MCQs with answer key — free study notes for SPSC, teaching and screening tests." />
+<style>
+:root{--bg:#faf8f2;--surface:#fffefa;--surface2:#f2eee3;--ink:#1b201d;--ink2:#54605a;--ink3:#7d8881;--line:#e3ddd0;--line2:#d6cfbc;--accent:#166649;--accent-hover:#12543d;--accent-soft:#e8f0eb;--accent-ink:#fff;--amber:#9a6a14;--amber-soft:#f5ecd6;--r-md:12px}
+@media (prefers-color-scheme: dark){:root{--bg:#141714;--surface:#1b1f1b;--surface2:#222722;--ink:#edf0eb;--ink2:#aab5ac;--ink3:#828d84;--line:#2e352e;--line2:#3a423a;--accent:#4ab78a;--accent-hover:#5fc79b;--accent-soft:#1d2f27;--accent-ink:#0d1511}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:24px 20px 64px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.brand{font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+.brand span{color:var(--accent)}
+.back{color:var(--accent);font-weight:600;text-decoration:none;font-size:.92rem}
+h1,h2,h3{font-family:"Lora",serif;line-height:1.3;margin:0 0 .5em}
+h1{font-size:1.7rem;margin-top:6px}
+h2{font-size:1.25rem;margin-top:28px;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:1.05rem;margin-top:18px}
+p{margin:0 0 .8em}
+.meta{font-size:.86rem;color:var(--ink3);font-weight:600}
+.pill{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:3px 12px;font-size:.82rem;font-weight:700;margin:0 6px 6px 0}
+.lede{color:var(--ink2);font-size:1.05rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;margin:16px 0}
+.formula{background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-weight:700;text-align:center;margin:10px 0}
+.ur{color:var(--ink2);font-style:italic}
+ol.mcq,ul.key{padding-left:22px}
+ol.mcq li{margin-bottom:12px}
+ol.mcq .opts{color:var(--ink2)}
+.key-box{background:var(--amber-soft);border:1px solid var(--line2);border-radius:var(--r-md);padding:14px 18px;margin-top:16px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent);border-radius:10px;padding:10px 18px;font-weight:600;text-decoration:none;font-size:.95rem;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--accent-hover)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+footer{margin-top:36px;border-top:1px solid var(--line);padding-top:14px;color:var(--ink3);font-size:.86rem}
+@media print{
+  .actions,.topbar .back{display:none !important}
+  body{background:#fff;color:#000}
+  .card,.key-box{border-color:#ccc;break-inside:avoid}
+  h2{break-after:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="../">Study<span>Sphere</span></a>
+    <a class="back" href="../">← Back to StudySphere</a>
+  </div>
+
+  <p class="meta">Friday, 6 November 2026 · Physics · SPSC / Teaching / Screening Tests</p>
+  <h1>Newton's Laws of Motion — Study Notes</h1>
+  <p>
+    <span class="pill">Physics</span>
+    <span class="pill">Newton's Laws</span>
+    <span class="pill">10 Practice MCQs</span>
+  </p>
+  <p class="lede">Newton's three laws explain how forces change the motion of objects. They are among the most repeated Physics topics in SPSC and screening tests — learn the laws, the formulas and the common traps below.</p>
+
+  <div class="actions">
+    <button class="btn" type="button" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <a class="btn ghost" href="../">Back to home page</a>
+  </div>
+
+  <h2>Key Words — Pehle Ye Samajh Lein</h2>
+  <div class="card">
+    <p><b>Force</b> — a push or pull that can change the motion of a body. SI unit: <b>newton (N)</b>.</p>
+    <p><b>Mass (m)</b> — the amount of matter in a body. SI unit: kilogram (kg). Mass never changes, wherever the body is.</p>
+    <p><b>Inertia</b> — the resistance of a body to a change in its state of rest or motion. <span class="ur">Roman Urdu: Jisam apni halat (sukoon ya harkat) badalne se rokta hai — yehi inertia hai.</span></p>
+    <p><b>Momentum (p)</b> — the quantity of motion of a body.</p>
+    <div class="formula">p = m × v &nbsp;&nbsp;·&nbsp;&nbsp; unit: kg·m/s</div>
+    <p><b>Weight (W)</b> — the force of gravity on a body. <span class="ur">Wazan mass se farq hai: wazan jagah ke saath badal sakta hai, mass nahi.</span></p>
+    <div class="formula">W = m × g &nbsp;&nbsp;·&nbsp;&nbsp; g ≈ 9.8 m/s² on Earth</div>
+  </div>
+
+  <h2>First Law — Law of Inertia</h2>
+  <p><b>"A body stays at rest, or keeps moving in a straight line at the same speed, unless a net force acts on it."</b></p>
+  <p><span class="ur">Roman Urdu: Agar koi bahar ki taaqat na lagay to ruka hua jisam ruka rahega aur chalta hua jisam barabar raftaar se chalta rahega.</span></p>
+  <p><b>Examples (test favourite):</b></p>
+  <ul>
+    <li>A passenger falls <b>forward</b> when a moving bus stops suddenly — the body wants to keep moving.</li>
+    <li>A passenger falls <b>backward</b> when a bus starts suddenly — the body wants to stay at rest.</li>
+    <li>A tablecloth can be pulled quickly from under dishes — the dishes stay because of inertia of rest.</li>
+    <li>Seat belts protect you: they stop your body with the car instead of letting it keep moving.</li>
+  </ul>
+  <p><b>Test point:</b> Inertia depends only on <b>mass</b> — a heavier body has more inertia. It does <b>not</b> depend on speed or shape.</p>
+
+  <h2>Second Law — Force = Mass × Acceleration</h2>
+  <p><b>"The acceleration of a body is directly proportional to the force applied, and inversely proportional to its mass."</b></p>
+  <div class="formula">F = m × a &nbsp;&nbsp;·&nbsp;&nbsp; 1 N = 1 kg·m/s²</div>
+  <p><span class="ur">Roman Urdu: Jitni bari taaqat, utni ziada acceleration; jitna bara mass, utni kam acceleration.</span></p>
+  <p><b>Worked example:</b> A force of 10 N acts on a mass of 2 kg.<br />
+  a = F ÷ m = 10 ÷ 2 = <b>5 m/s²</b>.</p>
+  <p>The second law is also the law of <b>momentum change</b>: F = change in momentum ÷ time.</p>
+  <p><b>Equations of motion (for constant acceleration):</b></p>
+  <div class="formula">v = u + at &nbsp;&nbsp;·&nbsp;&nbsp; s = ut + ½at² &nbsp;&nbsp;·&nbsp;&nbsp; v² = u² + 2as</div>
+  <p>Here u = initial velocity, v = final velocity, a = acceleration, t = time, s = distance.</p>
+
+  <h2>Third Law — Action and Reaction</h2>
+  <p><b>"Every action has an equal and opposite reaction."</b></p>
+  <p><span class="ur">Roman Urdu: Har amal ka barabar aur ulta rad-e-amal hota hai.</span></p>
+  <p><b>Examples:</b></p>
+  <ul>
+    <li><b>Rocket:</b> hot gases push down (action), the rocket is pushed up (reaction).</li>
+    <li><b>Walking:</b> your foot pushes the ground backward, the ground pushes you forward.</li>
+    <li><b>Gun recoil:</b> the bullet goes forward, the gun kicks backward.</li>
+    <li><b>Swimming:</b> you push water backward, the water pushes you forward.</li>
+  </ul>
+  <p><b>Test trap:</b> Action and reaction act on <b>different bodies</b> — that is why they never cancel each other out.</p>
+
+  <h2>Quick Facts — Test Mein Aane Wale Points</h2>
+  <div class="card">
+    <ul>
+      <li>g (acceleration due to gravity) ≈ <b>9.8 m/s²</b> on Earth; zero in space.</li>
+      <li>Mass is the same on the Moon; weight on the Moon is about <b>1/6</b> of Earth's weight.</li>
+      <li>Velocity and force are <b>vector</b> quantities (size + direction); speed, mass and distance are <b>scalar</b>.</li>
+      <li>Kinetic energy: <b>KE = ½mv²</b> — energy of motion. Work: <b>W = F × s</b>, unit joule (J).</li>
+      <li>If no net force acts, a body keeps its velocity — this is the <b>first law</b> again.</li>
+    </ul>
+  </div>
+
+  <h2>Practice MCQs — 10 Questions</h2>
+  <p>Try these first, then check the answer key at the end.</p>
+  <ol class="mcq">
+    <li>Newton's first law is also called the law of:<br /><span class="opts">(a) Action &nbsp; (b) Inertia &nbsp; (c) Gravitation &nbsp; (d) Momentum</span></li>
+    <li>F = ma is the mathematical form of Newton's:<br /><span class="opts">(a) First law &nbsp; (b) Second law &nbsp; (c) Third law &nbsp; (d) Law of gravitation</span></li>
+    <li>A force of 10 N acts on a mass of 5 kg. The acceleration is:<br /><span class="opts">(a) 0.5 m/s² &nbsp; (b) 2 m/s² &nbsp; (c) 5 m/s² &nbsp; (d) 50 m/s²</span></li>
+    <li>The momentum of a 2 kg object moving at 3 m/s is:<br /><span class="opts">(a) 1.5 kg·m/s &nbsp; (b) 5 kg·m/s &nbsp; (c) 6 kg·m/s &nbsp; (d) 9 kg·m/s</span></li>
+    <li>Action and reaction forces act on:<br /><span class="opts">(a) The same body &nbsp; (b) Different bodies &nbsp; (c) The Earth only &nbsp; (d) No body</span></li>
+    <li>Inertia of a body depends on its:<br /><span class="opts">(a) Speed &nbsp; (b) Mass &nbsp; (c) Shape &nbsp; (d) Colour</span></li>
+    <li>A passenger falls forward when a moving bus stops suddenly. This is due to:<br /><span class="opts">(a) Friction &nbsp; (b) Inertia of motion &nbsp; (c) Gravity &nbsp; (d) Air pressure</span></li>
+    <li>A rocket moves forward because of:<br /><span class="opts">(a) Gravity &nbsp; (b) Air pressure &nbsp; (c) Reaction of the exhaust gases &nbsp; (d) Friction</span></li>
+    <li>The weight of a 10 kg mass on Earth (g = 10 m/s²) is:<br /><span class="opts">(a) 1 N &nbsp; (b) 10 N &nbsp; (c) 100 N &nbsp; (d) 1000 N</span></li>
+    <li>If no net force acts on a body, it will:<br /><span class="opts">(a) Stop at once &nbsp; (b) Speed up &nbsp; (c) Keep moving with the same velocity &nbsp; (d) Fall down</span></li>
+  </ol>
+
+  <div class="key-box">
+    <h3 style="margin-top:0">Answer Key</h3>
+    <p style="margin-bottom:0">1 — (b) Inertia &nbsp;·&nbsp; 2 — (b) Second law &nbsp;·&nbsp; 3 — (b) 2 m/s² &nbsp;·&nbsp; 4 — (c) 6 kg·m/s &nbsp;·&nbsp; 5 — (b) Different bodies &nbsp;·&nbsp; 6 — (b) Mass &nbsp;·&nbsp; 7 — (b) Inertia of motion &nbsp;·&nbsp; 8 — (c) Reaction of the exhaust gases &nbsp;·&nbsp; 9 — (c) 100 N &nbsp;·&nbsp; 10 — (c) Keep moving with the same velocity</p>
+  </div>
+
+  <div class="actions">
+    <button class="btn" type="button" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <a class="btn ghost" href="../">Back to home page</a>
+  </div>
+
+  <footer>
+    <p>© 2026 StudySphere — Free job preparation for SPSC, teaching and screening tests. Made for the students of Sindh and Pakistan. Notes are summaries prepared for learning; for official syllabus details, always confirm with SPSC or the relevant board.</p>
+  </footer>
+</div>
+</body>
+</html>
