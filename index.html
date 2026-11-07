@@ -688,7 +688,7 @@ print(name, "your average is", average)</code></pre><p>No semicolons, no curly b
 </div>
 
 <script>
-var pages=["home","exam","papers","library","coding","typing","mcq","live","daily","about","contact"];
+var pages=["home","exam","papers","library","coding","typing","resources","mcq","live","daily","about","contact"];
 function goTo(id){pages.forEach(function(p){document.getElementById("page-"+p).classList.toggle("active",p===id)});document.querySelectorAll(".navlinks button").forEach(function(b){b.classList.toggle("active",b.getAttribute("data-page")===id)});document.getElementById("navLinks").classList.remove("open");window.scrollTo({top:0,behavior:"smooth"})}
 document.querySelectorAll("[data-page]").forEach(function(b){b.addEventListener("click",function(){goTo(b.getAttribute("data-page"))})});
 document.querySelectorAll("[data-goto]").forEach(function(el){el.addEventListener("click",function(e){e.preventDefault();goTo(el.getAttribute("data-goto"))})});
