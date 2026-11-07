@@ -277,7 +277,7 @@ footer a{display:block;color:var(--ink2);text-decoration:none;font-size:.92rem;p
       </div>
       <div class="daily-card" id="dailyQuizCard">
         <div class="label" data-i18n="dq_label">Aaj ka quiz — quiz of the day</div>
-        <h3 style="margin-bottom:4px" id="dqTitle">Today's 10 questions — Physics</h3>
+        <h3 style="margin-bottom:4px" id="dqTitle">Today's 10 questions — SPSC GK &amp; Current Affairs</h3>
         <p class="meta" id="dqDate"></p>
         <div id="dqList"></div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
@@ -429,7 +429,7 @@ footer a{display:block;color:var(--ink2);text-decoration:none;font-size:.92rem;p
     </div>
     <div id="paperList"></div>
   </section>
-  <section class="page" id="page-library"><h1><span class="u-draw" data-i18n="lib_h">PDF library</span></h1><p class="muted" data-i18n="lib_p">Study notes prepared for job-test candidates — SPSC, teaching and screening tests. Tap download to save a note to your device and study offline, anywhere.</p><div id="noteList"><div class="item"><div class="grow"><h3>6 November 2026 — Physics: Newton's Laws of Motion — Study Notes</h3><p>Newton's three laws, key formulas and 10 practice MCQs with answer key — for SPSC and screening tests.</p></div><a class="dl" href="notes/2026-11-06-physics.html" target="_blank" rel="noopener">Open notes</a></div></div></section>
+  <section class="page" id="page-library"><h1><span class="u-draw" data-i18n="lib_h">PDF library</span></h1><p class="muted" data-i18n="lib_p">Study notes prepared for job-test candidates — SPSC, teaching and screening tests. Tap download to save a note to your device and study offline, anywhere.</p><div id="noteList"><div class="item"><div class="grow"><h3>7 November 2026 — SPSC GK &amp; Current Affairs: The Constitution of Pakistan 1973 — Key Facts</h3><p>How the 1973 Constitution works, Parliament, fundamental rights and key articles — plus 10 practice MCQs with answer key, for SPSC and screening tests.</p></div><a class="dl" href="notes/2026-11-07-gk-current-affairs.html" target="_blank" rel="noopener">Open notes</a></div><div class="item"><div class="grow"><h3>6 November 2026 — Physics: Newton's Laws of Motion — Study Notes</h3><p>Newton's three laws, key formulas and 10 practice MCQs with answer key — for SPSC and screening tests.</p></div><a class="dl" href="notes/2026-11-06-physics.html" target="_blank" rel="noopener">Open notes</a></div></div></section>
 
   <section class="page" id="page-coding">
     <h1><span class="u-draw" data-i18n="code_h">Coding academy</span></h1>
@@ -698,16 +698,16 @@ document.querySelectorAll(".daily-dl").forEach(function(btn){btn.addEventListene
 /* Daily quiz + word */
 function dayIndex(len){var now=new Date();var start=new Date(now.getFullYear(),0,0);var diff=Math.floor((now-start)/86400000);return diff%len}
 var DAILY_SETS=[
-[{q:"The SI unit of work is:",o:["Newton","Joule","Watt","Pascal"],a:1,e:"Work is measured in joules (1 J = 1 N·m)."},
-{q:"A bus covers 150 km in 3 hours. Its average speed is:",o:["30 km/h","40 km/h","50 km/h","60 km/h"],a:2,e:"Speed = distance ÷ time = 150 ÷ 3 = 50 km/h."},
-{q:"“Every action has an equal and opposite reaction.” This is Newton's:",o:["First law","Second law","Third law","Law of gravitation"],a:2,e:"The action–reaction statement is Newton's third law."},
-{q:"The acceleration due to gravity on Earth is about:",o:["1.6 m/s²","5.8 m/s²","9.8 m/s²","15.2 m/s²"],a:2,e:"g ≈ 9.8 m/s² on Earth."},
-{q:"Which of these is a vector quantity?",o:["Speed","Distance","Mass","Velocity"],a:3,e:"Velocity has both size and direction, so it is a vector."},
-{q:"The SI unit of electric current is:",o:["Volt","Ohm","Ampere","Watt"],a:2,e:"Current is measured in amperes (A)."},
-{q:"The speed of light in a vacuum is about:",o:["3 × 10⁶ m/s","3 × 10⁸ m/s","3 × 10⁴ m/s","3 × 10¹⁰ m/s"],a:1,e:"Light travels at about 3 × 10⁸ m/s in a vacuum."},
-{q:"According to Ohm's law, V = ?",o:["I ÷ R","I × R","R ÷ I","I + R"],a:1,e:"Ohm's law: V = I × R."},
-{q:"Which mirror is used as the rear-view mirror in vehicles?",o:["Concave mirror","Convex mirror","Plane mirror","Parabolic mirror"],a:1,e:"A convex mirror gives a wide view, so it is used as a rear-view mirror."},
-{q:"The energy a body has because of its motion is called:",o:["Potential energy","Heat energy","Kinetic energy","Chemical energy"],a:2,e:"Energy of motion is kinetic energy: KE = ½mv²."}]
+[{q:"The capital of Australia is:",o:["Sydney","Canberra","Melbourne","Perth"],a:1,e:"Canberra is the capital of Australia; Sydney is its largest city."},
+{q:"The United Nations (UN) was founded in:",o:["1919","1939","1945","1950"],a:2,e:"The UN was founded in 1945 after the Second World War."},
+{q:"The national animal of Pakistan is the:",o:["Lion","Snow leopard","Markhor","Ibex"],a:2,e:"The markhor, a wild goat, is the national animal of Pakistan."},
+{q:"The currency of Japan is the:",o:["Yuan","Won","Yen","Ringgit"],a:2,e:"Japan's currency is the yen."},
+{q:"The longest river in the world is the:",o:["Amazon","Nile","Yangtze","Indus"],a:1,e:"The Nile (about 6,650 km) is the longest river in the world."},
+{q:"The first President of Pakistan was:",o:["Ayub Khan","Quaid-e-Azam Muhammad Ali Jinnah","Iskander Mirza","Zulfikar Ali Bhutto"],a:2,e:"Iskander Mirza became the first President of Pakistan in 1956."},
+{q:"The headquarters of the Sindh Public Service Commission (SPSC) is in:",o:["Karachi","Hyderabad","Larkana","Sukkur"],a:1,e:"SPSC is headquartered in Hyderabad, Sindh."},
+{q:"Which gas do plants absorb from the air for photosynthesis?",o:["Oxygen","Carbon dioxide","Nitrogen","Hydrogen"],a:1,e:"Plants absorb carbon dioxide and release oxygen during photosynthesis."},
+{q:"“Shah Jo Risalo” was written by:",o:["Sachal Sarmast","Shah Abdul Latif Bhittai","Bulleh Shah","Waris Shah"],a:1,e:"Shah Jo Risalo is the famous poetry collection of Shah Abdul Latif Bhittai."},
+{q:"The largest hot desert in the world is the:",o:["Gobi Desert","Sahara Desert","Thar Desert","Kalahari Desert"],a:1,e:"The Sahara in North Africa is the largest hot desert in the world."}]
 ];
 var WORDS=[
 {w:"Persistent",p:"adjective",en:"Continuing to try even when something is difficult.",ur:"Roman Urdu: Lagatar koshish karne wala, haar na manne wala.",ex:"Example: She was persistent in her studies and passed the test."},
