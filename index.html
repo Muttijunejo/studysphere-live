@@ -121,6 +121,10 @@ p{margin:0 0 1em}.muted{color:var(--ink2)}.small{font-size:.88rem}.meta{font-siz
 .dq-explain.show{display:block}
 .score-line{display:none;margin-top:12px;background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-weight:600}
 .score-line.show{display:block}
+.dq-result{display:none;margin-top:12px;background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;padding:16px 14px;text-align:center}
+.dq-result.show{display:block}
+.dq-result-score{font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+.dq-result-msg{margin:0 0 12px;color:var(--ink)}
 /* countdown + timetable */
 input[type="date"],input[type="text"],input[type="email"],select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
 input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
@@ -285,6 +289,7 @@ footer a{display:block;color:var(--ink2);text-decoration:none;font-size:.92rem;p
           <button class="btn ghost" id="dqReset" data-i18n="dq_retry">Try again</button>
         </div>
         <div class="score-line" id="dqScore"></div>
+        <div class="dq-result" id="dqResult"><div class="dq-result-score" id="dqResultScore"></div><p class="dq-result-msg" id="dqResultMsg"></p><button class="btn" id="dqRetry" type="button">Dobara Try Karo</button></div>
       </div>
     </div>
 
@@ -728,12 +733,13 @@ var WORDS=[
 var dqPicks={},dqDone=false,dqSet=DAILY_SETS[dayIndex(DAILY_SETS.length)];
 function renderDaily(){
   document.getElementById("dqDate").textContent=new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
-  var list=document.getElementById("dqList");list.innerHTML="";dqPicks={};dqDone=false;document.getElementById("dqScore").className="score-line";document.getElementById("dqScore").textContent="";
+  var list=document.getElementById("dqList");list.innerHTML="";dqPicks={};dqDone=false;document.getElementById("dqScore").className="score-line";document.getElementById("dqScore").textContent="";document.getElementById("dqResult").className="dq-result";
   dqSet.forEach(function(item,qi){var wrap=document.createElement("div");wrap.className="dq-q";var p=document.createElement("p");p.textContent=(qi+1)+". "+item.q;wrap.appendChild(p);var opts=document.createElement("div");opts.className="dq-opts";item.o.forEach(function(opt,oi){var b=document.createElement("button");b.type="button";b.className="dq-opt";b.textContent=opt;b.addEventListener("click",function(){if(dqDone)return;dqPicks[qi]=oi;opts.querySelectorAll(".dq-opt").forEach(function(x){x.style.borderColor="";x.style.background=""});b.style.borderColor="var(--accent)";b.style.background="var(--accent-soft)"});opts.appendChild(b)});wrap.appendChild(opts);var ex=document.createElement("div");ex.className="dq-explain";ex.id="dqe"+qi;ex.textContent=item.e;wrap.appendChild(ex);list.appendChild(wrap)});
   var w=WORDS[dayIndex(WORDS.length)];document.getElementById("wotdWord").textContent=w.w;document.getElementById("wotdPos").textContent=w.p;document.getElementById("wotdEn").textContent=w.en;document.getElementById("wotdUr").textContent=w.ur;document.getElementById("wotdEx").textContent=w.ex;
 }
-document.getElementById("dqCheck").addEventListener("click",function(){if(dqDone)return;dqDone=true;var score=0;dqSet.forEach(function(item,qi){var opts=document.querySelectorAll("#dqList .dq-q")[qi].querySelectorAll(".dq-opt");opts.forEach(function(b,oi){b.style.borderColor="";b.style.background="";if(oi===item.a)b.classList.add("right");if(dqPicks[qi]===oi&&oi!==item.a)b.classList.add("wrongpick")});if(dqPicks[qi]===item.a)score++;document.getElementById("dqe"+qi).classList.add("show")});var el=document.getElementById("dqScore");el.className="score-line show";el.textContent="Score: "+score+" / "+dqSet.length+(score===dqSet.length?" — full marks today. A new set comes tomorrow.":score>=2?" — good work. Read the explanations and come back tomorrow.":" — read the explanations above. A new set comes tomorrow.")});
+document.getElementById("dqCheck").addEventListener("click",function(){if(dqDone)return;dqDone=true;var score=0;dqSet.forEach(function(item,qi){var opts=document.querySelectorAll("#dqList .dq-q")[qi].querySelectorAll(".dq-opt");opts.forEach(function(b,oi){b.style.borderColor="";b.style.background="";if(oi===item.a)b.classList.add("right");if(dqPicks[qi]===oi&&oi!==item.a)b.classList.add("wrongpick")});if(dqPicks[qi]===item.a)score++;document.getElementById("dqe"+qi).classList.add("show")});var pct=Math.round(score/dqSet.length*100);var panel=document.getElementById("dqResult");document.getElementById("dqResultScore").textContent="Aap ke number: "+score+" / "+dqSet.length+" ("+pct+"%)";document.getElementById("dqResultMsg").textContent=pct>=80?"🌟 Zabardast! Aap ne bohat acha score kiya — isi tarah mehnat karte rahen!":pct>=50?"👏 Acha kiya! Aap pass hain — thori aur practice se aur behtari aayegi.":"💪 Koi baat nahi — haar nahi manni! Dobara try karen, aap kar sakte hain. Try Again!";panel.className="dq-result show";panel.scrollIntoView({behavior:"smooth",block:"center"})});
 document.getElementById("dqReset").addEventListener("click",renderDaily);
+document.getElementById("dqRetry").addEventListener("click",renderDaily);
 renderDaily();
 /* Countdown */
 function updateCountdown(){var v=document.getElementById("cdDate").value;var name=document.getElementById("cdName").value.trim();var daysEl=document.getElementById("cdDays");var txt=document.getElementById("cdText");if(!v){daysEl.textContent="—";txt.textContent=(window.currentLang==="ur"?"تاریخ منتخب کریں۔":"Choose a date to see the days left.");return}var target=new Date(v+"T00:00:00");var today=new Date();today.setHours(0,0,0,0);var diff=Math.round((target-today)/86400000);if(diff>0){daysEl.textContent=diff;txt.textContent=(window.currentLang==="ur"?("دن باقی ہیں"+(name?" — "+name:"")):("days left"+(name?" until "+name:"")+". Use the timetable below to plan them."))}else if(diff===0){daysEl.textContent="0";txt.textContent=(window.currentLang==="ur"?"آج ہی امتحان ہے۔":"Your exam is today. Stay calm and read each question carefully.")}else{daysEl.textContent="0";txt.textContent=(window.currentLang==="ur"?"یہ تاریخ گزر چکی ہے — نئی تاریخ منتخب کریں۔":"That date has passed. Pick your next exam date.")}}
