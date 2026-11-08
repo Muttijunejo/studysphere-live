@@ -37,7 +37,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Lora:wght@500;600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&family=Lora:wght@500;600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet" />
 <style>
 :root{
   --bg:#faf8f2; --surface:#fffefa; --surface2:#f2eee3; --surface3:#eae5d6;
@@ -275,6 +275,50 @@ html[data-theme="light"]{
   --r-lg:16px; --r-md:12px; --r-sm:8px;
   --ease:cubic-bezier(.25,.6,.3,1);
 }
+</style>
+<style>
+/* ===== NEW LOOK 8 Nov — indigo/violet theme (StudySphere redesign) ===== */
+:root{
+  --bg:#eef0fb; --surface:#ffffff; --surface2:#e6e9fa; --surface3:#d9def6;
+  --ink:#171a2e; --ink2:#4c5170; --ink3:#7c81a0;
+  --line:#dde1f5; --line2:#c6ccef;
+  --accent:#4f46e5; --accent-hover:#4338ca; --accent-soft:#e3e6fd; --accent-ink:#ffffff;
+  --amber:#b45309; --amber-soft:#fdf0dc;
+  --danger:#b3372c; --danger-soft:#fbeae8;
+  --shadow:0 2px 6px rgba(38,34,120,.07), 0 14px 34px rgba(38,34,120,.10);
+  --r-lg:22px; --r-md:16px; --r-sm:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0c0d1d; --surface:#161830; --surface2:#1e2040; --surface3:#282b52; --ink:#eceefc; --ink2:#a6a9cf; --ink3:#8387ad; --line:#262950; --line2:#343867; --accent:#8f8bf5; --accent-hover:#a5a1ff; --accent-soft:#23234d; --accent-ink:#12122b; --amber:#e5a54b; --amber-soft:#3a2c14; --danger:#e07a6d; --danger-soft:#3a2027; --shadow:0 2px 6px rgba(0,0,0,.4), 0 14px 34px rgba(0,0,0,.35)}
+}
+body{background:linear-gradient(180deg,#e3e6fd 0,#eef0fb 340px,#eef0fb 100%);background-color:var(--bg)}
+h1,h2,h3,.pagetitle{font-family:"Poppins","Manrope",system-ui,sans-serif;letter-spacing:-.01em}
+.brand{font-family:"Poppins","Manrope",sans-serif;font-weight:800;letter-spacing:-.02em}
+.head{background:rgba(255,255,255,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navlinks button,.navlinks a{border-radius:999px}
+.navlinks button.active,.navlinks .active{background:var(--accent);color:#fff}
+.hero{background:linear-gradient(135deg,#312e81 0%,#4f46e5 52%,#7c3aed 100%);color:#fff;border:0;border-radius:26px;box-shadow:0 22px 48px rgba(63,52,180,.32)}
+.hero h1{color:#fff}
+.hero .kicker{color:#c7c3ff;font-weight:700}
+.hero p.lede{color:#e6e4ff}
+.hero .small{color:#dcd9ff}
+.hero .stat span{color:#cfccf7}
+.hero .stat b{background:none;-webkit-background-clip:initial;background-clip:initial;color:#fff}
+.hero .u-draw::after{display:none}
+.hero-cta .btn{background:#fff;color:#3730a3;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.btn{border-radius:999px;font-weight:700;background:linear-gradient(135deg,#4f46e5,#7c3aed);border:0;color:#fff;box-shadow:0 8px 18px rgba(79,70,229,.30)}
+.btn:hover{background:linear-gradient(135deg,#4338ca,#6d28d9)}
+.btn.secondary{background:var(--surface);color:var(--accent);border:1.5px solid var(--line2);box-shadow:none}
+.card,.qcard,.daily-card,.examtile{border-radius:20px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.card:hover,.examtile:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(63,52,180,.16)}
+.examtile{border-top:4px solid var(--accent)}
+.quotebanner{background:linear-gradient(135deg,#7c3aed,#db2777);border-radius:22px;box-shadow:0 16px 36px rgba(160,40,140,.28)}
+.pill{border-radius:999px}
+.stat b,.stat strong,.stats b{font-family:"Poppins",sans-serif;background:linear-gradient(120deg,#4f46e5,#9333ea);-webkit-background-clip:text;background-clip:text;color:transparent}
+body>footer,body footer.foot{background:#14122e;color:#c9cbf5}
+body>footer a,body footer.foot a{color:#a5a1ff}
+.appbar{border-top:2px solid var(--accent)}
+input,select,textarea{border-radius:12px}
 </style>
 <style>/* polish 8 Nov */.examtile{border-top:3px solid var(--accent);box-shadow:0 1px 4px rgba(23,54,38,.07)}.examtile:hover{box-shadow:0 8px 20px rgba(23,54,38,.14)}.card{box-shadow:0 1px 5px rgba(23,54,38,.06)}.daily-card{border-top:3px solid var(--accent)}header{border-bottom:2px solid var(--accent)}.pagetitle .u-draw{text-decoration-thickness:3px}</style><style>/* mobile app style 8 Nov */.appbar{display:none}@media (max-width:700px){body{padding-bottom:66px}.hero h1{font-size:1.5rem;line-height:1.25}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid.c3{grid-template-columns:1fr 1fr;gap:10px}.grid.c2{grid-template-columns:1fr}.examtile{padding:12px}.examtile span{font-size:.8rem}.appbar{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:2px solid var(--accent);z-index:45;justify-content:space-around;padding:6px 2px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(11,61,44,.12)}.appbar button{background:none;border:0;color:var(--ink2);font-size:.68rem;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 8px;cursor:pointer;font-family:inherit}.appbar button svg{width:21px;height:21px}.appbar button.active{color:var(--accent)}}</style></head>
 <body>
