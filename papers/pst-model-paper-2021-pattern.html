@@ -1,0 +1,1214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PST Model Paper — 2021 Pattern (Solved) — StudySphere</title>
+<meta name="description" content="PST model paper in the official IBA Sukkur (STS) 2021 pattern: 100 solved MCQs with Show Answers — Mother Tongue, Social Studies/GK/Islamiyat/Computer, English, Maths and General Science. Free practice at StudySphere." />
+<style>
+:root{--bg:#f6f1e7;--surface:#fffdf8;--ink:#1d2420;--ink2:#5a665f;--line:#ddd3bf;--accent:#1e7a46;--accent-soft:#e3efe4;--wrong:#b3352b;--wrong-soft:#f9e7e4;--r:14px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 48px}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+a.back{color:var(--accent);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font-size:1.7rem;margin:10px 0 4px}
+.sub{color:var(--ink2);margin:0 0 18px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 22px}
+button.showall{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;cursor:pointer;font-size:.95rem}
+.score{font-weight:700;color:var(--accent)}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.q h3{margin:0 0 12px;font-size:1.05rem}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;font-size:.97rem;width:100%}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+body.show .opt.correct{border-color:var(--accent);background:var(--accent-soft);font-weight:700}
+body.show .opt.sel.wrongpick{border-color:var(--wrong);background:var(--wrong-soft)}
+.exp{display:none;margin:12px 0 0;color:var(--ink2);font-size:.93rem;border-top:1px dashed var(--line);padding-top:10px}
+body.show .exp{display:block}
+footer{color:var(--ink2);font-size:.88rem;margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+.paperhead{background:var(--surface);border:2px solid var(--accent);border-radius:var(--r);padding:18px;margin:14px 0 6px}
+.paperhead h2{margin:0 0 8px;font-size:1.15rem;letter-spacing:.02em}
+.paperhead table{width:100%;border-collapse:collapse;font-size:.95rem}
+.paperhead td{padding:3px 6px;vertical-align:top}
+.paperhead td.k{font-weight:700;width:34%;color:var(--ink)}
+.paperhead .note{margin:10px 0 0;font-weight:700;color:var(--accent)}
+.sectag{display:inline-block;background:var(--accent);color:#fff;font-size:.8rem;font-weight:700;border-radius:8px;padding:4px 10px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a class="logo" href="../index.html">Study<span>Sphere</span></a><a class="back" href="../index.html">&larr; Back to StudySphere</a></header>
+<h1>PST (PRIMARY SCHOOL TEACHER) — MODEL PAPER 2021 PATTERN (Solved)</h1>
+<div class="paperhead">
+<h2>SUKKUR IBA TESTING SERVICES (STS) — PATTERN PAPER</h2>
+<table>
+<tr><td class="k">Test:</td><td>PST (Primary School Teacher, BPS-14) — Model Paper</td></tr>
+<tr><td class="k">Conducting Body (Pattern):</td><td>IBA Sukkur (STS) — School Education &amp; Literacy Department, Government of Sindh</td></tr>
+<tr><td class="k">Total Questions:</td><td>100 MCQs</td></tr>
+<tr><td class="k">Time Allowed:</td><td>100 Minutes</td></tr>
+<tr><td class="k">Pattern:</td><td>Mother Tongue 15 &middot; Social Studies / GK / Islamiyat / Computer 15 &middot; English 20 &middot; Mathematics 25 &middot; General Science 25</td></tr>
+</table>
+<p class="note">Note: Ye ek MODEL paper hai jo asal 2021 ke official pattern par tayyar kiya gaya hai. Tamam sawal aur jawab Muse ne khud likhe aur solve kiye hain — kisi website se copy nahi.</p>
+</div>
+<p class="sub">Asal paper wale andaz mein practice karein: har sawal ke option par click karke apna jawab chunein, phir <b>Show Answers</b> dabayein — sahi jawab sabz rang mein nazar ayega aur sath ek line ki wazahat bhi milegi.</p>
+<div class="bar"><button class="showall" id="toggleBtn" onclick="toggleAnswers()">SHOW ANSWERS</button><span class="score" id="scoreLine"></span></div>
+<div id="quiz"></div>
+<footer>Ye model paper StudySphere (MR Academy) ki apni tayyar karda hai — tamam sawal aur jawab original hain. Asal 2021 paper ke sawal verify hote hi un ke solved sets bhi step by step yahin add kiye jayenge. <a class="back" href="../index.html">Home par wapas jayein</a></footer>
+</div>
+<script>
+var QUESTIONS = [
+ {
+  "sec": "PART-I: MOTHER TONGUE (URDU) — 15 MCQs",
+  "q": "Urdu ghazal ke sab se pehle sahib-e-diwan shair kaun mane jate hain?",
+  "opts": [
+   "Wali Dakkani",
+   "Mir Taqi Mir",
+   "Mirza Ghalib",
+   "Khwaja Mir Dard"
+  ],
+  "a": 0,
+  "exp": "Wali Dakkani ko Urdu ghazal ka pehla sahib-e-diwan shair mana jata hai."
+ },
+ {
+  "q": "Mashhoor dastan 'Bagh-o-Bahar' kis ne likhi?",
+  "opts": [
+   "Deputy Nazir Ahmad",
+   "Mir Amman",
+   "Sir Syed Ahmad Khan",
+   "Altaf Hussain Hali"
+  ],
+  "a": 1,
+  "exp": "Bagh-o-Bahar (1804) Mir Amman Dehlvi ki mashhoor dastan hai."
+ },
+ {
+  "q": "Lafz 'Kitab' ki sahi jama (plural) kya hai?",
+  "opts": [
+   "Kitabein",
+   "Kitabat",
+   "Kutub",
+   "Kitabain"
+  ],
+  "a": 2,
+  "exp": "Kitab ki jama 'Kutub' hai."
+ },
+ {
+  "q": "Jo lafz kaam karne wale ko zahir kare, use grammar mein kya kehte hain?",
+  "opts": [
+   "Ism-e-Mafool",
+   "Ism-e-Sifat",
+   "Ism-e-Zameer",
+   "Ism-e-Fail"
+  ],
+  "a": 3,
+  "exp": "Kaam karne wala 'fail' hota hai aur use zahir karne wala lafz Ism-e-Fail kehlata hai."
+ },
+ {
+  "q": "Muhawara 'Aankhein khul jana' ka matlab hai:",
+  "opts": [
+   "Neend aa jana",
+   "Haqeeqat samajh jana",
+   "Rona aa jana",
+   "Khush ho jana"
+  ],
+  "a": 1,
+  "exp": "Is muhawaray ka matlab hai asal haqeeqat ka samajh aa jana."
+ },
+ {
+  "q": "Lafz 'Roshni' ka zidd (antonym) kya hai?",
+  "opts": [
+   "Ujala",
+   "Noor",
+   "Chamak",
+   "Tareeki"
+  ],
+  "a": 3,
+  "exp": "Roshni ka zidd tareeki (andhera) hai."
+ },
+ {
+  "q": "'Musaddas-e-Hali' kis ki mashhoor nazm hai?",
+  "opts": [
+   "Altaf Hussain Hali",
+   "Allama Iqbal",
+   "Sir Syed Ahmad Khan",
+   "Maulana Shibli"
+  ],
+  "a": 0,
+  "exp": "Musaddas 'Madd-o-Jazr-e-Islam' Altaf Hussain Hali ki shahkar nazm hai."
+ },
+ {
+  "q": "Mirza Hadi Ruswa ke mashhoor novel ka naam kya hai?",
+  "opts": [
+   "Taubat-un-Nasuh",
+   "Fasana-e-Azad",
+   "Umrao Jan Ada",
+   "Aab-e-Hayat"
+  ],
+  "a": 2,
+  "exp": "Umrao Jan Ada (1899) Mirza Hadi Ruswa ka mashhoor novel hai."
+ },
+ {
+  "q": "Jumlay 'Woh ek lamba aadmi hai' mein lafz 'lamba' grammar mein kya hai?",
+  "opts": [
+   "Sifat",
+   "Ism",
+   "Fail",
+   "Zameer"
+  ],
+  "a": 0,
+  "exp": "Jo lafz kisi ki khoobi ya khaami bataye, woh sifat hota hai."
+ },
+ {
+  "q": "Allama Iqbal ko kis laqab se yaad kiya jata hai?",
+  "opts": [
+   "Baba-e-Urdu",
+   "Shair-e-Mashriq",
+   "Musawwir-e-Pakistan",
+   "Hakeem-ul-Ummat"
+  ],
+  "a": 1,
+  "exp": "Allama Iqbal 'Shair-e-Mashriq' ke laqab se mashhoor hain."
+ },
+ {
+  "q": "Darj zail mein se durust jumla kaun sa hai?",
+  "opts": [
+   "Maine ghar jana hai",
+   "Mujh ko ghar ko jana hai",
+   "Mujhe ghar jana hai",
+   "Main ghar ko jana hai"
+  ],
+  "a": 2,
+  "exp": "Grammatically sahi jumla hai: 'Mujhe ghar jana hai.'"
+ },
+ {
+  "q": "'Dastan' se murad hai:",
+  "opts": [
+   "Chhoti kahani",
+   "Ek ghazal",
+   "Ek marsiya",
+   "Lambi qissa-kahani"
+  ],
+  "a": 3,
+  "exp": "Dastan ek lambi, purani qissa-kahani ko kehte hain."
+ },
+ {
+  "q": "Lafz 'Bacha' ki jama kya hai?",
+  "opts": [
+   "Bachon",
+   "Bachche",
+   "Bachpan",
+   "Bacha"
+  ],
+  "a": 1,
+  "exp": "Bacha ki jama 'bachche' hai."
+ },
+ {
+  "q": "Iqbal ki nazm 'Shikwa' un ke kis majmua-e-kalam mein hai?",
+  "opts": [
+   "Bal-e-Jibreel",
+   "Zarb-e-Kaleem",
+   "Armaghan-e-Hijaz",
+   "Bang-e-Dara"
+  ],
+  "a": 3,
+  "exp": "Shikwa aur Jawab-e-Shikwa Bang-e-Dara mein shamil hain."
+ },
+ {
+  "q": "Mirza Ghalib ka asal naam kya tha?",
+  "opts": [
+   "Mirza Asadullah Khan",
+   "Mirza Abdul Qadir",
+   "Muhammad Asad Khan",
+   "Asad Ali Shah"
+  ],
+  "a": 0,
+  "exp": "Ghalib ka asal naam Mirza Asadullah Khan tha."
+ },
+ {
+  "sec": "PART-II: SOCIAL STUDIES / GK / ISLAMIYAT / COMPUTER — 15 MCQs",
+  "q": "Pakistan kab azaad hua?",
+  "opts": [
+   "23 March 1940",
+   "14 August 1948",
+   "14 August 1947",
+   "3 June 1947"
+  ],
+  "a": 2,
+  "exp": "Pakistan 14 August 1947 ko azaad hua."
+ },
+ {
+  "q": "Pakistan ke sab se pehle Governor General kaun thay?",
+  "opts": [
+   "Quaid-e-Azam Muhammad Ali Jinnah",
+   "Liaquat Ali Khan",
+   "Khawaja Nazimuddin",
+   "Ghulam Muhammad"
+  ],
+  "a": 0,
+  "exp": "Quaid-e-Azam Pakistan ke pehle Governor General thay."
+ },
+ {
+  "q": "Qarardad-e-Maqasid (Objectives Resolution) kab manzoor hui?",
+  "opts": [
+   "1940",
+   "1949",
+   "1956",
+   "1973"
+  ],
+  "a": 1,
+  "exp": "Objectives Resolution 12 March 1949 ko manzoor hui."
+ },
+ {
+  "q": "Duniya ka sab se bara samandar (ocean) kaun sa hai?",
+  "opts": [
+   "Atlantic",
+   "Indian",
+   "Pacific",
+   "Arctic"
+  ],
+  "a": 2,
+  "exp": "Pacific Ocean duniya ka sab se bara samandar hai."
+ },
+ {
+  "q": "Pakistan ka sab se bara shehar kaun sa hai?",
+  "opts": [
+   "Lahore",
+   "Islamabad",
+   "Faisalabad",
+   "Karachi"
+  ],
+  "a": 3,
+  "exp": "Karachi Pakistan ka sab se bara shehar aur bari bandargah hai."
+ },
+ {
+  "q": "Ranikot Fort, jo duniya ke bare qilao mein se ek hai, kis soobay mein hai?",
+  "opts": [
+   "Punjab",
+   "Sindh",
+   "Balochistan",
+   "KPK"
+  ],
+  "a": 1,
+  "exp": "Ranikot Fort Sindh ke zila Jamshoro mein waqe hai."
+ },
+ {
+  "q": "Islam ke sab se pehle Khalifa kaun thay?",
+  "opts": [
+   "Hazrat Umar (RA)",
+   "Hazrat Usman (RA)",
+   "Hazrat Ali (RA)",
+   "Hazrat Abu Bakr Siddique (RA)"
+  ],
+  "a": 3,
+  "exp": "Hazrat Abu Bakr Siddique (RA) Islam ke pehle Khalifa thay."
+ },
+ {
+  "q": "Quran-e-Pak ki sab se lambi Surah kaun si hai?",
+  "opts": [
+   "Surah Al-Baqarah",
+   "Surah Al-Imran",
+   "Surah An-Nisa",
+   "Surah Al-Maidah"
+  ],
+  "a": 0,
+  "exp": "Surah Al-Baqarah Quran ki sab se lambi Surah hai."
+ },
+ {
+  "q": "Hijri saal ka pehla maheena kaun sa hai?",
+  "opts": [
+   "Ramadan",
+   "Shawwal",
+   "Muharram",
+   "Rabi-ul-Awwal"
+  ],
+  "a": 2,
+  "exp": "Hijri saal Muharram se shuru hota hai."
+ },
+ {
+  "q": "Zakat kin logon par farz hoti hai?",
+  "opts": [
+   "Sahib-e-Nisab Musalman par",
+   "Har Musalman par",
+   "Sirf hajion par",
+   "Sirf taajiron par"
+  ],
+  "a": 0,
+  "exp": "Zakat us Musalman par farz hai jo sahib-e-nisab ho."
+ },
+ {
+  "q": "Computer ka 'dimagh' kis hissay ko kaha jata hai?",
+  "opts": [
+   "Monitor",
+   "CPU",
+   "Keyboard",
+   "Printer"
+  ],
+  "a": 1,
+  "exp": "CPU tamam processing karta hai, is liye use computer ka dimagh kehte hain."
+ },
+ {
+  "q": "Computer mein data mehfooz (store) karne ki aam device kaun si hai?",
+  "opts": [
+   "Mouse",
+   "Speaker",
+   "Hard Disk",
+   "Scanner"
+  ],
+  "a": 2,
+  "exp": "Hard disk data ko mustaqil tor par store karti hai."
+ },
+ {
+  "q": "Internet par websites dekhne ke liye istemal honay wala software kya kehlata hai?",
+  "opts": [
+   "Word Processor",
+   "Media Player",
+   "Antivirus",
+   "Web Browser"
+  ],
+  "a": 3,
+  "exp": "Chrome waghera web browsers hain jin se websites kholte hain."
+ },
+ {
+  "q": "Pakistan ka qaumi khel (national game) kaun sa hai?",
+  "opts": [
+   "Cricket",
+   "Hockey",
+   "Football",
+   "Squash"
+  ],
+  "a": 1,
+  "exp": "Hockey Pakistan ka qaumi khel hai."
+ },
+ {
+  "q": "Mohenjo-daro ke khandhar kis zila mein hain?",
+  "opts": [
+   "Hyderabad",
+   "Sukkur",
+   "Khairpur",
+   "Larkana"
+  ],
+  "a": 3,
+  "exp": "Mohenjo-daro Larkana zila mein waqe hai."
+ },
+ {
+  "sec": "PART-III: ENGLISH — 20 MCQs",
+  "q": "Choose the correct synonym of 'HAPPY'.",
+  "opts": [
+   "Joyful",
+   "Sad",
+   "Angry",
+   "Tired"
+  ],
+  "a": 0,
+  "exp": "Happy means khush; 'joyful' is its synonym."
+ },
+ {
+  "q": "Choose the correct antonym of 'ANCIENT'.",
+  "opts": [
+   "Old",
+   "Antique",
+   "Modern",
+   "Historic"
+  ],
+  "a": 2,
+  "exp": "Ancient means qadeem; its antonym is modern."
+ },
+ {
+  "q": "He is very good ___ mathematics.",
+  "opts": [
+   "at",
+   "in",
+   "on",
+   "for"
+  ],
+  "a": 0,
+  "exp": "Skill in a subject is expressed with 'good at'."
+ },
+ {
+  "q": "She ___ to school every day.",
+  "opts": [
+   "go",
+   "goes",
+   "going",
+   "gone"
+  ],
+  "a": 1,
+  "exp": "With third person singular (she), we use 'goes'."
+ },
+ {
+  "q": "Choose the correct synonym of 'BEGIN'.",
+  "opts": [
+   "End",
+   "Stop",
+   "Start",
+   "Finish"
+  ],
+  "a": 2,
+  "exp": "Begin and start both mean shuru karna."
+ },
+ {
+  "q": "Choose the correct antonym of 'BRAVE'.",
+  "opts": [
+   "Bold",
+   "Strong",
+   "Hero",
+   "Coward"
+  ],
+  "a": 3,
+  "exp": "Brave (bahadur) ka antonym coward (buzdil) hai."
+ },
+ {
+  "q": "The cat is hiding ___ the table.",
+  "opts": [
+   "between",
+   "under",
+   "among",
+   "since"
+  ],
+  "a": 1,
+  "exp": "Mez ke neeche ke liye sahi preposition 'under' hai."
+ },
+ {
+  "q": "What is the plural of 'Child'?",
+  "opts": [
+   "Childs",
+   "Childes",
+   "Childrens",
+   "Children"
+  ],
+  "a": 3,
+  "exp": "Child ki irregular plural 'children' hai."
+ },
+ {
+  "q": "Ali ___ a letter to his friend yesterday.",
+  "opts": [
+   "wrote",
+   "write",
+   "writes",
+   "writing"
+  ],
+  "a": 0,
+  "exp": "Yesterday shows past time, so the past tense 'wrote' is correct."
+ },
+ {
+  "q": "Choose the correct synonym of 'RAPID'.",
+  "opts": [
+   "Slow",
+   "Weak",
+   "Fast",
+   "Late"
+  ],
+  "a": 2,
+  "exp": "Rapid means tez; its synonym is 'fast'."
+ },
+ {
+  "q": "Choose the correct antonym of 'VICTORY'.",
+  "opts": [
+   "Defeat",
+   "Win",
+   "Success",
+   "Prize"
+  ],
+  "a": 0,
+  "exp": "Victory (fateh) ka antonym defeat (shikast) hai."
+ },
+ {
+  "q": "I have been waiting here ___ two hours.",
+  "opts": [
+   "since",
+   "for",
+   "from",
+   "at"
+  ],
+  "a": 1,
+  "exp": "Time ki muddat (period) ke sath 'for' lagta hai."
+ },
+ {
+  "q": "Choose the word with the correct spelling.",
+  "opts": [
+   "Beautifel",
+   "Beautifull",
+   "Beautiful",
+   "Beutiful"
+  ],
+  "a": 2,
+  "exp": "Sahi spelling 'Beautiful' hai."
+ },
+ {
+  "q": "They ___ playing football at this moment.",
+  "opts": [
+   "is",
+   "am",
+   "was",
+   "are"
+  ],
+  "a": 3,
+  "exp": "'They' plural hai, is liye 'are' ayega."
+ },
+ {
+  "q": "Choose the correct synonym of 'WEALTHY'.",
+  "opts": [
+   "Poor",
+   "Rich",
+   "Weak",
+   "Sick"
+  ],
+  "a": 1,
+  "exp": "Wealthy means ameer; its synonym is 'rich'."
+ },
+ {
+  "q": "Choose the correct antonym of 'GENEROUS'.",
+  "opts": [
+   "Kind",
+   "Noble",
+   "Happy",
+   "Mean"
+  ],
+  "a": 3,
+  "exp": "Generous (sakhi) ka antonym 'mean' (kanjoos) hai."
+ },
+ {
+  "q": "He divided the sweets ___ the two brothers.",
+  "opts": [
+   "between",
+   "among",
+   "into",
+   "upon"
+  ],
+  "a": 0,
+  "exp": "Sirf do afraad ke darmiyan taqseem ke liye 'between' ata hai."
+ },
+ {
+  "q": "A person who can use both hands equally well is called:",
+  "opts": [
+   "Ambassador",
+   "Amateur",
+   "Ambidextrous",
+   "Audible"
+  ],
+  "a": 2,
+  "exp": "Dono hathon se barabar kaam karne wala 'ambidextrous' kehlata hai."
+ },
+ {
+  "q": "She is ___ honest girl.",
+  "opts": [
+   "an",
+   "a",
+   "the",
+   "no article"
+  ],
+  "a": 0,
+  "exp": "'Honest' vowel sound se shuru hota hai, is liye 'an' ayega."
+ },
+ {
+  "q": "Read the passage: 'Ahmed wakes up early in the morning. He offers his prayer and then goes to school at 8 o'clock.' At what time does Ahmed go to school?",
+  "opts": [
+   "At 7 o'clock",
+   "At 8 o'clock",
+   "At 9 o'clock",
+   "At 6 o'clock"
+  ],
+  "a": 1,
+  "exp": "Passage mein saaf likha hai ke Ahmed 8 baje school jata hai."
+ },
+ {
+  "sec": "PART-IV: MATHEMATICS — 25 MCQs",
+  "q": "What is 25% of 200?",
+  "opts": [
+   "25",
+   "75",
+   "50",
+   "100"
+  ],
+  "a": 2,
+  "exp": "200 ka 25% = 200 x 25/100 = 50."
+ },
+ {
+  "q": "7 x 8 + 6 = ?",
+  "opts": [
+   "56",
+   "98",
+   "64",
+   "62"
+  ],
+  "a": 3,
+  "exp": "Pehle zarb: 7 x 8 = 56; phir 56 + 6 = 62."
+ },
+ {
+  "q": "If x + 9 = 15, then x = ?",
+  "opts": [
+   "4",
+   "6",
+   "5",
+   "7"
+  ],
+  "a": 1,
+  "exp": "x = 15 - 9 = 6."
+ },
+ {
+  "q": "The average of 10, 20 and 30 is:",
+  "opts": [
+   "15",
+   "25",
+   "30",
+   "20"
+  ],
+  "a": 3,
+  "exp": "(10 + 20 + 30) / 3 = 60 / 3 = 20."
+ },
+ {
+  "q": "Rs 500 is divided between two boys in the ratio 2 : 3. The smaller share is:",
+  "opts": [
+   "Rs 200",
+   "Rs 100",
+   "Rs 300",
+   "Rs 250"
+  ],
+  "a": 0,
+  "exp": "Kul hisay 5 hain; chhota hissa = 2/5 x 500 = Rs 200."
+ },
+ {
+  "q": "The simple interest on Rs 1,000 at 10% per year for 2 years is:",
+  "opts": [
+   "Rs 100",
+   "Rs 300",
+   "Rs 200",
+   "Rs 20"
+  ],
+  "a": 2,
+  "exp": "SI = 1000 x 10 x 2 / 100 = Rs 200."
+ },
+ {
+  "q": "3/4 expressed as a percentage is:",
+  "opts": [
+   "75%",
+   "34%",
+   "43%",
+   "0.75%"
+  ],
+  "a": 0,
+  "exp": "3/4 = 0.75 = 75%."
+ },
+ {
+  "q": "The area of a square whose side is 9 cm is:",
+  "opts": [
+   "36 cm2",
+   "81 cm2",
+   "18 cm2",
+   "72 cm2"
+  ],
+  "a": 1,
+  "exp": "Area = side x side = 9 x 9 = 81 cm2."
+ },
+ {
+  "q": "The perimeter of a rectangle with length 8 cm and width 5 cm is:",
+  "opts": [
+   "40 cm",
+   "13 cm",
+   "26 cm",
+   "80 cm"
+  ],
+  "a": 2,
+  "exp": "Perimeter = 2 x (8 + 5) = 26 cm."
+ },
+ {
+  "q": "144 / 12 = ?",
+  "opts": [
+   "11",
+   "13",
+   "14",
+   "12"
+  ],
+  "a": 3,
+  "exp": "12 x 12 = 144, is liye 144 / 12 = 12."
+ },
+ {
+  "q": "What is the next number in the series: 2, 6, 12, 20, ___?",
+  "opts": [
+   "24",
+   "30",
+   "28",
+   "32"
+  ],
+  "a": 1,
+  "exp": "Farq 4, 6, 8, 10 ki tarteeb se badh raha hai; 20 + 10 = 30."
+ },
+ {
+  "q": "A bus covers 120 km in 2 hours. Its speed is:",
+  "opts": [
+   "50 km/h",
+   "100 km/h",
+   "240 km/h",
+   "60 km/h"
+  ],
+  "a": 3,
+  "exp": "Speed = distance / time = 120 / 2 = 60 km/h."
+ },
+ {
+  "q": "A shopkeeper buys a pen for Rs 400 and sells it for Rs 500. His profit is:",
+  "opts": [
+   "Rs 100",
+   "Rs 50",
+   "Rs 900",
+   "Rs 150"
+  ],
+  "a": 0,
+  "exp": "Profit = 500 - 400 = Rs 100."
+ },
+ {
+  "q": "0.5 x 200 = ?",
+  "opts": [
+   "50",
+   "150",
+   "100",
+   "25"
+  ],
+  "a": 2,
+  "exp": "0.5 ka matlab aadha hai; 200 ka aadha 100 hai."
+ },
+ {
+  "q": "The smallest prime number is:",
+  "opts": [
+   "2",
+   "0",
+   "1",
+   "3"
+  ],
+  "a": 0,
+  "exp": "2 sab se chhota prime number hai aur wahid even prime hai."
+ },
+ {
+  "q": "The sum of all angles of a triangle is:",
+  "opts": [
+   "90 degrees",
+   "180 degrees",
+   "270 degrees",
+   "360 degrees"
+  ],
+  "a": 1,
+  "exp": "Har triangle ke teeno zawiyon ka majmua 180 degrees hota hai."
+ },
+ {
+  "q": "If 5 pens cost Rs 250, the cost of 1 pen is:",
+  "opts": [
+   "Rs 25",
+   "Rs 45",
+   "Rs 50",
+   "Rs 55"
+  ],
+  "a": 2,
+  "exp": "250 / 5 = Rs 50 per pen."
+ },
+ {
+  "q": "15% of 300 is:",
+  "opts": [
+   "30",
+   "60",
+   "15",
+   "45"
+  ],
+  "a": 3,
+  "exp": "300 x 15/100 = 45."
+ },
+ {
+  "q": "The cube of 3 (3 x 3 x 3) is:",
+  "opts": [
+   "9",
+   "27",
+   "18",
+   "81"
+  ],
+  "a": 1,
+  "exp": "3 x 3 x 3 = 27."
+ },
+ {
+  "q": "Which fraction is equal to 0.25?",
+  "opts": [
+   "1/2",
+   "3/4",
+   "2/5",
+   "1/4"
+  ],
+  "a": 3,
+  "exp": "1/4 = 0.25."
+ },
+ {
+  "q": "If a = 5, then 3a + 2 = ?",
+  "opts": [
+   "17",
+   "10",
+   "15",
+   "25"
+  ],
+  "a": 0,
+  "exp": "3 x 5 + 2 = 17."
+ },
+ {
+  "q": "999 + 111 = ?",
+  "opts": [
+   "1010",
+   "1100",
+   "1110",
+   "1000"
+  ],
+  "a": 2,
+  "exp": "999 + 111 = 1110."
+ },
+ {
+  "q": "3 hours 30 minutes is equal to how many minutes?",
+  "opts": [
+   "210 minutes",
+   "200 minutes",
+   "230 minutes",
+   "330 minutes"
+  ],
+  "a": 0,
+  "exp": "3 x 60 + 30 = 210 minutes."
+ },
+ {
+  "q": "A toy is bought for Rs 800 and sold for Rs 720. The loss is:",
+  "opts": [
+   "Rs 20",
+   "Rs 80",
+   "Rs 100",
+   "Rs 120"
+  ],
+  "a": 1,
+  "exp": "Loss = 800 - 720 = Rs 80."
+ },
+ {
+  "q": "Which of the following is an even number?",
+  "opts": [
+   "13",
+   "17",
+   "24",
+   "29"
+  ],
+  "a": 2,
+  "exp": "24 do par pura taqseem ho jata hai, is liye even number hai."
+ },
+ {
+  "sec": "PART-V: GENERAL SCIENCE — 25 MCQs",
+  "q": "The chemical formula of water is:",
+  "opts": [
+   "CO2",
+   "O2",
+   "H2SO4",
+   "H2O"
+  ],
+  "a": 3,
+  "exp": "Pani do hydrogen aur ek oxygen atom se banta hai: H2O."
+ },
+ {
+  "q": "How many bones are there in an adult human body?",
+  "opts": [
+   "106",
+   "206",
+   "306",
+   "226"
+  ],
+  "a": 1,
+  "exp": "Baligh insaan ke jism mein 206 haddiyan hoti hain."
+ },
+ {
+  "q": "Which planet is nearest to the Sun?",
+  "opts": [
+   "Venus",
+   "Earth",
+   "Mars",
+   "Mercury"
+  ],
+  "a": 3,
+  "exp": "Mercury suraj ke sab se qareeb siyara hai."
+ },
+ {
+  "q": "Plants absorb which gas from the air for photosynthesis?",
+  "opts": [
+   "Carbon dioxide",
+   "Oxygen",
+   "Nitrogen",
+   "Hydrogen"
+  ],
+  "a": 0,
+  "exp": "Pauday khana banane ke liye carbon dioxide jazb karte hain."
+ },
+ {
+  "q": "The SI unit of force is:",
+  "opts": [
+   "Joule",
+   "Watt",
+   "Newton",
+   "Pascal"
+  ],
+  "a": 2,
+  "exp": "Force ki SI ikai Newton hai."
+ },
+ {
+  "q": "The normal temperature of a healthy human body is:",
+  "opts": [
+   "37 C",
+   "35 C",
+   "39 C",
+   "40 C"
+  ],
+  "a": 0,
+  "exp": "Sehatmand insaani jism ka darja hararat taqreeban 37 C hota hai."
+ },
+ {
+  "q": "Which organ pumps blood throughout the body?",
+  "opts": [
+   "Liver",
+   "Heart",
+   "Lung",
+   "Kidney"
+  ],
+  "a": 1,
+  "exp": "Dil khoon ko pure jism mein pump karta hai."
+ },
+ {
+  "q": "Water boils at what temperature (at sea level)?",
+  "opts": [
+   "90 C",
+   "80 C",
+   "100 C",
+   "120 C"
+  ],
+  "a": 2,
+  "exp": "Pani 100 C par ubalta hai."
+ },
+ {
+  "q": "Which gas is necessary for burning?",
+  "opts": [
+   "Carbon dioxide",
+   "Nitrogen",
+   "Helium",
+   "Oxygen"
+  ],
+  "a": 3,
+  "exp": "Kisi cheez ke jalne ke liye oxygen lazmi hai."
+ },
+ {
+  "q": "The largest planet of our solar system is:",
+  "opts": [
+   "Saturn",
+   "Jupiter",
+   "Neptune",
+   "Earth"
+  ],
+  "a": 1,
+  "exp": "Jupiter hamaray nizam-e-shamsi ka sab se bara siyara hai."
+ },
+ {
+  "q": "Which vitamin is produced in our skin with the help of sunlight?",
+  "opts": [
+   "Vitamin A",
+   "Vitamin B",
+   "Vitamin C",
+   "Vitamin D"
+  ],
+  "a": 3,
+  "exp": "Dhoop ki madad se jild mein Vitamin D banta hai."
+ },
+ {
+  "q": "The speed of light is approximately:",
+  "opts": [
+   "300,000 km/s",
+   "300 km/s",
+   "3,000 km/s",
+   "30,000 km/s"
+  ],
+  "a": 0,
+  "exp": "Roshni ki raftaar taqreeban 300,000 km/s hai."
+ },
+ {
+  "q": "Which of the following is a renewable source of energy?",
+  "opts": [
+   "Coal",
+   "Oil",
+   "Solar energy",
+   "Natural gas"
+  ],
+  "a": 2,
+  "exp": "Solar energy khatam na honay wali (renewable) tawanai hai."
+ },
+ {
+  "q": "A healthy adult human has how many teeth?",
+  "opts": [
+   "32",
+   "28",
+   "30",
+   "36"
+  ],
+  "a": 0,
+  "exp": "Baligh insaan ke 32 daant hote hain."
+ },
+ {
+  "q": "The natural satellite of the Earth is:",
+  "opts": [
+   "Mars",
+   "Moon",
+   "Titan",
+   "Sun"
+  ],
+  "a": 1,
+  "exp": "Chaand zameen ka wahid qudrati satellite hai."
+ },
+ {
+  "q": "The chemical symbol of gold is:",
+  "opts": [
+   "Gd",
+   "Go",
+   "Au",
+   "Ag"
+  ],
+  "a": 2,
+  "exp": "Gold ka symbol 'Au' hai (Latin naam Aurum se)."
+ },
+ {
+  "q": "The force that pulls objects towards the Earth is called:",
+  "opts": [
+   "Friction",
+   "Magnetism",
+   "Pressure",
+   "Gravity"
+  ],
+  "a": 3,
+  "exp": "Zameen ki is kashish ko gravity kehte hain."
+ },
+ {
+  "q": "Which part of the plant prepares food?",
+  "opts": [
+   "Root",
+   "Leaf",
+   "Stem",
+   "Flower"
+  ],
+  "a": 1,
+  "exp": "Patta (leaf) photosynthesis ke zariye khana tayyar karta hai."
+ },
+ {
+  "q": "The pH of a neutral solution is:",
+  "opts": [
+   "0",
+   "14",
+   "1",
+   "7"
+  ],
+  "a": 3,
+  "exp": "Neutral solution ka pH 7 hota hai."
+ },
+ {
+  "q": "Temperature is measured by an instrument called:",
+  "opts": [
+   "Thermometer",
+   "Barometer",
+   "Ammeter",
+   "Hygrometer"
+  ],
+  "a": 0,
+  "exp": "Thermometer darja hararat napta hai."
+ },
+ {
+  "q": "Sound travels fastest through:",
+  "opts": [
+   "Vacuum",
+   "Gas",
+   "Solid",
+   "Liquid"
+  ],
+  "a": 2,
+  "exp": "Aawaz sab se tez thos (solid) cheezon mein safar karti hai."
+ },
+ {
+  "q": "Which cells in the blood carry oxygen?",
+  "opts": [
+   "Red blood cells",
+   "White blood cells",
+   "Platelets",
+   "Plasma"
+  ],
+  "a": 0,
+  "exp": "Red blood cells oxygen ko jism ke tamam hisson tak le jate hain."
+ },
+ {
+  "q": "The process by which water changes into vapour is called:",
+  "opts": [
+   "Condensation",
+   "Evaporation",
+   "Freezing",
+   "Melting"
+  ],
+  "a": 1,
+  "exp": "Pani ka bhaap banna evaporation kehlata hai."
+ },
+ {
+  "q": "The Sun rises in the:",
+  "opts": [
+   "West",
+   "North",
+   "East",
+   "South"
+  ],
+  "a": 2,
+  "exp": "Suraj mashriq (east) se tulu hota hai."
+ },
+ {
+  "q": "Deficiency of which vitamin causes night blindness?",
+  "opts": [
+   "Vitamin D",
+   "Vitamin C",
+   "Vitamin B12",
+   "Vitamin A"
+  ],
+  "a": 3,
+  "exp": "Vitamin A ki kami se raat ko kam dikhai deta hai, jise night blindness kehte hain."
+ }
+];
+var picked = {};
+var quiz = document.getElementById('quiz');
+QUESTIONS.forEach(function(item, qi){
+  var card = document.createElement('div'); card.className = 'q';
+  if (item.sec){
+    var tag = document.createElement('div'); tag.className = 'sectag'; tag.textContent = item.sec; card.appendChild(tag);
+  }
+  var h = document.createElement('h3'); h.textContent = (qi+1) + '. ' + item.q; card.appendChild(h);
+  var box = document.createElement('div'); box.className = 'opts';
+  item.opts.forEach(function(text, oi){
+    var b = document.createElement('button'); b.className = 'opt' + (oi === item.a ? ' correct' : '');
+    b.textContent = 'ABCD'[oi] + '. ' + text;
+    b.onclick = function(){
+      picked[qi] = oi;
+      box.querySelectorAll('.opt').forEach(function(x){ x.classList.remove('sel','wrongpick'); });
+      b.classList.add('sel');
+      if (document.body.classList.contains('show') && oi !== item.a) b.classList.add('wrongpick');
+      updateScore();
+    };
+    box.appendChild(b);
+  });
+  card.appendChild(box);
+  var e = document.createElement('p'); e.className = 'exp'; e.textContent = 'Wazahat: ' + item.exp; card.appendChild(e);
+  quiz.appendChild(card);
+});
+function updateScore(){
+  if (!document.body.classList.contains('show')) return;
+  var c = 0, t = 0;
+  QUESTIONS.forEach(function(item, qi){ if (qi in picked){ t++; if (picked[qi] === item.a) c++; } });
+  document.getElementById('scoreLine').textContent = t ? ('Aap ke ' + c + ' / ' + QUESTIONS.length + ' durust (attempted ' + t + ')') : '';
+}
+function toggleAnswers(){
+  var on = document.body.classList.toggle('show');
+  document.getElementById('toggleBtn').textContent = on ? 'HIDE ANSWERS' : 'SHOW ANSWERS';
+  QUESTIONS.forEach(function(item, qi){
+    if (qi in picked && picked[qi] !== item.a && on){
+      var card = quiz.children[qi];
+      var box = card.querySelector('.opts');
+      box.querySelectorAll('.opt')[picked[qi]].classList.add('wrongpick');
+    }
+  });
+  updateScore();
+}
+</script>
+</body>
+</html>
