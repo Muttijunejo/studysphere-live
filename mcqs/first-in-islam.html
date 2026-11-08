@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>First in Islam MCQs — StudySphere</title>
+<meta name="description" content="First in Islam important MCQs with Show Answers — free practice for SPSC, FPSC, PST/JEST and all screening tests at StudySphere." />
+<style>
+:root{--bg:#f6f1e7;--surface:#fffdf8;--ink:#1d2420;--ink2:#5a665f;--line:#ddd3bf;--accent:#1e7a46;--accent-soft:#e3efe4;--wrong:#b3352b;--wrong-soft:#f9e7e4;--r:14px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 48px}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+a.back{color:var(--accent);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font-size:1.7rem;margin:10px 0 4px}
+.sub{color:var(--ink2);margin:0 0 18px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 22px}
+button.showall{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;cursor:pointer;font-size:.95rem}
+.score{font-weight:700;color:var(--accent)}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.q h3{margin:0 0 12px;font-size:1.05rem}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;font-size:.97rem;width:100%}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+body.show .opt.correct{border-color:var(--accent);background:var(--accent-soft);font-weight:700}
+body.show .opt.sel.wrongpick{border-color:var(--wrong);background:var(--wrong-soft)}
+.exp{display:none;margin:12px 0 0;color:var(--ink2);font-size:.93rem;border-top:1px dashed var(--line);padding-top:10px}
+body.show .exp{display:block}
+footer{color:var(--ink2);font-size:.88rem;margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a class="logo" href="../index.html">Study<span>Sphere</span></a><a class="back" href="../index.html">← Back to StudySphere</a></header>
+<h1>FIRST IN ISLAM MCQs</h1>
+<p class="sub">Islamic Studies — Topic: First in Islam. Option par click karke apna jawab chunein, phir <b>Show Answers</b> dabayein — sahi jawab sabz rang mein nazar ayega aur sath wazahat bhi.</p>
+<div class="bar"><button class="showall" id="toggleBtn" onclick="toggleAnswers()">SHOW ANSWERS</button><span class="score" id="scoreLine"></span></div>
+<div id="quiz"></div>
+<footer>Ye MCQs StudySphere (MR Academy) ki apni tayyar karda hain. Mazeed sawal is topic mein step by step add ho rahe hain. <a class="back" href="../index.html">Home par wapas jayein</a></footer>
+</div>
+<script>
+var QUESTIONS = [
+ {q:"Who was the first person to accept Islam?", opts:["Hazrat Abu Bakr (RA)", "Hazrat Khadija (RA)", "Hazrat Ali (RA)", "Hazrat Zaid (RA)"], a:1, exp:"Sab se pehle Hazrat Khadija (RA) ne Islam qabool kiya tha."},
+ {q:"Who was the first free man to accept Islam?", opts:["Hazrat Umar (RA)", "Hazrat Uthman (RA)", "Hazrat Abu Bakr Siddiq (RA)", "Hazrat Hamza (RA)"], a:2, exp:"Azad mardon mein sab se pehle Hazrat Abu Bakr (RA) Musalman hue."},
+ {q:"Who was the first child to accept Islam?", opts:["Hazrat Zaid (RA)", "Hazrat Abdullah ibn Abbas (RA)", "Hazrat Hassan (RA)", "Hazrat Ali (RA)"], a:3, exp:"Bachon mein sab se pehle Hazrat Ali (RA) ne Islam qabool kiya."},
+ {q:"Who was the first Muezzin of Islam?", opts:["Hazrat Bilal (RA)", "Hazrat Ammar (RA)", "Hazrat Salman (RA)", "Hazrat Abu Mahdhura (RA)"], a:0, exp:"Hazrat Bilal (RA) Islam ke pehle Muezzin the, woh azan dete the."},
+ {q:"Who was the first martyr (Shaheed) in Islam?", opts:["Hazrat Yasir (RA)", "Hazrat Hamza (RA)", "Hazrat Sumayyah (RA)", "Hazrat Khabbab (RA)"], a:2, exp:"Hazrat Sumayyah (RA) Islam ki pehli shaheed khatoon thin."},
+ {q:"Who was the first male martyr in Islam?", opts:["Hazrat Yasir (RA)", "Hazrat Harith (RA)", "Hazrat Mahja (RA)", "Hazrat Ubaydah (RA)"], a:0, exp:"Mardon mein pehle shaheed Hazrat Yasir (RA) mane jate hain."},
+ {q:"Which was the first mosque built in Islam?", opts:["Masjid Nabawi", "Masjid Quba", "Masjid al-Haram", "Masjid al-Aqsa"], a:1, exp:"Madina ke qareeb sab se pehle Masjid Quba tameer hui thi."},
+ {q:"Which was the first battle in Islam?", opts:["Battle of Uhud", "Battle of Khandaq", "Battle of Hunayn", "Battle of Badr"], a:3, exp:"Ghazwa-e-Badr Islam ki pehli bari jang thi, 2 Hijri mein hui."},
+ {q:"Who was the first Caliph of Islam after the Prophet Muhammad (SAW)?", opts:["Hazrat Abu Bakr Siddiq (RA)", "Hazrat Umar (RA)", "Hazrat Uthman (RA)", "Hazrat Ali (RA)"], a:0, exp:"Rasool Allah (SAW) ke baad pehle Khalifa Hazrat Abu Bakr (RA) bane."},
+ {q:"Where was the first Hijrah (migration) of Muslims made to?", opts:["Madina", "Taif", "Yemen", "Abyssinia (Habsha)"], a:3, exp:"Pehli Hijrat Habsha ki taraf hui thi jahan ke badshah Najashi the."},
+ {q:"Who led the first group of Muslims in the migration to Abyssinia?", opts:["Hazrat Uthman (RA)", "Hazrat Jafar ibn Abi Talib (RA)", "Hazrat Zubayr (RA)", "Hazrat Saad (RA)"], a:1, exp:"Habsha Hijrat mein Hazrat Jafar (RA) ne Najashi ke samne Islam ki wazahat ki thi."},
+ {q:"Who was the first person to recite the Quran loudly in Makkah?", opts:["Hazrat Bilal (RA)", "Hazrat Umar (RA)", "Hazrat Abdullah ibn Masud (RA)", "Hazrat Hamza (RA)"], a:2, exp:"Hazrat Abdullah ibn Masud (RA) ne pehli dafa Makkah mein buland awaz se Quran parha."},
+ {q:"Who was the first ambassador of Islam sent to Madina before Hijrah?", opts:["Hazrat Muadh (RA)", "Hazrat Zaid (RA)", "Hazrat Khalid (RA)", "Hazrat Musab ibn Umayr (RA)"], a:3, exp:"Hazrat Musab ibn Umayr (RA) ko Madina mein tableegh ke liye bheja gaya tha."},
+ {q:"Which was the first Surah revealed to the Prophet Muhammad (SAW)?", opts:["Surah Al-Fatiha", "Surah Al-Alaq", "Surah Al-Muddaththir", "Surah Al-Qalam"], a:1, exp:"Pehli wahi Surah Al-Alaq ki pehli ayat thin — Iqra se shuru hoti hai."},
+ {q:"What was the first word of the first revelation?", opts:["Iqra (Read)", "Qul", "Salam", "Bismillah"], a:0, exp:"Pehli wahi ka pehla lafz Iqra tha, matlab parho."},
+ {q:"Who brought the first revelation to the Prophet Muhammad (SAW)?", opts:["Hazrat Mikail (AS)", "Hazrat Israfil (AS)", "Hazrat Jibrail (AS)", "Hazrat Azrail (AS)"], a:2, exp:"Wahi lekar Hazrat Jibrail (AS) Ghar-e-Hira mein aaye the."},
+ {q:"Where did the Prophet Muhammad (SAW) receive the first revelation?", opts:["Cave Thawr", "Cave Hira", "Mount Uhud", "Kaaba"], a:1, exp:"Pehli wahi Jabal-e-Noor ki Ghar-e-Hira mein nazil hui."},
+ {q:"Who was the first wife of the Prophet Muhammad (SAW)?", opts:["Hazrat Khadija (RA)", "Hazrat Aisha (RA)", "Hazrat Hafsa (RA)", "Hazrat Sawda (RA)"], a:0, exp:"Rasool Allah (SAW) ki pehli biwi Hazrat Khadija (RA) thin."},
+ {q:"The first pledge at Aqaba took place with people of which city?", opts:["Taif", "Makkah", "Yemen", "Madina (Yathrib)"], a:3, exp:"Bayt-e-Aqaba Madina ke logon ke sath hui thi Hijrat se pehle."},
+ {q:"Who was the first Sahabi to be buried in Jannat-ul-Baqi?", opts:["Hazrat Hamza (RA)", "Hazrat Saad (RA)", "Hazrat Uthman ibn Mazun (RA)", "Hazrat Zaid (RA)"], a:2, exp:"Hazrat Uthman ibn Mazun (RA) ko sab se pehle Baqi mein dafan kiya gaya."},
+ {q:"Who was the first commander appointed by the Prophet (SAW) for an expedition (Sariyya)?", opts:["Hazrat Ali (RA)", "Hazrat Zaid (RA)", "Hazrat Hamza (RA)", "Hazrat Khalid (RA)"], a:2, exp:"Pehli Sariyya ki qayadat Hazrat Hamza (RA) ko di gayi thi."},
+ {q:"Which mosque was the first to be built in Madina after Hijrah on the Prophet's land?", opts:["Masjid Quba", "Masjid Qiblatain", "Masjid Jumah", "Masjid Nabawi"], a:3, exp:"Madina mein Rasool Allah (SAW) ne Masjid Nabawi ki bunyad rakhi."},
+ {q:"Who gave the first Azan in Masjid Nabawi?", opts:["Hazrat Abdullah ibn Zaid (RA)", "Hazrat Bilal (RA)", "Hazrat Abu Mahdhura (RA)", "Hazrat Ammar (RA)"], a:1, exp:"Masjid Nabawi mein pehli azan Hazrat Bilal (RA) ne di thi."},
+ {q:"Who was the first person to compile the Quran into one book form?", opts:["Hazrat Abu Bakr Siddiq (RA)", "Hazrat Uthman (RA)", "Hazrat Umar (RA)", "Hazrat Ali (RA)"], a:0, exp:"Hazrat Abu Bakr (RA) ke daur mein Quran ko ek kitab ki surat mein jama kiya gaya."},
+ {q:"Under which Caliph was the Quran first given its standard copies to different cities?", opts:["Hazrat Uthman (RA)", "Hazrat Abu Bakr (RA)", "Hazrat Umar (RA)", "Hazrat Ali (RA)"], a:0, exp:"Hazrat Uthman (RA) ne Quran ke sarkari nuskhe mukhtalif shehron ko bheje, is liye unhe Jami-ul-Quran kehte hain."},
+ {q:"Who is known as the first historian of Seerah and Maghazi in early Islam?", opts:["Ibn Hisham", "Al-Waqidi", "Ibn Ishaq", "Ibn Saad"], a:2, exp:"Seerat par pehli mashhoor kitab Ibn Ishaq ne likhi jisay Ibn Hisham ne murattab kiya."},
+ {q:"Who was the first Muslim to migrate to Madina before the Prophet (SAW)?", opts:["Hazrat Musab (RA)", "Hazrat Hamza (RA)", "Hazrat Bilal (RA)", "Hazrat Abu Salama (RA)"], a:3, exp:"Riwayat mein Hazrat Abu Salama (RA) ko Madina ki taraf pehle hijrat karne walon mein ginna jata hai."},
+ {q:"Which was the first Ghazwa in which the Prophet (SAW) personally participated?", opts:["Ghazwa Badr", "Ghazwa Waddan (Abwa)", "Ghazwa Safawan", "Ghazwa Bawat"], a:1, exp:"Pehla Ghazwa jisme Aap (SAW) shareek hue woh Waddan / Abwa tha."},
+ {q:"Who was the first child born to Muhajireen in Madina after Hijrah?", opts:["Hazrat Abdullah ibn Umar (RA)", "Hazrat Hassan (RA)", "Hazrat Hussain (RA)", "Hazrat Abdullah ibn Zubayr (RA)"], a:3, exp:"Hijrat ke baad Madina mein Muhajireen ke yahan pehle Hazrat Abdullah ibn Zubayr (RA) paida hue."},
+ {q:"Who was the first person to accept Islam from among the slaves?", opts:["Hazrat Zaid ibn Harithah (RA)", "Hazrat Bilal (RA)", "Hazrat Ammar (RA)", "Hazrat Khabbab (RA)"], a:0, exp:"Ghulamon mein Hazrat Zaid ibn Harithah (RA) pehle Musalman hue."},
+ {q:"Which companion first suggested digging a trench in the Battle of Khandaq?", opts:["Hazrat Abu Bakr (RA)", "Hazrat Ali (RA)", "Hazrat Salman Farsi (RA)", "Hazrat Zubayr (RA)"], a:2, exp:"Khandaq khodne ka mashwara Hazrat Salman Farsi (RA) ne diya tha."},
+ {q:"Who was the first person martyred in the Battle of Badr from the Muslims?", opts:["Hazrat Harith (RA)", "Hazrat Mahja (RA)", "Hazrat Ubaydah (RA)", "Hazrat Umayr (RA)"], a:1, exp:"Badr mein pehle shaheed Hazrat Mahja (RA) the."},
+ {q:"What was the name of the first Islamic state established by the Prophet (SAW)?", opts:["Makkah", "Madina", "Kufa", "Damascus"], a:1, exp:"Hijrat ke baad pehli Islami riyasat Madina mein qaim hui."},
+ {q:"Misaq-e-Madina (Charter of Madina) was the first written constitution of which state?", opts:["Makkah", "Baghdad", "Cordoba", "Madina"], a:3, exp:"Misaq-e-Madina ko duniya ka pehla tehreeri dastoor mana jata hai."},
+ {q:"Who was the first Sahabi to lead a Hajj after Fath Makkah as Amir-ul-Hajj appointed by the Prophet?", opts:["Hazrat Abu Bakr Siddiq (RA)", "Hazrat Ali (RA)", "Hazrat Umar (RA)", "Hazrat Attab (RA)"], a:0, exp:"9 Hijri mein Hazrat Abu Bakr (RA) ko Amir-e-Hajj bana kar bheja gaya."},
+ {q:"Who first introduced the Hijri calendar officially?", opts:["Hazrat Abu Bakr (RA)", "Hazrat Uthman (RA)", "Hazrat Umar Farooq (RA)", "Hazrat Ali (RA)"], a:2, exp:"Hazrat Umar (RA) ke daur mein Hijri calendar sarkari taur par shuru hua."},
+ {q:"Who was the first person to be called Amir-ul-Momineen?", opts:["Hazrat Abu Bakr (RA)", "Hazrat Uthman (RA)", "Hazrat Umar Farooq (RA)", "Hazrat Ali (RA)"], a:2, exp:"Amir-ul-Momineen ka laqab sab se pehle Hazrat Umar (RA) ke liye istemal hua."},
+ {q:"The first Minbar in Masjid Nabawi was made from the wood of which tree?", opts:["Date palm trunk", "Tamarisk (Tarfa)", "Cedar", "Olive"], a:1, exp:"Pehlay Aap (SAW) khajoor ke tanay se tek lagate the, phir lakri ka minbar banaya gaya."},
+ {q:"Who was the first wife of the Prophet (SAW) to pass away after Hijrah in Madina?", opts:["Hazrat Khadija (RA)", "Hazrat Sawda (RA)", "Hazrat Aisha (RA)", "Hazrat Zaynab bint Khuzaymah (RA)"], a:3, exp:"Madina mein sab se pehle wafat panay wali zauja Hazrat Zaynab bint Khuzaymah (RA) thin — Khadija (RA) ki wafat Makkah mein hui thi."},
+ {q:"Who was the first person to shoot an arrow in the path of Allah?", opts:["Hazrat Saad ibn Abi Waqqas (RA)", "Hazrat Zubayr (RA)", "Hazrat Talha (RA)", "Hazrat Hamza (RA)"], a:0, exp:"Hazrat Saad ibn Abi Waqqas (RA) ko pehla teer chalane wala kaha jata hai."},
+ {q:"Which Sahabi was the first to perform Hijrah with his family to Abyssinia?", opts:["Hazrat Uthman (RA)", "Hazrat Abu Bakr (RA)", "Hazrat Ali (RA)", "Hazrat Umar (RA)"], a:0, exp:"Hazrat Uthman (RA) apni biwi Hazrat Ruqayyah (RA) ke sath Habsha gaye the."},
+ {q:"Who was the first born son of the Prophet Muhammad (SAW)?", opts:["Hazrat Abdullah (RA)", "Hazrat Qasim (RA)", "Hazrat Ibrahim (RA)", "Hazrat Tahir (RA)"], a:1, exp:"Rasool Allah (SAW) ke pehle bete Hazrat Qasim the, is liye Aap ki kunyat Abul Qasim hai."},
+ {q:"From which son does the Prophet's kunyat Abul Qasim come?", opts:["Hazrat Abdullah", "Hazrat Ibrahim", "Hazrat Qasim", "Hazrat Tayyib"], a:2, exp:"Aap (SAW) ki kunyat Abul Qasim Hazrat Qasim ki nisbat se hai."},
+ {q:"Who is known for first greeting with Assalamu Alaikum in a famous narration?", opts:["Hazrat Bilal (RA)", "Hazrat Salman (RA)", "Hazrat Ammar (RA)", "Hazrat Abu Dharr Ghifari (RA)"], a:3, exp:"Hazrat Abu Dharr (RA) ke bare mein aata hai ke unhon ne pehle salam kiya tha."},
+ {q:"Which was the first mosque where Jummah prayer was offered before reaching Madina?", opts:["Masjid Quba", "Masjid Nabawi", "Masjid Qiblatain", "Masjid Jumah (Bani Salim area)"], a:3, exp:"Quba se Madina jate hue Bani Salim mein pehla Jummah parha gaya."},
+ {q:"Who was the first Khalifa to establish a regular army and Diwan system?", opts:["Hazrat Abu Bakr (RA)", "Hazrat Uthman (RA)", "Hazrat Umar Farooq (RA)", "Hazrat Ali (RA)"], a:2, exp:"Hazrat Umar (RA) ne fouj aur mahkamon ka baqaida nizam qaim kiya."},
+ {q:"Who was the first martyr in the Battle of Uhud who is called Sayyid-ush-Shuhada?", opts:["Hazrat Musab (RA)", "Hazrat Hamza (RA)", "Hazrat Abdullah ibn Jahsh (RA)", "Hazrat Hanzala (RA)"], a:1, exp:"Hazrat Hamza (RA) ko Sayyid-ush-Shuhada kaha jata hai, woh Uhud mein shaheed hue."},
+ {q:"Who carried the flag (Liwa) of Islam first in Battle of Badr?", opts:["Hazrat Musab ibn Umayr (RA)", "Hazrat Ali (RA)", "Hazrat Hamza (RA)", "Hazrat Saad (RA)"], a:0, exp:"Badr mein Islami jhanda Hazrat Musab ibn Umayr (RA) ke pas tha."},
+ {q:"What was the first thing the Prophet (SAW) did on reaching Madina?", opts:["Built his house", "Built Masjid Quba and stayed there", "Met Ansar leaders", "Signed treaty"], a:1, exp:"Madina pohonchne par pehlay Quba mein qayam kiya aur Masjid Quba ki bunyad rakhi."},
+ {q:"In Madina, the Prophet (SAW) first stayed at the house of which Sahabi?", opts:["Hazrat Saad ibn Muadh (RA)", "Hazrat Anas (RA)", "Hazrat Abu Ayyub Ansari (RA)", "Hazrat Zaid (RA)"], a:2, exp:"Madina mein Aap (SAW) Hazrat Abu Ayyub Ansari (RA) ke ghar thehre the."}
+];
+var picked = {};
+var quiz = document.getElementById('quiz');
+QUESTIONS.forEach(function(item, qi){
+  var card = document.createElement('div'); card.className = 'q';
+  var h = document.createElement('h3'); h.textContent = (qi+1) + '. ' + item.q; card.appendChild(h);
+  var box = document.createElement('div'); box.className = 'opts';
+  item.opts.forEach(function(text, oi){
+    var b = document.createElement('button'); b.className = 'opt' + (oi === item.a ? ' correct' : '');
+    b.textContent = 'ABCD'[oi] + '. ' + text;
+    b.onclick = function(){
+      picked[qi] = oi;
+      box.querySelectorAll('.opt').forEach(function(x){ x.classList.remove('sel','wrongpick'); });
+      b.classList.add('sel');
+      if (document.body.classList.contains('show') && oi !== item.a) b.classList.add('wrongpick');
+      updateScore();
+    };
+    box.appendChild(b);
+  });
+  card.appendChild(box);
+  var e = document.createElement('p'); e.className = 'exp'; e.textContent = 'Wazahat: ' + item.exp; card.appendChild(e);
+  quiz.appendChild(card);
+});
+function updateScore(){
+  if (!document.body.classList.contains('show')) return;
+  var c = 0, t = 0;
+  QUESTIONS.forEach(function(item, qi){ if (qi in picked){ t++; if (picked[qi] === item.a) c++; } });
+  document.getElementById('scoreLine').textContent = t ? ('Aap ke ' + c + ' / ' + QUESTIONS.length + ' durust (attempted ' + t + ')') : '';
+}
+function toggleAnswers(){
+  var on = document.body.classList.toggle('show');
+  document.getElementById('toggleBtn').textContent = on ? 'HIDE ANSWERS' : 'SHOW ANSWERS';
+  document.querySelectorAll('.opt.sel').forEach(function(b){
+    var qi = Array.prototype.indexOf.call(quiz.children, b.closest('.q'));
+  });
+  // mark wrong picks
+  QUESTIONS.forEach(function(item, qi){
+    if (qi in picked && picked[qi] !== item.a && on){
+      quiz.children[qi].querySelectorAll('.opt')[picked[qi]].classList.add('wrongpick');
+    }
+  });
+  updateScore();
+}
+</script>
+</body>
+</html>

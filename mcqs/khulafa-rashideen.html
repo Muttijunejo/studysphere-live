@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Khulafa Rashideen MCQs — StudySphere</title>
+<meta name="description" content="Khulafa Rashideen important MCQs with Show Answers — free practice for SPSC, FPSC, PST/JEST and all screening tests at StudySphere." />
+<style>
+:root{--bg:#f6f1e7;--surface:#fffdf8;--ink:#1d2420;--ink2:#5a665f;--line:#ddd3bf;--accent:#1e7a46;--accent-soft:#e3efe4;--wrong:#b3352b;--wrong-soft:#f9e7e4;--r:14px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 48px}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+a.back{color:var(--accent);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font-size:1.7rem;margin:10px 0 4px}
+.sub{color:var(--ink2);margin:0 0 18px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 22px}
+button.showall{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;cursor:pointer;font-size:.95rem}
+.score{font-weight:700;color:var(--accent)}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.q h3{margin:0 0 12px;font-size:1.05rem}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;font-size:.97rem;width:100%}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+body.show .opt.correct{border-color:var(--accent);background:var(--accent-soft);font-weight:700}
+body.show .opt.sel.wrongpick{border-color:var(--wrong);background:var(--wrong-soft)}
+.exp{display:none;margin:12px 0 0;color:var(--ink2);font-size:.93rem;border-top:1px dashed var(--line);padding-top:10px}
+body.show .exp{display:block}
+footer{color:var(--ink2);font-size:.88rem;margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a class="logo" href="../index.html">Study<span>Sphere</span></a><a class="back" href="../index.html">← Back to StudySphere</a></header>
+<h1>KHULAFA RASHIDEEN MCQs</h1>
+<p class="sub">Islamic Studies — Topic: Khulafa Rashideen. Option par click karke apna jawab chunein, phir <b>Show Answers</b> dabayein — sahi jawab sabz rang mein nazar ayega aur sath wazahat bhi.</p>
+<div class="bar"><button class="showall" id="toggleBtn" onclick="toggleAnswers()">SHOW ANSWERS</button><span class="score" id="scoreLine"></span></div>
+<div id="quiz"></div>
+<footer>Ye MCQs StudySphere (MR Academy) ki apni tayyar karda hain. Mazeed sawal is topic mein step by step add ho rahe hain. <a class="back" href="../index.html">Home par wapas jayein</a></footer>
+</div>
+<script>
+var QUESTIONS = [
+ {q:"Who was the first Caliph of Islam after the Holy Prophet (PBUH)?", opts:["Hazrat Umar Farooq (RA)", "Hazrat Abu Bakr Siddique (RA)", "Hazrat Usman Ghani (RA)", "Hazrat Ali (RA)"], a:1, exp:"Nabi Kareem (PBUH) ke baad pehle Khalifa Hazrat Abu Bakr Siddique (RA) bane."},
+ {q:"The Rashidun Caliphate lasted for about:", opts:["10 years", "20 years", "About 30 years", "50 years"], a:2, exp:"Khilafat-e-Rashida taqreeban 30 saal, 632 se 661 Eisvi tak, rahi."},
+ {q:"Who was the second Caliph of Islam?", opts:["Hazrat Umar Farooq (RA)", "Hazrat Abu Bakr (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)"], a:0, exp:"Dusre Khalifa Hazrat Umar Farooq (RA) thay."},
+ {q:"Who was the fourth and last Rashidun Caliph?", opts:["Hazrat Abu Bakr (RA)", "Hazrat Umar (RA)", "Hazrat Usman (RA)", "Hazrat Ali ibn Abi Talib (RA)"], a:3, exp:"Chauthe aur akhri Khalifa-e-Rashid Hazrat Ali (RA) thay."},
+ {q:"Hazrat Abu Bakr (RA) belonged to which tribe?", opts:["Banu Hashim", "Quraysh, the Banu Taym clan", "The Ansar of Madinah", "Banu Umayya"], a:1, exp:"Hazrat Abu Bakr (RA) ka talluq Quraysh ke qabeele Banu Taym se tha."},
+ {q:"The famous title of Hazrat Abu Bakr (RA) is:", opts:["As-Siddiq, the Truthful", "Al-Farooq", "Ghani", "Sher-e-Khuda"], a:0, exp:"Hazrat Abu Bakr (RA) ko Siddique, yani sach ki tasdeeq karne wala, kaha jata hai."},
+ {q:"The caliphate of Hazrat Abu Bakr (RA) lasted for about:", opts:["One year", "Five years", "About two years", "Ten years"], a:2, exp:"Hazrat Abu Bakr (RA) ki khilafat taqreeban do saal rahi."},
+ {q:"The compilation of the Quran into one book form was done under the supervision of:", opts:["Hazrat Ali (RA)", "Hazrat Umar (RA)", "Hazrat Usman (RA)", "Hazrat Zaid ibn Thabit (RA)"], a:3, exp:"Abu Bakr (RA) ke daur mein Zaid ibn Thabit (RA) ki sarbarahi mein Quran ek kitab ki surat mein jama hua."},
+ {q:"Who advised Hazrat Abu Bakr (RA) to collect and preserve the Quran in written form?", opts:["Hazrat Umar Farooq (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)", "Hazrat Talha (RA)"], a:0, exp:"Jang-e-Yamama ke baad Hazrat Umar (RA) ne Quran jama karne ka mashwara diya."},
+ {q:"The Battle of Yamama was fought against the false prophet:", opts:["Tulaiha", "Musaylimah, called Musaylimah the Liar", "Aswad Ansi", "Sajah"], a:1, exp:"Yamama ki jang jhoote nabi Musaylimah Kazzab ke khilaf lari gayi."},
+ {q:"Before his death, Hazrat Abu Bakr (RA) had sent an expedition towards Syria under:", opts:["Hazrat Khalid ibn Walid (RA)", "Hazrat Abu Ubaidah (RA)", "Hazrat Saad ibn Abi Waqqas (RA)", "Hazrat Usama ibn Zaid (RA)"], a:3, exp:"Abu Bakr (RA) ne Usama ibn Zaid (RA) ki qiyadat mein lashkar Sham ki taraf bheja."},
+ {q:"The title Al-Farooq means:", opts:["The rich one", "The great warrior", "The one who separates truth from falsehood", "The compiler"], a:2, exp:"Farooq ke mani hain haq aur batil mein farq karne wala."},
+ {q:"The caliphate of Hazrat Umar (RA) lasted for about:", opts:["About 10 years", "About 2 years", "About 12 years", "About 5 years"], a:0, exp:"Hazrat Umar (RA) ki khilafat taqreeban das saal, 634 se 644 tak, rahi."},
+ {q:"Persia was largely conquered during the caliphate of:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Umar Farooq (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)"], a:1, exp:"Faris (Persia) ki bari futoohat Hazrat Umar (RA) ke daur mein hueen."},
+ {q:"The Battle of Qadisiyyah against Persia was fought during the caliphate of:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Ali (RA)", "Hazrat Umar Farooq (RA)", "Hazrat Usman (RA)"], a:2, exp:"Qadisiyyah ki jang Hazrat Umar (RA) ke daur-e-khilafat mein hui."},
+ {q:"The Muslim commander at the Battle of Qadisiyyah was:", opts:["Hazrat Khalid ibn Walid (RA)", "Hazrat Amr ibn al-Aas (RA)", "Hazrat Abu Ubaidah (RA)", "Hazrat Saad ibn Abi Waqqas (RA)"], a:3, exp:"Qadisiyyah mein musalman lashkar ke sipah salar Hazrat Saad ibn Abi Waqqas (RA) thay."},
+ {q:"The Battle of Yarmouk against the Romans in 636 CE took place during the caliphate of:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Umar Farooq (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)"], a:1, exp:"Yarmouk ki jang 636 mein Hazrat Umar (RA) ke daur mein hui."},
+ {q:"Which Caliph personally received the keys of Jerusalem after its peaceful conquest?", opts:["Hazrat Umar Farooq (RA)", "Hazrat Abu Bakr (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)"], a:0, exp:"Bait-ul-Muqaddas ki chabiyan Hazrat Umar (RA) ne khud wasool keen."},
+ {q:"The Hijri calendar was officially introduced by:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Usman (RA)", "Hazrat Ali (RA)", "Hazrat Umar Farooq (RA)"], a:3, exp:"Hijri calendar ka bazabta aghaz Hazrat Umar (RA) ke daur mein hua."},
+ {q:"The Diwan system, a register for salaries and stipends, was introduced by:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Ali (RA)", "Hazrat Umar Farooq (RA)", "Hazrat Usman (RA)"], a:2, exp:"Diwan ka nizam, yani tankhwahon aur wazaif ka register, Hazrat Umar (RA) ne qayam kiya."},
+ {q:"Hazrat Umar (RA) was martyred in which Hijri year?", opts:["22 AH", "23 AH", "24 AH", "20 AH"], a:1, exp:"Hazrat Umar (RA) 23 Hijri mein shaheed hue."},
+ {q:"Hazrat Umar (RA) was assassinated by:", opts:["Abu Lulu Fayruz", "Ibn Muljam", "Harmuzan", "Wahshi"], a:0, exp:"Hazrat Umar (RA) par Abu Lulu Fayruz ne jan lewa hamla kiya tha."},
+ {q:"Hazrat Usman (RA) belonged to which clan of Quraysh?", opts:["Banu Hashim", "Banu Taym", "Banu Umayya", "The Ansar"], a:2, exp:"Hazrat Usman (RA) ka talluq Quraysh ke Banu Umayya khandan se tha."},
+ {q:"Hazrat Usman (RA) is called Ghani because of his:", opts:["Bravery in battles", "Poetry", "Deep knowledge", "Generosity and spending his wealth for Islam"], a:3, exp:"Usman (RA) apni sakhawat aur maal Islam par kharch ki wajah se Ghani kehlaye."},
+ {q:"The caliphate of Hazrat Usman (RA) lasted for about:", opts:["About 12 years", "About 2 years", "About 10 years", "About 5 years"], a:0, exp:"Hazrat Usman (RA) ki khilafat taqreeban 12 saal, 644 se 656 tak, rahi."},
+ {q:"The standard official copy of the Holy Quran was prepared during the caliphate of:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Usman Ghani (RA)", "Hazrat Umar (RA)", "Hazrat Ali (RA)"], a:1, exp:"Quran ka sarkari mustanad nuskha Hazrat Usman (RA) ke daur mein tayyar hua."},
+ {q:"Hazrat Usman (RA) is called Jami-ul-Quran because he:", opts:["Memorised the whole Quran first", "Wrote the first ayat", "Translated the Quran", "Prepared and spread the standard collected copy of the Quran"], a:3, exp:"Usman (RA) ne Quran ke mustanad nuskhe tayyar karke har taraf bhijwaye, is liye Jami-ul-Quran kehlaye."},
+ {q:"The title Zun-Noorain, owner of two lights, belongs to:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Umar (RA)", "Hazrat Usman Ghani (RA)", "Hazrat Ali (RA)"], a:2, exp:"Usman (RA) ko Zun-Noorain kaha jata hai."},
+ {q:"Hazrat Usman (RA) married, one after the other, how many daughters of the Holy Prophet (PBUH)?", opts:["Two, Ruqayyah (RA) and then Umm Kulthum (RA)", "One", "Three", "None"], a:0, exp:"Usman (RA) ke nikah mein yakke baad deegre Nabi (PBUH) ki do betiyan aayen, is liye Zun-Noorain kehlaye."},
+ {q:"The first Muslim naval fleet was developed during the caliphate of:", opts:["Hazrat Umar (RA)", "Hazrat Ali (RA)", "Hazrat Usman Ghani (RA)", "Hazrat Abu Bakr (RA)"], a:2, exp:"Pehla musalman behri beda Hazrat Usman (RA) ke daur mein bana."},
+ {q:"The island of Cyprus was conquered during the caliphate of:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Usman Ghani (RA)", "Hazrat Umar (RA)", "Hazrat Ali (RA)"], a:1, exp:"Qubrus (Cyprus) ki fatah Hazrat Usman (RA) ke daur mein hui."},
+ {q:"Hazrat Usman (RA) was martyred in which Hijri year?", opts:["30 AH", "32 AH", "33 AH", "35 AH"], a:3, exp:"Hazrat Usman (RA) 35 Hijri mein shaheed hue."},
+ {q:"At the time of his martyrdom, Hazrat Usman (RA) was:", opts:["Reciting the Holy Quran at home", "Sleeping", "Eating a meal", "Leading prayer in the mosque"], a:0, exp:"Shahadat ke waqt Hazrat Usman (RA) ghar mein Quran ki tilawat kar rahe thay."},
+ {q:"Hazrat Ali (RA) was the cousin of the Prophet (PBUH) and also his:", opts:["Brother", "Son-in-law", "Uncle", "Father-in-law"], a:1, exp:"Hazrat Ali (RA) Nabi (PBUH) ke chacha zad bhai aur damad thay."},
+ {q:"Hazrat Ali (RA) was married to which daughter of the Prophet (PBUH)?", opts:["Hazrat Ruqayyah (RA)", "Hazrat Umm Kulthum (RA)", "Hazrat Fatimah (RA)", "Hazrat Zainab (RA)"], a:2, exp:"Hazrat Ali (RA) ka nikah Hazrat Fatimah (RA) se hua tha."},
+ {q:"The title Sher-e-Khuda and Asadullah is associated with:", opts:["Hazrat Ali (RA)", "Hazrat Umar (RA)", "Hazrat Usman (RA)", "Hazrat Abu Bakr (RA)"], a:0, exp:"Hazrat Ali (RA) ko Sher-e-Khuda aur Asadullah kaha jata hai."},
+ {q:"The caliphate of Hazrat Ali (RA) lasted for about:", opts:["About 2 years", "About 10 years", "About 12 years", "About 5 years, from 656 to 661 CE"], a:3, exp:"Hazrat Ali (RA) ki khilafat taqreeban panch saal, 656 se 661 tak, rahi."},
+ {q:"Which Caliph shifted the capital of the caliphate to Kufa?", opts:["Hazrat Usman (RA)", "Hazrat Ali (RA)", "Hazrat Umar (RA)", "Hazrat Abu Bakr (RA)"], a:1, exp:"Hazrat Ali (RA) ne dar-ul-khilafa Madinah se Kufa muntaqil kiya."},
+ {q:"The Battle of Jamal, the Battle of the Camel, was fought during the caliphate of:", opts:["Hazrat Abu Bakr (RA)", "Hazrat Umar (RA)", "Hazrat Ali (RA)", "Hazrat Usman (RA)"], a:2, exp:"Jang-e-Jamal Hazrat Ali (RA) ke daur-e-khilafat mein hui."},
+ {q:"The Battle of Siffin was fought between Hazrat Ali (RA) and:", opts:["Hazrat Muawiyah ibn Abi Sufyan (RA)", "Abu Sufyan", "Yazid", "Hazrat Khalid ibn Walid (RA)"], a:0, exp:"Siffin ki jang Hazrat Ali (RA) aur Hazrat Muawiyah (RA) ke darmiyan hui."},
+ {q:"The Battle of Nahrawan was fought by Hazrat Ali (RA) against:", opts:["The Romans", "The Persians", "The Quraysh", "The Kharijites"], a:3, exp:"Nahrawan ki jang Kharijiyon ke khilaf lari gayi."},
+ {q:"Hazrat Ali (RA) was martyred in which city?", opts:["Madinah", "Kufa, in Iraq", "Makkah", "Damascus"], a:1, exp:"Hazrat Ali (RA) ko Kufa ki masjid mein shaheed kiya gaya."},
+ {q:"Hazrat Ali (RA) was assassinated by:", opts:["Abu Lulu Fayruz", "Hazrat Muawiyah (RA)", "Abdur Rahman ibn Muljam", "Amr ibn al-Aas (RA)"], a:2, exp:"Hazrat Ali (RA) par Abdur Rahman ibn Muljam ne hamla kiya tha."},
+ {q:"Hazrat Ali (RA) was martyred in which Hijri year?", opts:["40 AH", "35 AH", "36 AH", "30 AH"], a:0, exp:"Hazrat Ali (RA) 40 Hijri mein shaheed hue."},
+ {q:"Which Rashidun Caliph served for the longest period?", opts:["Hazrat Abu Bakr (RA)", "Hazrat Umar (RA)", "Hazrat Ali (RA)", "Hazrat Usman Ghani (RA)"], a:3, exp:"Sab se taweel khilafat Hazrat Usman (RA) ki rahi, taqreeban 12 saal."},
+ {q:"The shortest caliphate among the four Rashidun Caliphs was that of:", opts:["Hazrat Umar (RA)", "Hazrat Usman (RA)", "Hazrat Abu Bakr Siddique (RA)", "Hazrat Ali (RA)"], a:2, exp:"Sab se mukhtasar khilafat Hazrat Abu Bakr (RA) ki thi, taqreeban do saal."},
+ {q:"All four Rashidun Caliphs belonged broadly to which group?", opts:["The Ansar of Madinah", "The Quraysh of Makkah", "The Persians", "The Romans"], a:1, exp:"Charon Khulafa-e-Rashideen ka talluq Makkah ke Quraysh se tha."},
+ {q:"Hazrat Umar (RA) nominated a Shura of how many members to choose the next Caliph?", opts:["Six members", "Three members", "Four members", "Ten members"], a:0, exp:"Umar (RA) ne agla Khalifa chunnay ke liye chhe rukni Shura banayi."},
+ {q:"The six-member Shura after Hazrat Umar (RA) selected which companion as Caliph?", opts:["Hazrat Ali (RA)", "Hazrat Abu Bakr (RA)", "Hazrat Talha (RA)", "Hazrat Usman Ghani (RA)"], a:3, exp:"Shura ne Hazrat Usman (RA) ko teesra Khalifa muntakhab kiya."},
+ {q:"The word Rashidun for these Caliphs means:", opts:["The rich caliphs", "The warrior caliphs", "The Rightly Guided Caliphs", "The four friends"], a:2, exp:"Rashidun ke mani hain hidayat par chalne wale, is liye inhen Rightly Guided Caliphs kehte hain."}
+];
+var picked = {};
+var quiz = document.getElementById('quiz');
+QUESTIONS.forEach(function(item, qi){
+  var card = document.createElement('div'); card.className = 'q';
+  var h = document.createElement('h3'); h.textContent = (qi+1) + '. ' + item.q; card.appendChild(h);
+  var box = document.createElement('div'); box.className = 'opts';
+  item.opts.forEach(function(text, oi){
+    var b = document.createElement('button'); b.className = 'opt' + (oi === item.a ? ' correct' : '');
+    b.textContent = 'ABCD'[oi] + '. ' + text;
+    b.onclick = function(){
+      picked[qi] = oi;
+      box.querySelectorAll('.opt').forEach(function(x){ x.classList.remove('sel','wrongpick'); });
+      b.classList.add('sel');
+      if (document.body.classList.contains('show') && oi !== item.a) b.classList.add('wrongpick');
+      updateScore();
+    };
+    box.appendChild(b);
+  });
+  card.appendChild(box);
+  var e = document.createElement('p'); e.className = 'exp'; e.textContent = 'Wazahat: ' + item.exp; card.appendChild(e);
+  quiz.appendChild(card);
+});
+function updateScore(){
+  if (!document.body.classList.contains('show')) return;
+  var c = 0, t = 0;
+  QUESTIONS.forEach(function(item, qi){ if (qi in picked){ t++; if (picked[qi] === item.a) c++; } });
+  document.getElementById('scoreLine').textContent = t ? ('Aap ke ' + c + ' / ' + QUESTIONS.length + ' durust (attempted ' + t + ')') : '';
+}
+function toggleAnswers(){
+  var on = document.body.classList.toggle('show');
+  document.getElementById('toggleBtn').textContent = on ? 'HIDE ANSWERS' : 'SHOW ANSWERS';
+  document.querySelectorAll('.opt.sel').forEach(function(b){
+    var qi = Array.prototype.indexOf.call(quiz.children, b.closest('.q'));
+  });
+  // mark wrong picks
+  QUESTIONS.forEach(function(item, qi){
+    if (qi in picked && picked[qi] !== item.a && on){
+      quiz.children[qi].querySelectorAll('.opt')[picked[qi]].classList.add('wrongpick');
+    }
+  });
+  updateScore();
+}
+</script>
+</body>
+</html>

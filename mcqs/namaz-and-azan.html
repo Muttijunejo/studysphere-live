@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Namaz and Azan MCQs — StudySphere</title>
+<meta name="description" content="Namaz and Azan important MCQs with Show Answers — free practice for SPSC, FPSC, PST/JEST and all screening tests at StudySphere." />
+<style>
+:root{--bg:#f6f1e7;--surface:#fffdf8;--ink:#1d2420;--ink2:#5a665f;--line:#ddd3bf;--accent:#1e7a46;--accent-soft:#e3efe4;--wrong:#b3352b;--wrong-soft:#f9e7e4;--r:14px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 48px}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+a.back{color:var(--accent);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font-size:1.7rem;margin:10px 0 4px}
+.sub{color:var(--ink2);margin:0 0 18px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 22px}
+button.showall{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;cursor:pointer;font-size:.95rem}
+.score{font-weight:700;color:var(--accent)}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.q h3{margin:0 0 12px;font-size:1.05rem}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;font-size:.97rem;width:100%}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+body.show .opt.correct{border-color:var(--accent);background:var(--accent-soft);font-weight:700}
+body.show .opt.sel.wrongpick{border-color:var(--wrong);background:var(--wrong-soft)}
+.exp{display:none;margin:12px 0 0;color:var(--ink2);font-size:.93rem;border-top:1px dashed var(--line);padding-top:10px}
+body.show .exp{display:block}
+footer{color:var(--ink2);font-size:.88rem;margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a class="logo" href="../index.html">Study<span>Sphere</span></a><a class="back" href="../index.html">← Back to StudySphere</a></header>
+<h1>NAMAZ AND AZAN MCQs</h1>
+<p class="sub">Islamic Studies — Topic: Namaz and Azan. Option par click karke apna jawab chunein, phir <b>Show Answers</b> dabayein — sahi jawab sabz rang mein nazar ayega aur sath wazahat bhi.</p>
+<div class="bar"><button class="showall" id="toggleBtn" onclick="toggleAnswers()">SHOW ANSWERS</button><span class="score" id="scoreLine"></span></div>
+<div id="quiz"></div>
+<footer>Ye MCQs StudySphere (MR Academy) ki apni tayyar karda hain. Mazeed sawal is topic mein step by step add ho rahe hain. <a class="back" href="../index.html">Home par wapas jayein</a></footer>
+</div>
+<script>
+var QUESTIONS = [
+ {q:"How many obligatory prayers are offered in a day?", opts:["Five","Three","Four","Seven"], a:0, exp:"Din mein 5 waqt ki namaz farz hai — Fajr, Zuhr, Asr, Maghrib aur Isha."},
+ {q:"Who was the first Muezzin of Islam?", opts:["Hazrat Abu Bakr RA","Hazrat Bilal RA","Hazrat Umar RA","Hazrat Ali RA"], a:1, exp:"Hazrat Bilal RA Islam ke pehle Muezzin thay."},
+ {q:"How many total Rakats are there in Fajr prayer?", opts:["Two","Three","Four","Six"], a:2, exp:"Fajr mein 2 Sunnat aur 2 Farz, kul 4 Rakats hain."},
+ {q:"Azan was started in which Hijri year?", opts:["3 AH","4 AH","2 AH","1 AH"], a:3, exp:"Azan ka aghaz 1 Hijri mein Madinah mein hua."},
+ {q:"How many Farz Rakats are there in Zuhr prayer?", opts:["Four","Two","Three","Five"], a:0, exp:"Zuhr mein 4 Farz Rakats hain."},
+ {q:"The person who calls the Azan is called a:", opts:["Imam","Khatib","Muezzin","Qari"], a:2, exp:"Azan dene wale ko Muezzin kehte hain."},
+ {q:"How many Farz Rakats are there in Maghrib prayer?", opts:["Four","Three","Two","Five"], a:1, exp:"Maghrib mein 3 Farz Rakats hain, sab namazon se kam Farz isi ke sath Fajr ke hain."},
+ {q:"Which prayer is offered before sunrise?", opts:["Zuhr","Asr","Isha","Fajr"], a:3, exp:"Fajr ki namaz suraj nikalne se pehle parhi jati hai."},
+ {q:"Wudu is a necessary condition before:", opts:["Sleeping","Eating","Namaz","Walking"], a:2, exp:"Namaz se pehle Wudu karna shart hai."},
+ {q:"How many times is Allahu Akbar said at the beginning of Azan?", opts:["Four times","Two times","Three times","Six times"], a:0, exp:"Azan ke shuru mein Allahu Akbar 4 martaba kaha jata hai."},
+ {q:"Iqama is called:", opts:["Before the Azan","After the prayer","Only at night","Just before the prayer starts"], a:3, exp:"Iqama jamaat khari hone se foran pehle kahi jati hai."},
+ {q:"How many Farz Rakats are there in Isha prayer?", opts:["Three","Four","Two","Five"], a:1, exp:"Isha mein 4 Farz Rakats hain."},
+ {q:"Which prayer has only 3 Farz Rakats?", opts:["Zuhr","Maghrib","Asr","Isha"], a:1, exp:"Maghrib hi woh namaz hai jis mein 3 Farz Rakats hain."},
+ {q:"Tahajjud prayer is offered:", opts:["At night after Isha","At noon","At sunset","In the afternoon"], a:0, exp:"Tahajjud raat ko Isha ke baad, khaas taur par aakhri hisse mein parhi jati hai."},
+ {q:"How many Sunnat Rakats are offered before the Farz of Fajr?", opts:["Four","None","Three","Two"], a:3, exp:"Fajr ke Farz se pehle 2 Sunnat Rakats hain jin ki bohat takeed hai."},
+ {q:"Jummah prayer is offered on which day?", opts:["Monday","Thursday","Friday","Sunday"], a:2, exp:"Jummah ki namaz Jumma (Friday) ko Zuhr ke waqt parhi jati hai."},
+ {q:"How many Rakats are there in Witr prayer?", opts:["Two","Four","One","Three"], a:3, exp:"Witr aam taur par 3 Rakats parhi jati hai aur ye Isha ke baad hoti hai."},
+ {q:"Azan is called for:", opts:["Only Jummah prayer","The five daily prayers","Only Eid prayer","Only Janaza prayer"], a:1, exp:"Paanchon waqt ki farz namazon ke liye Azan di jati hai."},
+ {q:"From Pakistan, the Qibla direction is towards the:", opts:["West","East","North","South"], a:0, exp:"Pakistan se Qibla maghrib (west) ki taraf hai, kyun ke Kaaba Makkah mein hai."},
+ {q:"How many Farz Rakats are there in Asr prayer?", opts:["Two","Three","Four","Five"], a:2, exp:"Asr mein 4 Farz Rakats hain."},
+ {q:"The first Azan was given in which city?", opts:["Makkah","Taif","Madinah","Kufa"], a:2, exp:"Pehli Azan Madinah Munawwarah mein di gayi."},
+ {q:"How many Sajdah are there in one Rakat?", opts:["One","Three","Four","Two"], a:3, exp:"Har Rakat mein 2 Sajde hote hain."},
+ {q:"Which prayer is offered at sunset?", opts:["Asr","Maghrib","Isha","Fajr"], a:1, exp:"Maghrib ki namaz suraj ghurub hote hi parhi jati hai."},
+ {q:"Standing in prayer is called:", opts:["Qiyam","Ruku","Sujood","Jalsa"], a:0, exp:"Namaz mein khade hone ko Qiyam kehte hain."},
+ {q:"Bowing in prayer is called:", opts:["Ruku","Qiyam","Sajdah","Tashahhud"], a:0, exp:"Namaz mein jhukne ko Ruku kehte hain."},
+ {q:"Tashahhud is recited in which position?", opts:["Standing","Sitting","Bowing","Prostrating"], a:1, exp:"Tashahhud beth kar (Qaida mein) parha jata hai."},
+ {q:"The method of Azan was shown in a dream to:", opts:["Hazrat Abu Bakr RA","Hazrat Bilal RA","Hazrat Hamza RA","Hazrat Abdullah bin Zayd RA"], a:3, exp:"Hazrat Abdullah bin Zayd RA ko khawab mein Azan ke alfaaz sikhaye gaye."},
+ {q:"The time of Fajr prayer ends at:", opts:["Midnight","Noon","Sunrise","Sunset"], a:2, exp:"Fajr ka waqt suraj nikalte hi khatam ho jata hai."},
+ {q:"Namaz-e-Janaza (funeral prayer) has:", opts:["Four Ruku","No Ruku and no Sujood","Two Sajdah in every Rakat","Three Rakats"], a:1, exp:"Janaza ki namaz mein na Ruku hota hai na Sajdah, ye khade ho kar parhi jati hai."},
+ {q:"Which obligatory prayer has the fewest Farz Rakats?", opts:["Zuhr","Isha","Fajr","Asr"], a:2, exp:"Fajr mein sirf 2 Farz Rakats hain, sab se kam."},
+ {q:"Taraweeh prayer is offered in which month?", opts:["Ramadan","Shawwal","Muharram","Rajab"], a:0, exp:"Taraweeh sirf Ramadan mein Isha ke baad parhi jati hai."},
+ {q:"The Khutba of Jummah is delivered:", opts:["After the prayer","The next day","Only at night","Before the prayer"], a:3, exp:"Jummah ka Khutba namaz se pehle diya jata hai."},
+ {q:"The word Azan literally means:", opts:["Invitation only","The prayer itself","Fasting","Announcement"], a:3, exp:"Azan ke maani hain ailan karna, yani namaz ke waqt ki khabar dena."},
+ {q:"While calling Azan, the Muezzin traditionally places his fingers in his:", opts:["Ears","Pocket","On his head","On his chest"], a:0, exp:"Hazrat Bilal RA Azan dete waqt ungliyan kaanon mein rakhte thay."},
+ {q:"How many times is Hayya alas-Salah said in Azan?", opts:["Once","Three times","Twice","Four times"], a:2, exp:"Hayya alas-Salah aur Hayya alal-Falah dono 2, 2 martaba kahe jate hain."},
+ {q:"The time of Isha begins after the disappearance of:", opts:["The sun","Twilight (Shafaq)","The moon","The clouds"], a:1, exp:"Isha ka waqt maghrib ki surkhi (Shafaq) khatam hone ke baad shuru hota hai."},
+ {q:"Which Surah is recited in every Rakat of prayer?", opts:["Surah Al-Fatiha","Surah Al-Ikhlas","Surah Ya-Sin","Surah Al-Kahf"], a:0, exp:"Har Rakat mein Surah Al-Fatiha parhna lazmi hai."},
+ {q:"Namaz was made obligatory on the occasion of:", opts:["Hijrat","Battle of Badr","Conquest of Makkah","Miraj"], a:3, exp:"Namaz ka tohfa Shab-e-Miraj mein mila."},
+ {q:"On Miraj, how many prayers were ordained at first?", opts:["Five","Fifty","Forty","Ten"], a:1, exp:"Pehle 50 namazon ka hukm hua, phir kami ho kar 5 reh gayin, sawab 50 ka hai."},
+ {q:"The time of Zuhr starts when the sun:", opts:["Rises","Sets","Passes the meridian (Zawal)","Reaches midnight"], a:2, exp:"Zuhr ka waqt Zawal ke baad shuru hota hai."},
+ {q:"Eid-ul-Fitr prayer is offered on:", opts:["10 Zil Hajj","1 Shawwal","1 Ramadan","15 Shaban"], a:1, exp:"Eid-ul-Fitr 1 Shawwal ko Ramadan ke baad parhi jati hai."},
+ {q:"How many Rakats are there in Eid prayer?", opts:["Four","Three","Two","Five"], a:2, exp:"Eid ki namaz 2 Rakats hoti hai, is mein extra Takbeerein hoti hain."},
+ {q:"Qasr (shortened) prayer is offered during:", opts:["Illness at home","Work","Hunger","Travel"], a:3, exp:"Safar mein 4 Rakat wali farz namaz 2 Rakat parhi jati hai, isey Qasr kehte hain."},
+ {q:"In Qasr, Zuhr, Asr and Isha are shortened to how many Rakats?", opts:["Two","Three","Four","One"], a:0, exp:"Qasr mein 4 Farz wali namaz 2 Rakat ho jati hai."},
+ {q:"In congregational prayer, the Imam stands:", opts:["Behind everyone","On the right side","In front","At the back"], a:2, exp:"Imam sab se aage khada ho kar namaz parhata hai."},
+ {q:"The second Azan of Jummah was introduced in the time of:", opts:["Hazrat Usman RA","Hazrat Abu Bakr RA","Hazrat Ali RA","Hazrat Bilal RA"], a:0, exp:"Hazrat Usman RA ke daur mein logon ki kasrat ki wajah se ek aur Azan ka izafa hua."},
+ {q:"Which prayer is generally known as Salat-ul-Wusta, the middle prayer?", opts:["Fajr","Asr","Zuhr","Maghrib"], a:1, exp:"Aksar mufassireen ke nazdeek darmiyani namaz se murad Asr ki namaz hai."},
+ {q:"Listening and replying to the Azan is:", opts:["Forbidden","Makruh","Of no use","Recommended (Sunnah)"], a:3, exp:"Azan ka jawab dena Sunnat hai, Muezzin ke alfaaz duhraye jate hain."},
+ {q:"Which extra sentence is added in the Fajr Azan?", opts:["Hayya alal-Falah","Allahu Akbar","La ilaha illallah","As-salatu khayrun minan-nawm"], a:3, exp:"Fajr ki Azan mein As-salatu khayrun minan-nawm ka izafa hota hai."},
+ {q:"As-salatu khayrun minan-nawm means:", opts:["Allah is the Greatest","Prayer is better than sleep","Come to prayer","Come to success"], a:1, exp:"Is jumlay ka matlab hai: Namaz neend se behtar hai."}
+];
+var picked = {};
+var quiz = document.getElementById('quiz');
+QUESTIONS.forEach(function(item, qi){
+  var card = document.createElement('div'); card.className = 'q';
+  var h = document.createElement('h3'); h.textContent = (qi+1) + '. ' + item.q; card.appendChild(h);
+  var box = document.createElement('div'); box.className = 'opts';
+  item.opts.forEach(function(text, oi){
+    var b = document.createElement('button'); b.className = 'opt' + (oi === item.a ? ' correct' : '');
+    b.textContent = 'ABCD'[oi] + '. ' + text;
+    b.onclick = function(){
+      picked[qi] = oi;
+      box.querySelectorAll('.opt').forEach(function(x){ x.classList.remove('sel','wrongpick'); });
+      b.classList.add('sel');
+      if (document.body.classList.contains('show') && oi !== item.a) b.classList.add('wrongpick');
+      updateScore();
+    };
+    box.appendChild(b);
+  });
+  card.appendChild(box);
+  var e = document.createElement('p'); e.className = 'exp'; e.textContent = 'Wazahat: ' + item.exp; card.appendChild(e);
+  quiz.appendChild(card);
+});
+function updateScore(){
+  if (!document.body.classList.contains('show')) return;
+  var c = 0, t = 0;
+  QUESTIONS.forEach(function(item, qi){ if (qi in picked){ t++; if (picked[qi] === item.a) c++; } });
+  document.getElementById('scoreLine').textContent = t ? ('Aap ke ' + c + ' / ' + QUESTIONS.length + ' durust (attempted ' + t + ')') : '';
+}
+function toggleAnswers(){
+  var on = document.body.classList.toggle('show');
+  document.getElementById('toggleBtn').textContent = on ? 'HIDE ANSWERS' : 'SHOW ANSWERS';
+  document.querySelectorAll('.opt.sel').forEach(function(b){
+    var qi = Array.prototype.indexOf.call(quiz.children, b.closest('.q'));
+  });
+  // mark wrong picks
+  QUESTIONS.forEach(function(item, qi){
+    if (qi in picked && picked[qi] !== item.a && on){
+      quiz.children[qi].querySelectorAll('.opt')[picked[qi]].classList.add('wrongpick');
+    }
+  });
+  updateScore();
+}
+</script>
+</body>
+</html>

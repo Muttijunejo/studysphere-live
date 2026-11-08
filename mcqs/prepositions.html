@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prepositions MCQs — StudySphere</title>
+<meta name="description" content="Prepositions important MCQs with Show Answers — free practice for SPSC, FPSC, PST/JEST and all screening tests at StudySphere." />
+<style>
+:root{--bg:#f6f1e7;--surface:#fffdf8;--ink:#1d2420;--ink2:#5a665f;--line:#ddd3bf;--accent:#1e7a46;--accent-soft:#e3efe4;--wrong:#b3352b;--wrong-soft:#f9e7e4;--r:14px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 48px}
+header.site{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+a.back{color:var(--accent);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font-size:1.7rem;margin:10px 0 4px}
+.sub{color:var(--ink2);margin:0 0 18px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 22px}
+button.showall{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;cursor:pointer;font-size:.95rem}
+.score{font-weight:700;color:var(--accent)}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.q h3{margin:0 0 12px;font-size:1.05rem}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;font-size:.97rem;width:100%}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft);font-weight:600}
+body.show .opt.correct{border-color:var(--accent);background:var(--accent-soft);font-weight:700}
+body.show .opt.sel.wrongpick{border-color:var(--wrong);background:var(--wrong-soft)}
+.exp{display:none;margin:12px 0 0;color:var(--ink2);font-size:.93rem;border-top:1px dashed var(--line);padding-top:10px}
+body.show .exp{display:block}
+footer{color:var(--ink2);font-size:.88rem;margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a class="logo" href="../index.html">Study<span>Sphere</span></a><a class="back" href="../index.html">← Back to StudySphere</a></header>
+<h1>PREPOSITIONS MCQs</h1>
+<p class="sub">English — Topic: Prepositions. Option par click karke apna jawab chunein, phir <b>Show Answers</b> dabayein — sahi jawab sabz rang mein nazar ayega aur sath wazahat bhi.</p>
+<div class="bar"><button class="showall" id="toggleBtn" onclick="toggleAnswers()">SHOW ANSWERS</button><span class="score" id="scoreLine"></span></div>
+<div id="quiz"></div>
+<footer>Ye MCQs StudySphere (MR Academy) ki apni tayyar karda hain. Mazeed sawal is topic mein step by step add ho rahe hain. <a class="back" href="../index.html">Home par wapas jayein</a></footer>
+</div>
+<script>
+var QUESTIONS = [
+ {q:"She was born ___ 2010.", opts:["in","on","at","by"], a:0, exp:"'In' saal (year) ke sath istemal hota hai."},
+ {q:"The book is ___ the table.", opts:["at","on","in","by"], a:1, exp:"Kisi cheez ki satah par ho to 'on' aata hai."},
+ {q:"He will arrive here ___ Monday.", opts:["in","at","on","for"], a:2, exp:"Din (day) ke naam ke sath 'on' lagta hai."},
+ {q:"She is good ___ English.", opts:["in","for","with","at"], a:3, exp:"'Good at' ek fixed phrase hai — maharat ke liye 'at'."},
+ {q:"They travelled to Karachi ___ bus.", opts:["by","with","on","at"], a:0, exp:"Transport ke zariye ke liye 'by bus / by train' kehte hain."},
+ {q:"The cat is hiding ___ the bed.", opts:["on","over","under","upon"], a:2, exp:"Neeche chhupa ho to 'under' istemal hota hai."},
+ {q:"He divided the sweets ___ the two brothers.", opts:["among","between","with","from"], a:1, exp:"Do afraad ke darmiyan ke liye 'between' aata hai."},
+ {q:"She has been waiting ___ two hours.", opts:["since","from","by","for"], a:3, exp:"Waqt ki muddat (duration) ke liye 'for' lagta hai."},
+ {q:"He is suffering ___ fever.", opts:["from","with","by","of"], a:0, exp:"'Suffer from' fixed phrase hai."},
+ {q:"The keys are ___ my pocket.", opts:["on","in","at","upon"], a:1, exp:"Andar hone ke liye 'in' — in my pocket."},
+ {q:"Please write your name ___ ink.", opts:["by","for","from","in"], a:3, exp:"Siyahi se likhne ke liye 'in ink' kehte hain."},
+ {q:"He jumped ___ the river to swim.", opts:["on","at","into","over"], a:2, exp:"Andar ki taraf harkat ho to 'into' aata hai."},
+ {q:"She sat ___ her mother in the car.", opts:["among","beside","between","upon"], a:1, exp:"'Beside' ka matlab hai baghal mein / sath."},
+ {q:"The train will leave ___ 5 o'clock.", opts:["at","on","in","by"], a:0, exp:"Clock time ke sath 'at' lagta hai."},
+ {q:"He is interested ___ science.", opts:["at","for","in","with"], a:2, exp:"'Interested in' fixed phrase hai."},
+ {q:"They walked ___ the bridge carefully.", opts:["under","between","among","across"], a:3, exp:"Ek kinare se dusre kinare tak ho to 'across'."},
+ {q:"She placed the vase ___ the window.", opts:["into","near","onto","under"], a:1, exp:"'Near' ka matlab hai qareeb."},
+ {q:"He has lived here ___ 2015.", opts:["for","from","since","by"], a:2, exp:"Kisi khaas saal / point of time se 'since' aata hai."},
+ {q:"She is afraid ___ dogs.", opts:["of","from","with","by"], a:0, exp:"'Afraid of' fixed phrase hai."},
+ {q:"He stood ___ the two pillars.", opts:["among","with","from","between"], a:3, exp:"Do cheezon ke darmiyan ke liye 'between'."},
+ {q:"She went to school ___ foot.", opts:["by","with","on","in"], a:2, exp:"'On foot' paidal chalne ke liye fixed phrase hai."},
+ {q:"The picture is hanging ___ the wall.", opts:["on","in","at","over"], a:0, exp:"Diwar par latki cheez ke liye 'on the wall'."},
+ {q:"He cut the apple ___ a knife.", opts:["by","with","from","in"], a:1, exp:"Ala (tool) ke sath 'with' lagta hai — with a knife."},
+ {q:"We will meet ___ the evening.", opts:["at","on","by","in"], a:3, exp:"Morning / evening / afternoon ke sath 'in' aata hai."},
+ {q:"The ball rolled ___ the hill.", opts:["down","between","among","with"], a:0, exp:"Upar se neeche ki harkat ke liye 'down'."},
+ {q:"She is very kind ___ animals.", opts:["with","to","for","at"], a:1, exp:"'Kind to' kisi ke sath narmi ke liye aata hai."},
+ {q:"He arrived ___ the airport on time.", opts:["in","on","at","to"], a:2, exp:"Kisi jagah / point par pohnchne ke liye 'at'."},
+ {q:"The children are playing ___ the garden.", opts:["on","at","by","in"], a:3, exp:"Bagh ke andar khel rahe hain, is liye 'in'."},
+ {q:"She lives ___ Lahore.", opts:["at","on","in","by"], a:2, exp:"Sheher mein rehne ke liye 'in' istemal hota hai."},
+ {q:"Please do not laugh ___ others.", opts:["at","on","in","for"], a:0, exp:"'Laugh at' mazak urane ke liye fixed phrase hai."},
+ {q:"The dog jumped ___ the fence.", opts:["into","onto","under","over"], a:3, exp:"Upar se phalang kar paar jane ke liye 'over'."},
+ {q:"He is famous ___ his honesty.", opts:["with","for","by","at"], a:1, exp:"Wajah / sabab batane ke liye 'famous for'."},
+ {q:"She listened ___ the teacher carefully.", opts:["with","for","to","at"], a:2, exp:"'Listen to' fixed phrase hai."},
+ {q:"They agreed ___ the plan.", opts:["on","in","at","with"], a:0, exp:"Kisi plan / baat par ittefaq ke liye 'agree on'."},
+ {q:"He died ___ a heart attack.", opts:["from","with","by","of"], a:3, exp:"Bimari se marne ke liye 'die of' kehte hain."},
+ {q:"This chair is made ___ wood.", opts:["by","of","at","on"], a:1, exp:"Jab asli material nazar aye to 'made of' aata hai."},
+ {q:"She walked ___ the room quietly.", opts:["into","onto","at","among"], a:0, exp:"Kamre ke andar dakhil hone ke liye 'into'."},
+ {q:"He is senior ___ me by two years.", opts:["than","from","to","with"], a:2, exp:"Senior / junior ke sath 'to' lagta hai, 'than' nahi."},
+ {q:"The letter was written ___ Ali.", opts:["with","by","from","at"], a:1, exp:"Passive voice mein karne wale ke liye 'by' aata hai."},
+ {q:"The students are sitting ___ the classroom.", opts:["on","at","upon","in"], a:3, exp:"Classroom ke andar ke liye 'in'."},
+ {q:"She is married ___ a doctor.", opts:["to","with","by","for"], a:0, exp:"'Married to' fixed phrase hai."},
+ {q:"He ran ___ the road to catch the bus.", opts:["over","under","across","between"], a:2, exp:"Sarak paar karne ke liye 'across'."},
+ {q:"Please keep your books ___ the bag.", opts:["on","at","over","in"], a:3, exp:"Bag ke andar rakhne ke liye 'in'."},
+ {q:"He was punished ___ his mistake.", opts:["by","for","with","at"], a:1, exp:"Wajah / saza ki wajah ke liye 'for' — for his mistake."},
+ {q:"She is weak ___ mathematics.", opts:["for","by","in","at"], a:2, exp:"Kisi subject mein kamzor hone ke liye 'weak in'."},
+ {q:"The meeting will be held ___ Friday.", opts:["on","in","at","by"], a:0, exp:"Din ke naam ke sath 'on' — on Friday."},
+ {q:"He climbed ___ the tree quickly.", opts:["on","up","in","at"], a:1, exp:"Upar charhne ke liye 'up' — climbed up the tree."},
+ {q:"They distributed the food ___ the poor children.", opts:["between","with","from","among"], a:3, exp:"Do se zyada afraad mein ho to 'among' aata hai."},
+ {q:"She has been ill ___ Monday.", opts:["for","from","since","by"], a:2, exp:"Din se shuru hone wale waqt ke liye 'since'."},
+ {q:"He looked ___ his watch and smiled.", opts:["through","at","on","in"], a:1, exp:"'Look at' kisi cheez ki taraf dekhne ke liye hai."}
+];
+var picked = {};
+var quiz = document.getElementById('quiz');
+QUESTIONS.forEach(function(item, qi){
+  var card = document.createElement('div'); card.className = 'q';
+  var h = document.createElement('h3'); h.textContent = (qi+1) + '. ' + item.q; card.appendChild(h);
+  var box = document.createElement('div'); box.className = 'opts';
+  item.opts.forEach(function(text, oi){
+    var b = document.createElement('button'); b.className = 'opt' + (oi === item.a ? ' correct' : '');
+    b.textContent = 'ABCD'[oi] + '. ' + text;
+    b.onclick = function(){
+      picked[qi] = oi;
+      box.querySelectorAll('.opt').forEach(function(x){ x.classList.remove('sel','wrongpick'); });
+      b.classList.add('sel');
+      if (document.body.classList.contains('show') && oi !== item.a) b.classList.add('wrongpick');
+      updateScore();
+    };
+    box.appendChild(b);
+  });
+  card.appendChild(box);
+  var e = document.createElement('p'); e.className = 'exp'; e.textContent = 'Wazahat: ' + item.exp; card.appendChild(e);
+  quiz.appendChild(card);
+});
+function updateScore(){
+  if (!document.body.classList.contains('show')) return;
+  var c = 0, t = 0;
+  QUESTIONS.forEach(function(item, qi){ if (qi in picked){ t++; if (picked[qi] === item.a) c++; } });
+  document.getElementById('scoreLine').textContent = t ? ('Aap ke ' + c + ' / ' + QUESTIONS.length + ' durust (attempted ' + t + ')') : '';
+}
+function toggleAnswers(){
+  var on = document.body.classList.toggle('show');
+  document.getElementById('toggleBtn').textContent = on ? 'HIDE ANSWERS' : 'SHOW ANSWERS';
+  document.querySelectorAll('.opt.sel').forEach(function(b){
+    var qi = Array.prototype.indexOf.call(quiz.children, b.closest('.q'));
+  });
+  // mark wrong picks
+  QUESTIONS.forEach(function(item, qi){
+    if (qi in picked && picked[qi] !== item.a && on){
+      quiz.children[qi].querySelectorAll('.opt')[picked[qi]].classList.add('wrongpick');
+    }
+  });
+  updateScore();
+}
+</script>
+</body>
+</html>
