@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JavaScript Lessons — Beginner Track · StudySphere · MR Academy</title>
+<meta name="description" content="8 free beginner JavaScript lessons with examples and exercises — load any example into the StudySphere Coding Lab editor. By MR Academy.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:#f7f9fc;color:#1e293b}
+.wrap{max-width:900px;margin:0 auto;padding:28px 18px 60px}
+a.back{display:inline-block;margin-bottom:14px;color:#0b3d91;font-weight:600;text-decoration:none}
+h1{font-family:Poppins,sans-serif;color:#0b3d91;font-size:30px;margin:6px 0}
+.badge{display:inline-block;background:#fef3c7;color:#92400e;border:1px solid #f59e0b;padding:3px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.road{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px 20px;margin:18px 0;font-weight:600;color:#0b3d91}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px 22px;margin:16px 0;box-shadow:0 4px 14px rgba(11,61,145,.06)}
+.card h2{font-family:Poppins,sans-serif;color:#0b3d91;font-size:20px;margin:0 0 8px}
+.card p{line-height:1.65}
+pre{background:#0c1424;color:#dbeafe;border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.55}
+.ex{background:#f1f5f9;border-left:4px solid #d97706;border-radius:8px;padding:10px 14px;margin-top:12px}
+.btn{display:inline-block;background:#0b3d91;color:#fff;padding:9px 18px;border-radius:10px;font-weight:600;text-decoration:none;margin-top:12px;border:none;cursor:pointer;font-size:15px}
+footer{text-align:center;color:#64748b;font-size:13px;margin-top:34px}
+</style></head><body><div class="wrap">
+<a class="back" href="../index.html">← Back to StudySphere</a>
+<span class="badge">MR Academy · Coding Academy</span>
+<h1>JavaScript Lessons — Beginner Track</h1>
+<p>JavaScript is the language that makes web pages interactive. These 8 short, original lessons take you from zero to simple page interaction. Every lesson has a small example — press <b>Try in Editor</b> and the example opens ready inside the StudySphere Coding Lab, where you can run it and change it.</p>
+<div class="road">Beginner Roadmap: 1. HTML → 2. CSS → 3. JavaScript (these lessons + Coding Lab practice) → 4. C++ (lessons on the site) → 5. Python (lessons on the site) → 6. Data Science &amp; AI. Python and C++ are taught through lessons and code reading; they do not run inside the browser editor — only HTML, CSS and JavaScript run there.</div>
+
+<div class="card"><h2>Lesson 1 — Variables &amp; Data Types</h2>
+<p>A <b>variable</b> is a named box that stores a value. Use <b>let</b> for values that can change and <b>const</b> for values that stay fixed. Common data types are <b>strings</b> (text in quotes), <b>numbers</b>, and <b>booleans</b> (true/false).</p>
+<pre>let name = "Ali";
+const age = 20;
+let isStudent = true;
+document.getElementById("out").textContent = name + " is " + age + " years old.";</pre>
+<button class="btn" data-js='let name = "Ali";\nconst age = 20;\nlet isStudent = true;\ndocument.getElementById("out").textContent = name + " is " + age + " years old.";'>Try in Editor</button>
+<div class="ex"><b>Exercise:</b> Change the name and age to your own, and add a third line that also prints "Student: yes" or "Student: no" using the boolean.</div></div>
+
+<div class="card"><h2>Lesson 2 — Operators</h2>
+<p>Operators do work on values: <b>+ − * / %</b> for maths (% gives the remainder), <b>===</b> compares values, and <b>&amp;&amp;</b> / <b>||</b> combine true/false conditions.</p>
+<pre>let a = 17, b = 5;
+let sum = a + b;        // 22
+let rest = a % b;       // 2
+document.getElementById("out").textContent = "Sum = " + sum + ", Remainder = " + rest;</pre>
+<button class="btn" data-js='let a = 17, b = 5;\nlet sum = a + b;\nlet rest = a % b;\ndocument.getElementById("out").textContent = "Sum = " + sum + ", Remainder = " + rest;'>Try in Editor</button>
+<div class="ex"><b>Exercise:</b> Store a price and a quantity, then print the total bill using multiplication.</div></div>
+
+<div class="card"><h2>Lesson 3 — Conditions (if / else)</h2>
+<p>Programs make decisions with <b>if</b>: if a condition is true, one block runs; otherwise the <b>else</b> block runs.</p>
+<pre>let marks = 72;
+let msg;
+if (marks >= 50) { msg = "Pass"; } else { msg = "Fail"; }
+document.getElementById("out").textContent = msg;</pre>
+<button class="btn" data-js='let marks = 72;\nlet msg;\nif (marks >= 50) { msg = "Pass"; } else { msg = "Fail"; }\ndocument.getElementById("out").textContent = msg;'>Try in Editor</button>
+<div class="ex"><b>Exercise:</b> Add an "else if" branch so marks of 80 or more print "Distinction".</div></div>
+
+<div class="card"><h2>Lesson 4 — Loops</h2>
+<p>A <b>for loop</b> repeats a block a set number of times — perfect for tables, lists and counting.</p>
+<pre>let text = "";
+for (let i = 1; i <= 5; i++) { text += i + " "; }
+document.getElementById("out").textContent = text;</pre>
+<button class="btn" data-js='let text = "";\nfor (let i = 1; i <= 5; i++) { text += i + " "; }\ndocument.getElementById("out").textContent = text;'>Try in Editor</button>
+<div class="ex"><b>Exercise:</b> Change the loop to print the multiplication table of 7 (7, 14, 21 … 70).</div></div>
+
+<div class="card"><h2>Lesson 5 — Functions</h2>
+<p>A <b>function</b> is a reusable block of code. You define it once, then call it whenever you need it — it can take inputs (parameters) and give back a result with <b>return</b>.</p>
+<pre>function square(n) { return n * n; }
+document.getElementById("out").textContent = "Square of 6 is " + square(6);</pre>
+<button class="btn" data-js='function square(n) { return n * n; }\ndocument.getElementById("out").textContent = "Square of 6 is " + square(6);'>Try in Editor</button>
+<div class="ex"><b>Exercise:</b> Write a function <i>addTax(price)</i> that returns the price plus 10%.</div></div>
+
+<div class="card"><h2>Lesson 6 — Arrays</h2>
+<p>An <b>array</b> stores a list of values in one variable. Items are counted from index <b>0</b>, and <b>.length</b> tells you how many items there are.</p>
+<pre>let fruits = ["Apple", "Banana", "Mango"];
+document.getElementById("out").textContent = fruits[0] + " — total: " + fruits.length;</pre>
+<button class="btn" data-js='let fruits = ["Apple", "Banana", "Mango"];\ndocument.getElementById("out").textContent = fruits[0] + " — total: " + fruits.length;'>Try in Editor</button>
+<div class="ex"><b>Exercise:</b> Use a loop to print all the fruits, one per line.</div></div>
+
+<div class="card"><h2>Lesson 7 — Strings &amp; Methods</h2>
+<p>Strings have built-in tools called <b>methods</b>: <b>.length</b> counts characters, <b>.toUpperCase()</b> makes text capital, and <b>.includes()</b> checks whether text contains something.</p>
+<pre>let word = "studysphere";
+document.getElementById("out").textContent = word.toUpperCase() + " has " + word.length + " letters.";</pre>
+<button class="btn" data-js='let word = "studysphere";\ndocument.getElementById("out").textContent = word.toUpperCase() + " has " + word.length + " letters.";'>Try in Editor</button>
+<div class="ex"><b>Exercise:</b> Check whether the sentence "I love coding" includes the word "coding" and print the result.</div></div>
+
+<div class="card"><h2>Lesson 8 — DOM Basics</h2>
+<p>The <b>DOM</b> is the page itself, seen as objects. JavaScript can read and change any element: find it with <b>getElementById</b>, then change its text or style — and react when a button is clicked.</p>
+<pre>document.getElementById("out").style.color = "#0b3d91";
+document.getElementById("out").textContent = "The DOM changed this text!";</pre>
+<button class="btn" data-js='document.getElementById("out").style.color = "#0b3d91";\ndocument.getElementById("out").textContent = "The DOM changed this text!";'>Try in Editor</button>
+<div class="ex"><b>Exercise:</b> Change the colour to a different one and make the text bold as well (hint: style.fontWeight = "bold").</div></div>
+
+<p style="margin-top:22px">Finished the lessons? Open the <a href="../index.html"><b>Coding Lab</b></a> on StudySphere and try the three built-in challenges.</p>
+<footer>StudySphere · by MR Academy · JavaScript Beginner Track</footer>
+</div>
+<script>
+document.querySelectorAll("[data-js]").forEach(function(b){
+  b.addEventListener("click", function(){
+    try { localStorage.setItem("ss3-js-example", b.getAttribute("data-js")); } catch(e){}
+    location.href = "../index.html#coding";
+  });
+});
+</script>
+</body></html>
