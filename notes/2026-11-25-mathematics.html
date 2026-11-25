@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Matrices & Determinants — Order, Addition, Multiplication and Inverse | StudySphere</title>
+<meta name="description" content="What is a matrix? Learn the order of a matrix, its types, addition and scalar multiplication, matrix multiplication, transpose, 2×2 and 3×3 determinants, singular matrices and the inverse of a 2×2 matrix — with quick facts and 10 practice MCQs with answer key, free study notes for SPSC, teaching and screening tests." />
+<link rel="canonical" href="https://muttijunejo.github.io/studysphere-live/notes/2026-11-25-mathematics.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="StudySphere">
+<meta property="og:title" content="Matrices & Determinants — Order, Addition, Multiplication and Inverse | StudySphere">
+<meta property="og:description" content="What is a matrix? Learn the order of a matrix, its types, addition and scalar multiplication, matrix multiplication, transpose, 2×2 and 3×3 determinants, singular matrices and the inverse of a 2×2 matrix — with quick facts and 10 practice MCQs with answer key, free study notes for SPSC, teaching and screening tests.">
+<meta property="og:url" content="https://muttijunejo.github.io/studysphere-live/notes/2026-11-25-mathematics.html">
+<meta property="og:image" content="https://muttijunejo.github.io/studysphere-live/og-image.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Matrices & Determinants — Order, Addition, Multiplication and Inverse | StudySphere">
+<meta name="twitter:description" content="What is a matrix? Learn the order of a matrix, its types, addition and scalar multiplication, matrix multiplication, transpose, 2×2 and 3×3 determinants, singular matrices and the inverse of a 2×2 matrix — with quick facts and 10 practice MCQs with answer key, free study notes for SPSC, teaching and screening tests.">
+<meta name="twitter:image" content="https://muttijunejo.github.io/studysphere-live/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "StudySphere Home",
+      "item": "https://muttijunejo.github.io/studysphere-live/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Notes",
+      "item": "https://muttijunejo.github.io/studysphere-live/#notes"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Matrices & Determinants — Order, Addition, Multiplication and Inverse",
+      "item": "https://muttijunejo.github.io/studysphere-live/notes/2026-11-25-mathematics.html"
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#faf8f2;--surface:#fffefa;--surface2:#f2eee3;--ink:#1b201d;--ink2:#54605a;--ink3:#7d8881;--line:#e3ddd0;--line2:#d6cfbc;--accent:#166649;--accent-hover:#12543d;--accent-soft:#e8f0eb;--accent-ink:#fff;--amber:#9a6a14;--amber-soft:#f5ecd6;--r-md:12px}
+@media (prefers-color-scheme: dark){:root{--bg:#141714;--surface:#1b1f1b;--surface2:#222722;--ink:#edf0eb;--ink2:#aab5ac;--ink3:#828d84;--line:#2e352e;--line2:#3a423a;--accent:#4ab78a;--accent-hover:#5fc79b;--accent-soft:#1d2f27;--accent-ink:#0d1511}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:24px 20px 64px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.brand{font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+.brand span{color:var(--accent)}
+.back{color:var(--accent);font-weight:600;text-decoration:none;font-size:.92rem}
+h1,h2,h3{font-family:"Lora",serif;line-height:1.3;margin:0 0 .5em}
+h1{font-size:1.7rem;margin-top:6px}
+h2{font-size:1.25rem;margin-top:28px;border-bottom:2px solid var(--accent);padding-bottom:4px}
+h3{font-size:1.05rem;margin-top:18px}
+p{margin:0 0 .8em}
+.meta{font-size:.86rem;color:var(--ink3);font-weight:600}
+.pill{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:3px 12px;font-size:.82rem;font-weight:700;margin:0 6px 6px 0}
+.lede{color:var(--ink2);font-size:1.05rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;margin:16px 0}
+.formula{background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-weight:700;text-align:center;margin:10px 0}
+.ur{color:var(--ink2);font-style:italic}
+ol.mcq,ul.key{padding-left:22px}
+ol.mcq li{margin-bottom:12px}
+ol.mcq .opts{color:var(--ink2)}
+.key-box{background:var(--amber-soft);border:1px solid var(--line2);border-radius:var(--r-md);padding:14px 18px;margin-top:16px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent);border-radius:10px;padding:10px 18px;font-weight:600;text-decoration:none;font-size:.95rem;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--accent-hover)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+footer{margin-top:36px;border-top:1px solid var(--line);padding-top:14px;color:var(--ink3);font-size:.86rem}
+table{border-collapse:collapse;width:100%;margin:10px 0}
+th,td{border:1px solid var(--line2);padding:6px 8px;text-align:left;font-size:.95rem}
+th{background:var(--surface2)}
+@media print{
+  .actions,.topbar .back{display:none !important}
+  body{background:#fff;color:#000}
+  .card,.key-box{border-color:#ccc;break-inside:avoid}
+  h2{break-after:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="../">Study<span>Sphere</span></a>
+    <a class="back" href="../">← Back to StudySphere</a>
+  </div>
+
+  <p class="meta">Wednesday, 25 November 2026 · Mathematics · SPSC / Teaching / Screening Tests</p>
+  <h1>Matrices &amp; Determinants — Order, Addition, Multiplication and Inverse</h1>
+  <p>
+    <span class="pill">Mathematics</span>
+    <span class="pill">Matrices &amp; Determinants</span>
+    <span class="pill">10 Practice MCQs</span>
+  </p>
+  <p class="lede">A matrix is simply a neat box of numbers — and once you know the few rules for adding, multiplying and finding determinants, most test questions become easy marks. These notes explain matrices step by step in simple English with Roman Urdu help, made for SPSC, teaching and screening tests.</p>
+
+  <div class="actions">
+    <button class="btn" type="button" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <a class="btn ghost" href="../">Back to home page</a>
+  </div>
+
+  <p><b>Practice MCQs:</b> Want more Mathematics questions? Try the <a href="../mcqs/maths-percentages.html">Maths MCQ practice page</a>.</p>
+
+  <h2>1. What Is a Matrix?</h2>
+  <div class="card">
+    <p>A <b>matrix</b> is a rectangular arrangement of numbers (or symbols) in rows and columns, written inside square brackets. <span class="ur">Roman Urdu: Matrix numbers ko rows (qataron) aur columns (sutunon) mein tartib se likhne ka tareeqa hai.</span></p>
+    <p class="formula">A = [ 1 &nbsp; 2 &nbsp; 3 ; &nbsp; 4 &nbsp; 5 &nbsp; 6 ]</p>
+    <p>The matrix above has <b>2 rows</b> and <b>3 columns</b>. Its <b>order</b> is written as <b>2 × 3</b> (read as "two by three") — rows first, then columns. The numbers inside are called the <b>elements</b> (or entries) of the matrix. A 2 × 3 matrix has 2 × 3 = <b>6 elements</b>.</p>
+    <p>Each element has a position. In the matrix A above, the element in the 1st row and 2nd column is written as a<sub>12</sub> = 2, and a<sub>23</sub> = 6. <b>Test tip:</b> the first number in the order always counts the rows, the second counts the columns — tests often swap them to trap you.</p>
+    <p><b>Remember:</b> a matrix is not a number — it is a whole arrangement of numbers. But we can add, subtract and multiply matrices by fixed rules, and we can find the determinant of a square matrix.</p>
+  </div>
+
+  <h2>2. Types of Matrices</h2>
+  <div class="card">
+    <p>Learn these types by their shapes — tests ask "which of these is a column matrix" or "which is an identity matrix" again and again.</p>
+    <table>
+      <tr><th>Type</th><th>What it is</th><th>Example</th></tr>
+      <tr><td><b>Row matrix</b></td><td>Only one row</td><td>[ 1 &nbsp; 2 &nbsp; 3 ]</td></tr>
+      <tr><td><b>Column matrix</b></td><td>Only one column</td><td>[ 1 ; 2 ; 3 ]</td></tr>
+      <tr><td><b>Square matrix</b></td><td>Rows = columns (order n × n)</td><td>[ 1 &nbsp; 2 ; 3 &nbsp; 4 ]</td></tr>
+      <tr><td><b>Rectangular matrix</b></td><td>Rows ≠ columns</td><td>[ 1 &nbsp; 2 &nbsp; 3 ; 4 &nbsp; 5 &nbsp; 6 ]</td></tr>
+      <tr><td><b>Zero (null) matrix</b></td><td>All elements are 0</td><td>[ 0 &nbsp; 0 ; 0 &nbsp; 0 ]</td></tr>
+      <tr><td><b>Diagonal matrix</b></td><td>Square matrix; all elements off the main diagonal are 0</td><td>[ 2 &nbsp; 0 ; 0 &nbsp; 5 ]</td></tr>
+      <tr><td><b>Scalar matrix</b></td><td>Diagonal matrix with all diagonal elements equal</td><td>[ 3 &nbsp; 0 ; 0 &nbsp; 3 ]</td></tr>
+      <tr><td><b>Identity (unit) matrix</b></td><td>Diagonal elements are all 1 — written as I</td><td>[ 1 &nbsp; 0 ; 0 &nbsp; 1 ]</td></tr>
+      <tr><td><b>Symmetric matrix</b></td><td>Square matrix that equals its own transpose (a<sub>ij</sub> = a<sub>ji</sub>)</td><td>[ 1 &nbsp; 2 ; 2 &nbsp; 3 ]</td></tr>
+    </table>
+    <p><b>The identity matrix I is special:</b> multiplying any matrix by I leaves it unchanged — A × I = I × A = A. It works like the number 1 in ordinary multiplication. <span class="ur">Roman Urdu: Identity matrix wahi kaam karti hai jo aam hisaab mein 1 karta hai — kisi bhi matrix ko I se multiply karein to wohi matrix wapas milti hai.</span></p>
+  </div>
+
+  <h2>3. Addition, Subtraction and Scalar Multiplication</h2>
+  <div class="card">
+    <p><b>Rule 1 — same order only:</b> two matrices can be added or subtracted only if they have the <b>same order</b>. Add (or subtract) the elements that sit in the same position.</p>
+    <p class="formula">[ 1 &nbsp; 2 ; 3 &nbsp; 4 ] + [ 5 &nbsp; 6 ; 7 &nbsp; 8 ] = [ 6 &nbsp; 8 ; 10 &nbsp; 12 ]</p>
+    <p>Check: 1 + 5 = 6, 2 + 6 = 8, 3 + 7 = 10, 4 + 8 = 12. Subtraction works the same way, with minus instead of plus.</p>
+    <p><b>Rule 2 — scalar multiplication:</b> to multiply a matrix by a number (called a scalar), multiply <b>every</b> element by that number.</p>
+    <p class="formula">3 × [ 1 &nbsp; 2 ; 0 &nbsp; 5 ] = [ 3 &nbsp; 6 ; 0 &nbsp; 15 ]</p>
+    <p><b>Test trap:</b> a 2 × 3 matrix can never be added to a 3 × 2 matrix — the orders are different, so addition is impossible. If a question asks "which of these additions is possible", just compare the orders.</p>
+  </div>
+
+  <h2>4. Matrix Multiplication</h2>
+  <div class="card">
+    <p><b>Rule — the middle numbers must match:</b> A × B is possible only if the <b>number of columns of A equals the number of rows of B</b>. The product then has the order: rows of A × columns of B.</p>
+    <p class="formula">(2 × 3) × (3 × 2) = (2 × 2) &nbsp;&nbsp;|&nbsp;&nbsp; (2 × 3) × (2 × 3) = not possible</p>
+    <p><b>How to multiply:</b> each element of the product is the <b>row × column</b> sum — multiply the row of the first matrix by the matching column of the second matrix, then add.</p>
+    <p class="formula">[ 1 &nbsp; 2 ; 3 &nbsp; 4 ] × [ 5 &nbsp; 6 ; 7 &nbsp; 8 ] = [ 19 &nbsp; 22 ; 43 &nbsp; 50 ]</p>
+    <p>Check the first element: row 1 of A is (1, 2) and column 1 of B is (5, 7), so 1 × 5 + 2 × 7 = 5 + 14 = 19. The other three: 1 × 6 + 2 × 8 = 22; 3 × 5 + 4 × 7 = 43; 3 × 6 + 4 × 8 = 50.</p>
+    <p><b>Very important — multiplication is NOT commutative:</b> in general, A × B ≠ B × A. In ordinary numbers 2 × 3 = 3 × 2, but for matrices the order matters — and sometimes B × A is not even possible. <span class="ur">Roman Urdu: Aam numbers mein 2 × 3 aur 3 × 2 barabar hote hain, lekin matrices mein A × B aur B × A aksar barabar nahi hote — tartib ka khayal rakhein.</span></p>
+    <p>Other useful facts: A × I = A (identity changes nothing), and A × 0 = 0 (the zero matrix).</p>
+  </div>
+
+  <h2>5. Transpose of a Matrix</h2>
+  <div class="card">
+    <p>The <b>transpose</b> of a matrix, written A<sup>T</sup>, is made by turning its <b>rows into columns</b> and its columns into rows.</p>
+    <p class="formula">If A = [ 1 &nbsp; 2 ; 3 &nbsp; 4 ], then A<sup>T</sup> = [ 1 &nbsp; 3 ; 2 &nbsp; 4 ]</p>
+    <p>The first row (1, 2) becomes the first column. A 2 × 3 matrix becomes a 3 × 2 matrix when transposed — the order flips.</p>
+    <p><b>Rules to remember:</b> (A<sup>T</sup>)<sup>T</sup> = A — transposing twice brings the original matrix back. And (A × B)<sup>T</sup> = B<sup>T</sup> × A<sup>T</sup> — the order reverses, just like taking off shoes and socks in reverse order.</p>
+  </div>
+
+  <h2>6. Determinant of a Matrix</h2>
+  <div class="card">
+    <p>A determinant is a single number worked out from a <b>square</b> matrix only. It is written with straight bars: | A | or det(A). <span class="ur">Roman Urdu: Determinant aik square matrix se nikalne wala aik number hota hai — ye batata hai ke matrix ka inverse hai ya nahi.</span></p>
+    <p><b>2 × 2 determinant — the "cross" rule:</b> multiply the main diagonal, then subtract the product of the other diagonal.</p>
+    <p class="formula">det [ a &nbsp; b ; c &nbsp; d ] = ad − bc</p>
+    <p>Example: det [ 2 &nbsp; 3 ; 1 &nbsp; 4 ] = 2 × 4 − 3 × 1 = 8 − 3 = <b>5</b>.</p>
+    <p><b>3 × 3 determinant — expand along the first row:</b> take each element of the first row in turn, multiply it by the determinant of the 2 × 2 matrix that is left when you cross out its row and column, with signs +, −, +.</p>
+    <p>Example: det [ 1 &nbsp; 2 &nbsp; 3 ; 0 &nbsp; 1 &nbsp; 4 ; 5 &nbsp; 6 &nbsp; 0 ]<br />
+    = 1 × (1 × 0 − 4 × 6) − 2 × (0 × 0 − 4 × 5) + 3 × (0 × 6 − 1 × 5)<br />
+    = 1 × (−24) − 2 × (−20) + 3 × (−5) = −24 + 40 − 15 = <b>1</b>.</p>
+    <p><b>Useful facts:</b> det(A × B) = det(A) × det(B). The determinant of the identity matrix is 1. If two rows (or two columns) of a matrix are the same, its determinant is 0.</p>
+  </div>
+
+  <h2>7. Singular Matrices and the Inverse</h2>
+  <div class="card">
+    <p><b>Singular matrix:</b> a square matrix whose determinant is <b>0</b>. A singular matrix has <b>no inverse</b> — this is one of the most-asked facts in job tests.</p>
+    <p><b>Non-singular matrix:</b> a square matrix whose determinant is <b>not 0</b>. Only a non-singular matrix has an inverse, written A<sup>−1</sup>, and A × A<sup>−1</sup> = A<sup>−1</sup> × A = I.</p>
+    <p><b>Inverse of a 2 × 2 matrix — the quick formula:</b> swap the two diagonal elements, change the sign of the other two, then divide everything by the determinant.</p>
+    <p class="formula">If A = [ a &nbsp; b ; c &nbsp; d ], then A<sup>−1</sup> = (1 / det A) × [ d &nbsp; −b ; −c &nbsp; a ]</p>
+    <p>Example: A = [ 4 &nbsp; 7 ; 2 &nbsp; 6 ]. First the determinant: det A = 4 × 6 − 7 × 2 = 24 − 14 = 10 (not 0, so the inverse exists). Then A<sup>−1</sup> = (1/10) × [ 6 &nbsp; −7 ; −2 &nbsp; 4 ] = [ 0.6 &nbsp; −0.7 ; −0.2 &nbsp; 0.4 ].</p>
+    <p><b>Check it:</b> A × A<sup>−1</sup> = [ 1 &nbsp; 0 ; 0 &nbsp; 1 ] = I. If the answer is not the identity matrix, the inverse is wrong.</p>
+    <p><b>Test trap:</b> if a question gives a matrix with determinant 0 and asks for its inverse, the correct answer is "the inverse does not exist" — do not try to calculate it.</p>
+  </div>
+
+  <h2>Quick Facts — Test Mein Aane Wale Points</h2>
+  <div class="card">
+    <ul>
+      <li>A matrix of order m × n has <b>m × n elements</b>. A 3 × 4 matrix has 12 elements.</li>
+      <li>Addition and subtraction need the <b>same order</b>; scalar multiplication multiplies <b>every</b> element.</li>
+      <li>A × B is possible only if <b>columns of A = rows of B</b>; the product has order (rows of A) × (columns of B).</li>
+      <li>Matrix multiplication is <b>NOT commutative</b>: A × B ≠ B × A in general.</li>
+      <li>A × I = A and A × 0 = 0, where I is the <b>identity matrix</b> and 0 is the zero matrix.</li>
+      <li>Transpose: rows become columns; (A<sup>T</sup>)<sup>T</sup> = A and (A × B)<sup>T</sup> = B<sup>T</sup> × A<sup>T</sup>.</li>
+      <li>2 × 2 determinant: det [ a &nbsp; b ; c &nbsp; d ] = <b>ad − bc</b>. Determinants exist only for <b>square</b> matrices.</li>
+      <li>det(A × B) = det(A) × det(B); det(I) = 1; equal rows or columns make the determinant 0.</li>
+      <li><b>Singular</b> matrix: determinant = 0, <b>no inverse</b>. <b>Non-singular</b>: determinant ≠ 0, inverse exists.</li>
+      <li>Inverse of a 2 × 2 matrix: (1 / det) × [ d &nbsp; −b ; −c &nbsp; a ] — swap the diagonal, change the signs of the other two.</li>
+    </ul>
+  </div>
+
+  <h2>Practice MCQs — 10 Questions</h2>
+  <p>Try these first, then check the answer key at the end.</p>
+  <ol class="mcq">
+    <li>What is the order of a matrix with 2 rows and 3 columns?<br /><span class="opts">(a) 3 × 2 &nbsp; (b) 2 × 3 &nbsp; (c) 5 &nbsp; (d) 6</span></li>
+    <li>Two matrices can be added only if they have…<br /><span class="opts">(a) The same number of rows &nbsp; (b) The same order &nbsp; (c) The same determinant &nbsp; (d) The same first element</span></li>
+    <li>[ 1 &nbsp; 2 ; 3 &nbsp; 4 ] + [ 5 &nbsp; 6 ; 7 &nbsp; 8 ] = ?<br /><span class="opts">(a) [ 6 &nbsp; 8 ; 10 &nbsp; 12 ] &nbsp; (b) [ 5 &nbsp; 12 ; 21 &nbsp; 32 ] &nbsp; (c) [ 6 &nbsp; 6 ; 10 &nbsp; 10 ] &nbsp; (d) [ 4 &nbsp; 4 ; 4 &nbsp; 4 ]</span></li>
+    <li>What is the determinant of [ 2 &nbsp; 3 ; 1 &nbsp; 4 ]?<br /><span class="opts">(a) 11 &nbsp; (b) 5 &nbsp; (c) 2 &nbsp; (d) 10</span></li>
+    <li>The identity matrix of order 2 is…<br /><span class="opts">(a) [ 1 &nbsp; 1 ; 1 &nbsp; 1 ] &nbsp; (b) [ 1 &nbsp; 0 ; 0 &nbsp; 1 ] &nbsp; (c) [ 0 &nbsp; 0 ; 0 &nbsp; 0 ] &nbsp; (d) [ 2 &nbsp; 0 ; 0 &nbsp; 2 ]</span></li>
+    <li>The transpose of [ 1 &nbsp; 2 ; 3 &nbsp; 4 ] is…<br /><span class="opts">(a) [ 1 &nbsp; 3 ; 2 &nbsp; 4 ] &nbsp; (b) [ 4 &nbsp; 3 ; 2 &nbsp; 1 ] &nbsp; (c) [ 1 &nbsp; 2 ; 3 &nbsp; 4 ] &nbsp; (d) [ 2 &nbsp; 1 ; 4 &nbsp; 3 ]</span></li>
+    <li>A 2 × 3 matrix is multiplied by a 3 × 2 matrix. What is the order of the product?<br /><span class="opts">(a) 3 × 3 &nbsp; (b) 2 × 2 &nbsp; (c) 2 × 3 &nbsp; (d) Cannot be multiplied</span></li>
+    <li>If the determinant of a matrix is 0, the matrix is called…<br /><span class="opts">(a) Identity &nbsp; (b) Singular &nbsp; (c) Symmetric &nbsp; (d) Diagonal</span></li>
+    <li>What is 2 × [ 3 &nbsp; 1 ; 0 &nbsp; 2 ]?<br /><span class="opts">(a) [ 6 &nbsp; 2 ; 0 &nbsp; 4 ] &nbsp; (b) [ 5 &nbsp; 3 ; 2 &nbsp; 4 ] &nbsp; (c) [ 3 &nbsp; 1 ; 0 &nbsp; 2 ] &nbsp; (d) [ 6 &nbsp; 1 ; 0 &nbsp; 4 ]</span></li>
+    <li>For A = [ 4 &nbsp; 7 ; 2 &nbsp; 6 ], what is the inverse A<sup>−1</sup>?<br /><span class="opts">(a) (1/10) × [ 6 &nbsp; −7 ; −2 &nbsp; 4 ] &nbsp; (b) (1/10) × [ 4 &nbsp; −7 ; −2 &nbsp; 6 ] &nbsp; (c) [ 6 &nbsp; −7 ; −2 &nbsp; 4 ] &nbsp; (d) (1/24) × [ 6 &nbsp; −7 ; −2 &nbsp; 4 ]</span></li>
+  </ol>
+
+  <div class="key-box">
+    <h3 style="margin-top:0">Answer Key</h3>
+    <p style="margin-bottom:0">1 — (b) 2 × 3 &nbsp;·&nbsp; 2 — (b) The same order &nbsp;·&nbsp; 3 — (a) [ 6 &nbsp; 8 ; 10 &nbsp; 12 ] &nbsp;·&nbsp; 4 — (b) 5 &nbsp;·&nbsp; 5 — (b) [ 1 &nbsp; 0 ; 0 &nbsp; 1 ] &nbsp;·&nbsp; 6 — (a) [ 1 &nbsp; 3 ; 2 &nbsp; 4 ] &nbsp;·&nbsp; 7 — (b) 2 × 2 &nbsp;·&nbsp; 8 — (b) Singular &nbsp;·&nbsp; 9 — (a) [ 6 &nbsp; 2 ; 0 &nbsp; 4 ] &nbsp;·&nbsp; 10 — (a) (1/10) × [ 6 &nbsp; −7 ; −2 &nbsp; 4 ]</p>
+  </div>
+
+  <div class="actions">
+    <button class="btn" type="button" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <a class="btn ghost" href="../">Back to home page</a>
+  </div>
+
+  <footer>
+    <p>© 2026 StudySphere — Free job preparation for SPSC, teaching and screening tests. Made for the students of Sindh and Pakistan. Notes are summaries prepared for learning; for official syllabus details, always confirm with SPSC or the relevant board.</p>
+  </footer>
+</div>
+</body>
+</html>
